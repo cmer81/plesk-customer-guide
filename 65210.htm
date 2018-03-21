@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fichiers de log </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65154.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74484.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031133.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031133.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Fichiers de log</h3>
+<p class="bodytext">L'explorateur de log vous aide à résoudre les problèmes liés à vos sites Web : il analyse les fichiers de log des serveurs Web et affiche des avertissements pertinents ainsi que des messages d'erreur dans l'interface de Plesk. </p>
+<p class="bodytext">Sous Linux, les informations des fichiers de log suivants sont affichées par défaut :</p>
+<ul class="listbullet2"><li class="listbullet2"><em class="emphasis">Accès Apache (access_log)</em>. Ce log enregistre toutes les requêtes HTTP traitées par le serveur Web Apache.</li><li class="listbullet2"><em class="emphasis">Accès ssl Apache (access_ssl_log)</em>. Ce log enregistre toutes les requêtes HTTPS traitées par le serveur Web Apache.</li><li class="listbullet2"><em class="emphasis">Erreur Apache (error_log)</em>. Ce log contient toutes les informations de diagnostic. Il enregistre également toutes les erreurs que le serveur Web Apache rencontre pendant le traitement des requêtes.</li><li class="listbullet2"><em class="emphasis">Accès Nginx (proxy_access_log).</em> Ce log enregistre toutes les requêtes HTTP traitées par le serveur Web proxy Nginx.</li><li class="listbullet2"><em class="emphasis">Accès ssl Nginx (proxy_access_ssl_log)</em>. Ce log enregistre toutes les requêtes HTTPS traitées par le serveur Web proxy Nginx.</li><li class="listbullet2"><em class="emphasis">Erreur Nginx (proxy_error_log)</em>. Ce log contient toutes les informations de diagnostic. Il enregistre également toutes les erreurs que le serveur Web proxy Nginx rencontre pendant le traitement des requêtes.</li></ul><p class="bodytext">Sous Windows, les informations du log IIS sont affichées. Ce log enregistre toutes les requêtes traitées par le serveur Web, HTTP et HTTPS, ainsi que toutes les erreurs rencontrées pendant le traitement des requêtes.</p>
+<p class="bodytext">En outre, vous pouvez ajouter tout fichier de log personnalisé depuis le répertoire de votre site Web pour le surveiller dans l'explorateur de log, comme décrit ci-dessous. </p>
+<h5 class="heading5">Accès à l'explorateur de log</h5>
+<p class="bodytext">Pour accéder à l'explorateur de log, allez dans <strong class="specialbold">Sites Web et domaine</strong> &gt; <strong class="specialbold">Logs</strong>. Cette page présente la liste des messages issus des logs. Par défaut, l'explorateur de log affiche les messages présents dans les logs suivis au moment de l'ouverture. Pour actualiser la liste avec les messages ajoutés après ouverture de l'explorateur de log, cliquez sur <strong class="specialbold">Actualiser</strong>. Autre solution : si vous voulez que la liste soit actualisée automatiquement, activez l'option <strong class="specialbold">Lancer les mises à jour en temps réel</strong>.</p>
+<p class="widegraphic"><img src="76824.gif" alt="Logs" height="483" width="1075" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Pour sélectionner les logs dont vous souhaitez voir les messages, cliquez sur l'icône <img src="74882.png" alt="Arrow_down" height="28" width="28" vspace="0" hspace="0" align="bottom" border="0"> et sélectionnez les logs voulus dans le menu. </p>
+<h5 class="heading5">Gérer les fichiers de log</h5>
+<p class="bodytext">Pour voir tous les messages d'un log, allez dans <strong class="specialbold">Sites Web &amp; domaines</strong> &gt; <strong class="specialbold">Logs</strong> et cliquez sur l'icône <img src="74886.png" alt="" height="28" width="28" vspace="0" hspace="0" align="bottom" border="0"> &gt;<strong class="specialbold"> Gérer les fichiers de log</strong>. La liste de tous les fichiers de log suivis est présentée.</p>
+<p class="widegraphic"><img src="76825.gif" alt="Manage_log_files" height="479" width="1074" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Là, vous pouvez cliquer sur le nom d'un fichier de log pour en voir le contenu directement dans l'explorateur de log. Vous pouvez cliquer sur l'icône<img src="74884.png" alt="Icon_View" height="27" width="27" vspace="0" hspace="0" align="bottom" border="0">en regard d'un fichier de log pour l'ouvrir et le voir dans une nouvelle fenêtre ou cliquer sur l'icône<img src="74885.png" alt="Icon_download" height="23" width="23" vspace="0" hspace="0" align="bottom" border="0">pour le télécharger. </p>
+<p class="bodytext">Pour économiser de l'espace disque, vous pouvez activer la rotation des logs qui compresse et/ou supprime automatiquement les fichiers de log de sites Web obsolètes. Pour configurer la rotation des logs, allez dans <strong class="specialbold">Sites Web &amp; domaines</strong> &gt; <strong class="specialbold">Logs</strong> &gt; cliquez sur l'icône <img src="74886.png" alt="" height="28" width="28" vspace="0" hspace="0" align="bottom" border="0"> &gt; <strong class="specialbold">Gérer les fichiers de log</strong> &gt; <strong class="specialbold">Rotation des logs.</strong></p>
+<p class="bodytext">Vous pouvez supprimer les fichiers de log après rotation (les fichiers qui n'ont pas encore été inclus dans la rotation ne peuvent être supprimés). </p>
+<h5 class="heading5">Ajout d'un fichier de log personnalisé</h5>
+<p class="bodytext">Vous pouvez ajouter tout fichier de log personnalisé depuis le répertoire de votre site Web pour le surveiller dans l'explorateur de log. Pour ce faire, cliquez sur le bouton <strong class="specialbold">Ajouter un fichier de log personnalisé</strong> sur la page <strong class="specialbold">Gérer les fichiers de log</strong>. L'arborescence des dossiers de votre site Web s'affiche. Sélectionnez le fichier à ajouter à l'explorateur de log et cliquez sur <strong class="specialbold">OK</strong>. </p>
+<p class="note"><strong class="buttons">Remarque</strong> : seuls des fichiers en texte brut peuvent être sélectionnés. Pour qu'il s'affiche correctement, votre fichier de log personnalisé doit présenter un horodatage pour chaque entrée de log, sans quoi l'analyse échouera.</p>
+<p class="widegraphic"><img src="76826.gif" alt="Add_custom_log" height="503" width="1072" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Par conséquent, le fichier de log sélectionné apparaît dans la liste des fichiers de log gérés.</p>
+<p class="widegraphic"><img src="76827.gif" alt="Manage_custom_log" height="499" width="1074" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Si vous ne souhaitez plus surveiller ce fichier de log personnalisé, cliquez sur<img src="75821.png" alt="Stop_tracking_icon" height="25" width="27" vspace="0" hspace="0" align="bottom" border="0">en regard. Cela ne supprime pas le fichier de votre système de fichiers ; cela le supprime simplement de la liste des fichiers disponibles dans l'explorateur de log.</p>
+<p class="bodytext">Vous pouvez aussi ouvrir un fichier texte dans l'explorateur de log directement dans le Gestionnaire de fichiers avec l'option <strong class="specialbold">Ouvrir dans l'explorateur de log</strong>.</p>
+<p class="widegraphic"><img src="76828.gif" alt="Custom_log_open_in_log_browser" height="535" width="1073" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Lorsque vous ouvrez un fichier de log dans le Gestionnaire de fichiers dans l'explorateur de log, il n'est pas encore ajouté à la liste de logs affichée dans l'explorateur de log de manière permanente. Pour ajouter le fichier à l'explorateur de log, cliquez sur le bouton <strong class="specialbold">Ajouter à l'explorateur de log en tant que fichier personnalisé</strong>.</p>
+<p class="widegraphic"><img src="76829.gif" alt="Custom_log_add" height="221" width="1074" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="note"><strong class="buttons">Remarque</strong> : la rotation des logs n'est pas disponible pour les fichiers de log personnalisés.</p>
+<p class="bodytext"></p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65210.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

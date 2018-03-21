@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Configurer des règles d'accès personnalisées </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69539.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74498.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Configurer des règles d'accès personnalisées</h2>
+<p class="bodytext">En général, l'accès à distance aux bases de données Plesk est autorisé depuis tout ordinateur. Pour des raisons de sécurité, vous pouvez autoriser l'accès depuis une adresse IP spécifique (par exemple, pour les applications exécutées sur un ordinateur distant avec une base de données hébergée sur un serveur Plesk). </p>
+<p class="bodytext">Vous pouvez également interdire l'accès à distance (par exemple, si l'application qui tourne avec la base de données Plesk est exécutée sur le serveur Plesk). </p>
+<p class="bodytext">Les paramètres de contrôle d'accès sont spécifiés individuellement pour les utilisateurs de bases de données Plesk. Afin que vos paramètres fonctionnent, l'application doit utiliser les identifiants d'accès de l'utilisateur de base de données approprié pour accéder à la base de données.</p>
+<p class="note"><strong class="buttons">Remarque :</strong> les options décrites ci-dessous sont affichées uniquement si votre abonnement a le droit <strong class="specialbold">Accès à distance pour les utilisateurs de la base de données</strong>. De plus, si vous utilisez le PostgreSQL ou SQL Server, le pare-feu de Plesk doit être activé par votre hébergeur.</p>
+<h5 class="heading5">Configurer l'accès aux bases de données MySQL</h5>
+<p class="bodytext">Pour les utilisateurs de bases de données MySQL, l'accès à distance est contrôlé par un mécanisme de sécurité natif MySQL : Access Control List (ACL). Vos paramètres personnalisés sont ajoutés à l'Access Control List MySQL. </p>
+<p class="procedureheading">Pour indiquer les paramètres d'accès d'un utilisateur MySQL :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Pour un utilisateur existant, allez sous <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Utilisateurs</strong>. Sélectionnez un utilisateur et allez dans le groupe d'options &gt; <strong class="specialbold">Contrôle de l'accès</strong>. Pour un nouvel utilisateur, allez sous <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Utilisateurs</strong> &gt; <strong class="specialbold">Ajouter un utilisateur de base de données</strong>, dans le groupe d'options <strong class="specialbold">Contrôle de l'accès</strong>.<p class="listcontinue">Vous pouvez également configurer un contrôle d'accès lors de la création d'une base de données si vous créez un utilisateur en même temps que vous créez la base de données : <strong class="specialbold">Base de données</strong> &gt; <strong class="specialbold">Ajouter une base de données</strong> &gt; <strong class="specialbold">Créer un utilisateur de bases de données</strong>.</p>
+</li><li class="procedurelistnumber">Utilisez l'option suivante pour contrôler l'accès à distance à la base de données au nom de l'utilisateur de la base de données :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Autoriser uniquement les connexions locales</strong>. Sélectionnez cette option pour autoriser l'accès depuis toutes les adresses IP de Plesk. y compris l'hôte local et toutes les adresses IP utilisées par Plesk.</li><li class="listbullet2"><strong class="specialbold">Autoriser les connexions à distance depuis n'importe quel hôte</strong>. Sélectionnez cette option pour autoriser l'accès depuis tout serveur, y compris depuis l'hôte local et les adresses IP du serveur Plesk.</li><li class="listbullet2"><strong class="specialbold">Autoriser les connexions à distance depuis</strong> (les hôtes indiqués). Sélectionnez l'accès à distance depuis les noms d'hôtes ou les adresses IP indiquées. Remarque : les connexions locales sont autorisées également.</li></ul></li><li class="procedurelistnumber">Si Plesk est doté d'un pare-feu, vous pouvez voir le message correspondant sous les options <strong class="specialbold">Contrôle de l'accès</strong>. Vous devrez contacter votre hébergeur pour confirmer que le pare-feu autorise les connexions à distance à MySQL. <p class="listcontinue">Si le pare-feu de Plesk interdit les connexions entrantes de MySQL, alors les paramètres de contrôle d'accès personnalisés ne fonctionneront pas.</p>
+<p class="listcontinue"></p>
+</li></ol><h5 class="heading5">Paramétrer l'accès à distance aux bases de données PostgreSQL</h5>
+<p class="bodytext">Pour un utilisateur de base de données PostgreSQL, l'accès à distance est contrôlé par les règles du pare-feu. Vos règles personnalisées sont ajoutées aux règles du pare-feu du système une fois que votre hébergeur les a vérifiées afin de s'assurer qu'elles n'entrent pas en conflit avec les règles existantes.</p>
+<p class="procedureheading">Pour indiquer les paramètres d'accès d'un utilisateur PostgreSQL :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Pour un utilisateur existant, allez sous <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Utilisateurs</strong>. Sélectionnez un utilisateur et allez dans le groupe d'options <strong class="specialbold">Accès à distance</strong>. Pour un nouvel utilisateur, allez dans <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Gestion des utilisateurs</strong> &gt; <strong class="specialbold">Ajouter un utilisateur de base de données</strong>, dans le groupe d'options <strong class="specialbold">Contrôle de l'accès</strong>.<p class="listcontinue">Vous pouvez également configurer un contrôle d'accès lors de la création d'une base de données si vous créez un utilisateur en même temps que vous créez la base de données : <strong class="specialbold">Base de données</strong> &gt; <strong class="specialbold">Ajouter une base de données</strong> &gt; <strong class="specialbold">Créer un utilisateur de bases de données</strong>.</p>
+</li><li class="procedurelistnumber">Utilisez l'option suivante pour contrôler l'accès à distance à la base de données au nom de l'utilisateur de la base de données :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Utiliser les règles du pare-feu du système</strong>. Les règles définies par votre hébergeur seront utilisées.</li><li class="listbullet2"><strong class="specialbold">Autoriser les connexions à distance depuis</strong> (les hôtes indiqués). Choisissez cette option pour préciser les adresses IP depuis lesquelles l'utilisateur peut accéder à la base de données. Vos modifications seront appliquées une fois que votre hébergeur les aura modérées.</li></ul></li></ol><p class="bodytext"></p>
+<h5 class="heading5">Paramétrer l'accès à distance aux bases de données Microsoft SQL Server (Windows)</h5>
+<p class="bodytext">Pour un utilisateur de base de données SQL Server, l'accès à distance est contrôlé par les règles du pare-feu. Vos règles personnalisées sont ajoutées aux règles du pare-feu du système une fois que votre hébergeur les a vérifiées afin de s'assurer qu'elles n'entrent pas en conflit avec les règles existantes.</p>
+<p class="procedureheading">Pour indiquer les paramètres d'accès d'un utilisateur SQL Server :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Pour un utilisateur existant, allez sous <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Utilisateurs</strong>. Sélectionnez un utilisateur et allez dans le groupe d'options <strong class="specialbold">Accès à distance</strong>. Pour un nouvel utilisateur, allez dans <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Gestion des utilisateurs</strong> &gt; <strong class="specialbold">Ajouter un utilisateur de base de données</strong>, dans le groupe d'options <strong class="specialbold">Contrôle de l'accès</strong>.<p class="listcontinue">Vous pouvez également configurer un contrôle d'accès lors de la création d'une base de données si vous créez un utilisateur en même temps que vous créez la base de données : <strong class="specialbold">Base de données</strong> &gt; <strong class="specialbold">Ajouter une base de données</strong> &gt; <strong class="specialbold">Créer un utilisateur de bases de données</strong>.</p>
+</li><li class="procedurelistnumber">Utilisez l'option suivante pour contrôler l'accès à distance à la base de données au nom de l'utilisateur de la base de données :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Utiliser les règles du pare-feu du système</strong>. Les règles définies par votre hébergeur seront utilisées.</li><li class="listbullet2"><strong class="specialbold">Autoriser les connexions à distance depuis</strong> (les hôtes indiqués). Choisissez cette option pour préciser les adresses IP depuis lesquelles l'utilisateur peut accéder à la base de données. Vos modifications seront appliquées une fois que votre hébergeur les aura modérées.</li></ul></li></ol><p class="bodytext">&nbsp;&nbsp;</p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '73491.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

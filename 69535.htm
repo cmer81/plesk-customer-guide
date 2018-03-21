@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> (Avancé) Gérer les bases de données du site Web </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65207.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65157.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h1 class="heading1">(Avancé) Gérer les bases de données du site Web</h1>
+<p class="bodytext">Si votre site Web est équipé d'applications de traitement des données personnalisées ou s'il est conçu pour générer des pages Web de façon dynamique, vous aurez probablement besoin d'une base de données pour stocker et récupérer des données. </p>
+<p class="bodytext">Dans Plesk, vous pouvez effectuer les opérations suivantes.</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold"><a id="h71575" class="jumptemplate" title="Créer des bases de données" href="65157.htm" target="_self">Créer une base de données</a></strong> manuellement pour votre site.</li><li class="listbullet">Créer une <strong class="specialbold"><a id="h71579" class="jumptemplate" title="Copier les bases de données" href="71563.htm" target="_self">copie de base de données</a></strong>.</li><li class="listbullet">Gérer les <strong class="specialbold"><a id="h71574" class="jumptemplate" title="Gérer les comptes utilisateur de la base de données" href="69539.htm" target="_self">comptes utilisateur de bases de données</a></strong> et <strong class="specialbold"><a id="h73510" class="jumptemplate" title="Configurer des règles d'accès personnalisées" href="73491.htm" target="_self">configurer les règles d'accès</a></strong>.</li><li class="listbullet"><strong class="specialbold"><a id="h75264" class="jumptemplate" title="Afficher les informations de connexion" href="74497.htm" target="_self">Afficher les informations de connexion</a></strong> (nom d'hôte, nom de la base de données, nom d'utilisateur).</li><li class="listbullet"><strong class="specialbold"><a id="h75265" class="jumptemplate" title="Vérifier et réparer des bases de données" href="74498.htm" target="_self">Vérifier une base de données</a></strong> pour détecter les problèmes et réparer la base de données.</li><li class="listbullet"><strong class="specialbold"><a id="h71580" class="jumptemplate" title="Exporter et importer les dumps de bases de données" href="69538.htm" target="_self">Exporter et importer des dumps de bases de données</a></strong> ou <strong class="specialbold"><a id="h75267" class="jumptemplate" title="Sauvegarder et restaurer les bases de données" href="74647.htm" target="_self">sauvegarder des bases de données</a></strong> dans le cadre d'une sauvegarde d'abonnement.</li><li class="listbullet"><strong class="specialbold">Déplacer une base de données</strong> vers un autre abonnement.</li><li class="listbullet"><strong class="specialbold"><a id="h71575_2" class="jumptemplate" title="Créer des bases de données" href="65157.htm" target="_self">Associer une base de données</a></strong> à l'un des sites Web de votre abonnement.</li><li class="listbullet">Gérer les données avec les <strong class="specialbold"><a id="h75434" class="jumptemplate" title="Accéder aux bases de données" href="65157.htm#o71841" target="_self">outils de gestion de bases de données externes</a></strong>, comme phpMyAdmin.</li></ul><p class="bodytext">Vous pouvez effectuer ces opérations depuis l'onglet <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong>. </p>
+<p class="widegraphic"><img src="76958.gif" alt="Bases de données" height="441" width="1148" vspace="0" hspace="0" align="bottom" border="0"></p>
+<h5 class="heading5">Liste active et Liste classique</h5>
+<p class="bodytext">Par défaut, la liste des bases de données est affichée en mode <strong class="specialbold">Liste active</strong>. Pour passer au mode <strong class="specialbold">Liste classique</strong>, utilisez l'icône à côté du champ de recherche. Quelle est la principale différence entre ces modes ? Le mode <strong class="specialbold">Liste active</strong> permet d'afficher les statistiques sur la base de données et le nom du site Web auquel la base de données est affectée. </p>
+<h5 class="heading5">Outils de gestion de base de données</h5>
+<p class="bodytext">Grâce aux outils de gestion de bases de données tiers fournis avec Plesk, vous pouvez modifier les tables des bases de données, <a id="h71580_2" class="jumptemplate" title="Exporter et importer les dumps de bases de données" href="69538.htm" target="_self">importer et exporter des données</a> et exécuter des requêtes SQL. Ces outils sont disponibles depuis le lien correspondant sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong>. Par exemple, Plesk utilise phpMyAdmin pour gérer les bases de données MySQL.</p>
+<h5 class="heading5">Création automatique de bases de données</h5>
+<p class="bodytext">Lorsque vous installez une application à partir du Catalogue d'applications, toutes les bases de données et tous les comptes utilisateur de bases de données requis sont automatiquement créés. Vous pouvez également assigner un compte utilisateur créé manuellement à une base de données créée avec une application Web. Pour en savoir plus, consultez la section <strong class="specialbold">Applications Web</strong> &gt; <strong class="specialbold">Bases de données d'applications</strong>.</p>
+<h5 class="heading5">Accès aux bases de données avec ODBC</h5>
+<p class="bodytext">Si vous souhaitez déployer une application qui fonctionne avec une base de données gérée par un pilote Open Database Connectivity (ODBC), vous devez créer une source de données ODBC appropriée dans le système d'exploitation. Dans Plesk pour Windows, vous pouvez ajouter des sources de données ODBC pour plusieurs pilotes ODBC pris en charge. Pour en savoir plus, consultez la section <strong class="specialbold"><a id="h71581" class="jumptemplate" title="Accéder aux bases de données avec ODBC (Windows)" href="65285.htm" target="_self">Accéder aux bases de données avec ODBC (Windows)</a></strong>.</p>
+<p class="bodytext">&nbsp;&nbsp;</p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="65157.htm" target="_self">Créer des bases de données</a></p><p class="relateditem"><a href="65157.htm#o71841" target="_self">Accéder aux bases de données</a></p><p class="relateditem"><a href="74497.htm" target="_self">Afficher les informations de connexion</a></p><p class="relateditem"><a href="71563.htm" target="_self">Copier les bases de données</a></p><p class="relateditem"><a href="74647.htm" target="_self">Sauvegarder et restaurer les bases de données</a></p><p class="relateditem"><a href="69538.htm" target="_self">Exporter et importer les dumps de bases de données</a></p><p class="relateditem"><a href="69539.htm" target="_self">Gérer les comptes utilisateur de la base de données</a></p><p class="relateditem"><a href="73491.htm" target="_self">Configurer des règles d'accès personnalisées</a></p><p class="relateditem"><a href="74498.htm" target="_self">Vérifier et réparer des bases de données</a></p><p class="relateditem"><a href="65285.htm" target="_self">Accéder aux bases de données avec ODBC (Windows)</a></p><p class="relateditem"><a href="74201.htm" target="_self">Accéder aux bases de données avec les chaînes de connexion</a></p></td>
+</tr>
+</table>
+
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '69535.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

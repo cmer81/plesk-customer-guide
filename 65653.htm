@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Configurer les documents d'erreur personnalisés sur les serveurs Linux </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65652.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65284.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031196.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031196.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Configurer les documents d'erreur personnalisés sur les serveurs Linux</h4>
+<p class="procedureheading">Pour configurer le serveur Web afin qu'il affiche vos pages d'erreur personnalisées pour un site, procédez comme suit : </p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Activez la prise en charge des documents d'erreur personnalisés. <ol class="procedurelistnumber2"><li class="procedurelistnumber2">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur <strong class="specialbold">Paramètres d'hébergement</strong> dans le volet des paramètres d'un site Web. </li><li class="procedurelistnumber2">Cochez la case <strong class="specialbold">Documents d'erreur personnalisés</strong>.</li><li class="procedurelistnumber2">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol></li><li class="procedurelistnumber">Connectez-vous à votre compte FTP et allez dans le répertoire <code class="monospace">error_docs</code>.</li><li class="procedurelistnumber">Éditez ou remplacez les fichiers respectifs. Veillez à respecter les noms de fichier :<ul class="listbullet2"><li class="listbullet2">400 Bad File Request - bad_request.html</li><li class="listbullet2">401 Unauthorized - unauthorized.html</li><li class="listbullet2">403 Forbidden/Access denied - forbidden.html</li><li class="listbullet2">404 Not Found - not_found.html</li><li class="listbullet2">405 Method Not Allowed - method_not_allowed.html</li><li class="listbullet2">406 Not Acceptable - not_acceptable.html</li><li class="listbullet2">407 Proxy Authentication Required - proxy_authentication_required.html</li><li class="listbullet2">412 Precondition Failed - precondition_failed.html</li><li class="listbullet2">414 Request-URI Too Long - request-uri_too_long.html</li><li class="listbullet2">415 Unsupported Media Type - unsupported_media_type.html</li><li class="listbullet2">500 Internal Server Error - internal_server_error.html</li><li class="listbullet2">501 Not Implemented - not_implemented.html</li><li class="listbullet2">502 Bad Gateway - bad_gateway.html</li><li class="listbullet2">503 Service Temporarily Unavailable - maintenance.html</li></ul></li></ol><p class="bodytext">Le serveur Web commencera à utiliser vos documents d'erreur en quelques heures, après son redémarrage.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65653.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Paramètres ASP.NET (Windows) </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="75145.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="71929.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Paramètres ASP.NET (Windows)</h4>
+<p class="procedureheading">Pour configurer les paramètres ASP.NET pour un site :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine de votre site.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Paramètres ASP.NET</strong>. Si vous ne voyez pas le bouton <strong class="specialbold">Paramètres ASP.NET</strong>, vérifiez si ASP.NET est activé dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres d'hébergement</strong>. Si vous ne pouvez pas activer ASP.NET, contactez votre fournisseur.<p class="widegraphic"><br><img src="76859.gif" alt="ASP_Net" height="676" width="1061" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="procedurelistnumber">Définissez les chaînes qui déterminent les données de connexion de la base de données pour les applications ASP.NET qui ont recours à des bases de données. Cette option n'existe que pour ASP.NET 2.0.x.<p class="listcontinue2">La première fois que vous ouvrez l'écran de configuration ASP.NET, des exemples de paramètres de connexion avec des constructions courantes sont affichés. Vous pouvez alors les supprimer et définir vos propres chaînes.</p>
+<ul class="listbullet2"><li class="listbullet2">Pour ajouter une chaîne, cliquez sur le lien <strong class="specialbold">Ajouter une chaîne de connexion</strong>. Saisissez les données demandées dans les champs <strong class="specialbold">Nom</strong> et <strong class="specialbold">Paramètres de connexion</strong>.</li><li class="listbullet2">Pour supprimer une chaîne, cliquez sur le lien <strong class="specialbold">Supprimer</strong> à côté de la chaîne.</li></ul></li><li class="procedurelistnumber">Configurez et saisissez les messages d'erreur personnalisés renvoyés par les applications ASP.NET dans le champ <strong class="specialbold">Paramètres pour les erreurs personnalisées</strong> :<ul class="listbullet2"><li class="listbullet2">Pour activer le mode Messages d'erreur personnalisés, choisissez l'option adéquate dans le menu <strong class="specialbold">Mode Erreurs personnalisées</strong> :<ul class="listbullet3"><li class="listbullet3"><strong class="specialbold">On</strong> : les messages d'erreur personnalisés sont activés.</li><li class="listbullet3"><strong class="specialbold">Off</strong> : les messages d'erreur personnalisés sont désactivés et les erreurs détaillées sont affichées.</li><li class="listbullet3"><strong class="specialbold">RemoteOnly</strong> : les messages d'erreur personnalisés ne sont affichés que pour les clients distants, et les erreurs d'ASP.NET sont affichées pour les utilisateurs de l'hôte local.</li></ul></li><li class="listbullet2">Pour ajouter un message d'erreur personnalisé (à utiliser, sauf si le mode <strong class="specialbold">Off</strong> est sélectionné), saisissez les valeurs dans les champs <strong class="specialbold">Code du statut</strong> et <strong class="specialbold">URL de redirection</strong> puis cliquez sur <img src="21053.gif" alt="" height="16" width="16" vspace="0" hspace="0" align="bottom" border="0">.<ul class="listbullet3"><li class="listbullet3">Le <strong class="specialbold">Code du statut</strong> définit le code du statut HTTP entraînant une redirection vers une page d'erreur.</li><li class="listbullet3">L'<strong class="specialbold">URL de redirection</strong> définit l'adresse Web de la page d'erreur qui donne au client des informations sur l'erreur.</li></ul><p class="listcontinue2">Compte tenu du risque de conflit, vous ne pouvez pas ajouter de message d'erreur personnalisé avec un code d'erreur qui existe déjà, mais vous pouvez redéfinir l'URL du code existant.</p>
+</li><li class="listbullet2">Pour supprimer un message d'erreur personnalisé de la liste, cliquez sur le lien <strong class="specialbold">Supprimer</strong> à côté de celui-ci.</li></ul></li><li class="procedurelistnumber">Configurez les paramètres de compilation dans le champ <strong class="specialbold">Compilation et débogage</strong> :<ul class="listbullet2"><li class="listbullet2">Pour déterminer le langage de programmation à utiliser par défaut dans les fichiers de compilation dynamique, choisissez une entrée dans la liste <strong class="specialbold">Langues de la page par défaut</strong>.</li><li class="listbullet2">Pour permettre la compilation des applications en mode production, ne cochez pas la case <strong class="specialbold">Activer le débogage</strong>.</li><li class="listbullet2">Pour permettre la compilation d'applications en mode débogage, cochez la case <strong class="specialbold">Activer le débogage</strong>. Dans ce cas, les fragments du code source contenant une erreur seront cités dans le message de la page de diagnostic.<p class="listnote"><strong class="buttons">Remarque :</strong> lorsque les applications fonctionnent en mode de débogage, il y a saturation de la mémoire et des performances. Il est recommandé d'utiliser le mode débogage lorsque vous testez une application, mais de le désactiver avant de déployer une application en production.</p>
+</li></ul></li><li class="procedurelistnumber">Configurez les paramètres d'encodage des applications ASP.NET à la section <strong class="specialbold">Paramètres de globalisation</strong> :<ul class="listbullet2"><li class="listbullet2">Pour définir un encodage adopté pour toutes les requêtes entrantes, saisissez une valeur de codage dans le champ <strong class="specialbold">Encodage de la requête</strong>, par défaut, utf-8.</li><li class="listbullet2">Pour définir un encodage adopté pour toutes les réponses, saisissez une valeur de codage dans le champ <strong class="specialbold">Encodage de la réponse</strong>, par défaut, utf-8.</li><li class="listbullet2">Pour définir un encodage à utiliser par défaut pour analyser les fichiers <code class="monospace">.aspx</code>, <code class="monospace">.asmx</code> et <code class="monospace">.asax</code>, saisissez une valeur d'encodage dans le champ <strong class="specialbold">Encodage du fichier</strong>, par défaut Windows-1252.</li><li class="listbullet2">Pour définir la langue à utiliser par défaut pour traiter les requêtes Web entrantes, choisissez l'élément voulu dans la liste <strong class="specialbold">Langues</strong>.</li><li class="listbullet2">Pour définir la langue à utiliser par défaut lors de la recherche d'une ressource liée à un fichier de langue, choisissez l'élément voulu dans la liste <strong class="specialbold">Langues UI</strong>.</li></ul></li><li class="procedurelistnumber">Définissez un niveau de confiance du code d'accès pour les applications ASP.NET dans le champ <strong class="specialbold">Sécurité du code d'accès</strong>.<p class="listcontinue">Le niveau de confiance du code d'accès (CAS) correspond à un périmètre de sécurité auquel l'exécution d'applications est affectée. Il définit les ressources serveur auxquelles les applications ont accès.</p>
+<p class="listnote"><strong class="buttons">Important :</strong> lorsqu'un assemblage se voit affecter un niveau de confiance trop bas, il ne fonctionne pas correctement. Pour en savoir plus sur les niveaux de droits, consultez l'article <a class="externalhyperlinktemplate" title="" href="http://msdn.microsoft.com/en-us/library/vstudio/tkscy493(v=vs.100).aspx" target="_blank">http://msdn.microsoft.com/fr-fr/library/vstudio/tkscy493(v=vs.100).aspx</a>.</p>
+</li><li class="procedurelistnumber">Autorisez l'utilisation de scripts annexes dans le champ <strong class="specialbold">Paramètres de bibliothèques de scripts</strong>. Il faut impérativement définir les paramètres de la bibliothèque de scripts si vous voulez que les commandes de validation via Internet puissent être utilisées sur votre site Web. Cette option n'existe que pour ASP.NET 1.1.x.<ul class="listbullet2"><li class="listbullet2">Si vous devez utiliser des scripts auxiliaires (particulièrement les scripts pour implémenter des objets permettant de valider des données d'entrée), saisissez les paramètres de la bibliothèque de scripts pour .NET Framework. Pour ce faire, saisissez le chemin en commençant par le répertoire racine du domaine précédé d'un slash dans le champ <strong class="specialbold">Chemin d'accès à la bibliothèque de scripts Microsoft</strong>, ou cliquez sur l'icône représentant le dossier en regard du champ <strong class="specialbold">Chemin d'accès à la bibliothèque de scripts Microsoft</strong> et accédez à l'emplacement voulu.</li><li class="listbullet2">Pour lancer les fichiers auto-extractibles qui contiennent les scripts, à l'emplacement indiqué, cochez la case <strong class="specialbold">Installer</strong>. S'il y a déjà des fichiers à cet emplacement, ils sont écrasés.</li></ul></li><li class="procedurelistnumber">Définissez les paramètres des sessions client dans le champ <strong class="specialbold">Paramètres de session</strong> :<ul class="listbullet2"><li class="listbullet2">Pour configurer le mode d'authentification par défaut des applications, choisissez l'élément qui convient dans la liste <strong class="specialbold">Mode d'authentification</strong>. Le mode d'authentification <strong class="specialbold">Windows</strong> doit être sélectionné si une forme d'authentification IIS est utilisée.</li><li class="listbullet2">Pour configurer la durée d'inactivité maximale d'une session, tapez le nombre de minutes dans le champ <strong class="specialbold">Période d'inactivité de la session</strong>.</li></ul></li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong> pour appliquer tous les changements.</li></ol><p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65283.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

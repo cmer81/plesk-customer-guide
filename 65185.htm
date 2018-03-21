@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Plesk en tant que Serveur DNS maître </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69433.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65192.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Plesk en tant que Serveur DNS maître</h4>
+<p class="bodytext">Lorsque vous créez un domaine dans Plesk, une zone DNS avec tous les enregistrements DNS requis est créée automatiquement. Toutefois, vous pouvez ajouter, modifier ou supprimer des enregistrements DNS si l'hébergeur vous a accordé le droit correspondant.</p>
+<h5 class="heading5">Gestion des enregistrements DNS</h5>
+<p class="bodytext">Pour voir les enregistrements actuels d'une zone DNS, allez sous : <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres DNS</strong>. Depuis cet écran, vous pouvez également ajouter, modifier et supprimer des enregistrements.</p>
+<p class="widegraphic"><img src="76853.gif" alt="DNS_setings" height="679" width="1230" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Pour ajouter un enregistrement, cliquez sur <strong class="specialbold">Ajouter un enregistrement</strong>. Pour modifier un enregistrement, cliquez sur son nom. Pour supprimer un enregistrement, cochez la case à côté de son nom et cliquez sur <strong class="specialbold">Supprimer</strong>. Remarque : supprimer certains enregistrements risque d'affecter le fonctionnement de votre domaine. Par exemple, si vous supprimez l'enregistrement A, la résolution ne fonctionnera plus. Si vous avez modifié des éléments de la zone DNS qui affectent le fonctionnement de votre site Web, vous pouvez restaurer les enregistrements DNS par défaut. Pour cela, cliquez sur <strong class="specialbold">Rétablir le paramétrage initial</strong>. Cela permet de réinitialiser les modifications de la zone DNS et de la recréer conformément aux paramètres définis dans le template DNS valable pour l'ensemble du serveur. Notez que tous les enregistrements personnalisés que vous avez ajoutés à la zone seront perdus.</p>
+<p class="bodytext">La zone DNS inclut également l'enregistrement SOA. Pour afficher et modifier les valeurs de l'enregistrement SOA, cliquez sur <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres DNS</strong> et allez dans l'onglet <strong class="specialbold">SOA</strong>. Si vous cochez la case <strong class="specialbold">Utiliser le format du numéro de série recommandé par IETF et RIPE</strong>, Plesk change le format d'enregistrement des numéros de série SOA : autrement dit, l'horodatage UNIX est converti au format YYYYMMDDNN recommandé par RIPE. Le format YYYYMMDDNN est requis par de nombreux registraires de domaines, notamment européens. Si votre registraire refuse le numéro de série SOA, essayez d'activer cette option.</p>
+<p class="note"><strong class="buttons">Remarque </strong>: si les numéros de série SOA sont stockés au format recommandé par IETF et RIPE, notez que le maximum de changements d'un enregistrement SOA est de 98. Si vous avez modifié votre enregistrement SOA dans un domaine 98 fois au cours de la même journée, alors vous ne pouvez plus changer le numéro de série SOA. Si vous cliquez sur le bouton <strong class="specialbold">Par défaut</strong>, tous les enregistrements de la zone DNS seront supprimés et le service DNS de la zone DNS ne pourra pas être activé/désactivé ou basculer du mode esclave au mode maître.</p>
+<h5 class="heading5">Application des modifications du template DNS (Plesk pour Linux)</h5>
+<p class="bodytext">Plesk pour Linux vous permet de synchroniser les enregistrements du template DNS valable pour tout le serveur avec la zone DNS de votre domaine. La synchronisation est réalisée avec les règles suivantes :</p>
+<ul class="listbullet2"><li class="listbullet2">Les enregistrements modifiés par l'utilisateur restent toujours intacts (ne sont jamais modifiés ou supprimés).</li><li class="listbullet2">Les enregistrements ajoutés dans le template sont ajoutés à la zone.</li><li class="listbullet2">Les enregistrements supprimés du template sont supprimés de la zone (les enregistrements que vous avez modifiés ne sont pas supprimés).</li><li class="listbullet2">Les enregistrements modifiés dans le template sont modifiés de la zone (les enregistrements que vous avez modifiés ne sont pas supprimés).</li></ul><p class="bodytext">Pour synchroniser les enregistrements du template DNS et ceux votre zone DNS, cliquez sur <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres DNS</strong>, puis cliquez sur le bouton <strong class="specialbold">Appliquer le template DNS</strong>.</p>
+<p class="bodytext">&nbsp;&nbsp;</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65185.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

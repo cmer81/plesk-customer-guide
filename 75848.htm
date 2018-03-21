@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Utiliser l'hébergement Git distant </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="75825.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="76489.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311119.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311119.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Utiliser l'hébergement Git distant</h2>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/QAVUmoGTUY8?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Cette solution peut s'avérer utile si vous utilisez déjà des dépôts distants dans GitHub (<a class="externalhyperlinktemplate" title="" href="https://github.com/" target="_blank">github.com</a>) ou BitBucket (<a class="externalhyperlinktemplate" title="" href="https://bitbucket.org/" target="_blank">bitbucket.org</a>). Vous envoyez les modifications à ce dépôt distant, puis Plesk les en extrait et les déploie sur votre site Web.</p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="75848.htm#o76294" target="_self">Cloner un dépôt Git</a></p><p class="relateditem"><a href="75848.htm#o77957" target="_self">Utilisation de la connexion SSH</a></p><p class="relateditem"><a href="75848.htm#o76295" target="_self">Récupérer et déployer des fichiers</a></p><p class="relateditem"><a href="75848.htm#o76297" target="_self">Modifier la branche ou le chemin d'accès</a></p><p class="relateditem"><a href="75848.htm#o76298" target="_self">Sélectionner le mode de déploiement</a></p><p class="relateditem"><a href="75848.htm#o76296" target="_self">Utiliser des webhooks pour la récupération automatique</a></p><p class="relateditem"><a href="75848.htm#o76299" target="_self">Autoriser d'autres actions de déploiement</a></p><p class="relateditem"><a href="75848.htm#o76300" target="_self">Voir les logs de commit</a></p><p class="relateditem"><a href="75848.htm#o76302" target="_self">Renommer ou supprimer un dépôt</a></p></td>
+</tr>
+</table>
+
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76294"></a><h3 class="heading3">Cloner un dépôt Git</h3>
+<p class="bodytext">Vous pouvez créer un dépôt Git clone d'un répertoire distant. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur <strong class="specialbold">Git</strong>. Si des dépôts Git ont déjà été créés pour votre domaine, cliquez sur le bouton <strong class="specialbold">Ajouter un dépôt</strong>. L'écran de création de dépôt apparaît.</p>
+<p class="bodytext"><img src="76919.gif" alt="Git_remote_create_HTTPS" height="539" width="1162" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous devez d'abord sélectionner l'emplacement de stockage du code. Dans ce cas, sélectionnez <strong class="specialbold">Hébergement Git distant de type GitHub ou BitBucket</strong>.</p>
+<p class="bodytext"><strong class="specialbold">Dépôt Git distant</strong>. Indiquez le chemin vers le dépôt distant dans BitBucket ou GitHub. Cela peut être au format HTTPS ou SSH. L'authentification HTTP/HTTPS n&#8217;est pas supportée, donc vous pouvez utiliser le protocole HTTP/HTTPS uniquement si un dépôt ne nécessite pas d&#8217;authentification. Si un dépôt Git privé est utilisé, vous devez vous authentifier avec une clé SSH générée par Plesk (pour avoir plus d&#8217;informations, consultez <strong class="specialbold"><a id="h77960" class="jumptemplate" title="Utilisation de la connexion SSH" href="75848.htm#o77957" target="_self">Utilisation de la connexion SSH</a></strong>).</p>
+<p class="bodytext">Dans la section <strong class="specialbold">Votre site Web</strong>, renseignez les informations suivantes :</p>
+<ul class="listbullet"><li class="listbullet">Mode de déploiement. Par défaut, il s'agit du <strong class="specialbold">Déploiement automatique</strong>. Cela signifie que toutes les modifications poussées vers le dépôt Git sont déployées automatiquement sur le site de production. Pour modifier le mode de déploiement, cliquez sur le lien <strong class="specialbold">déployé automatiquement</strong> et sélectionnez une autre option dans la fenêtre <strong class="specialbold">Mode de déploiement</strong>. Si <strong class="specialbold">Déploiement manuel</strong> est sélectionné, vous devez déployer manuellement les fichiers à partir du dépôt Git de votre hébergement. Si <strong class="specialbold">Aucun déploiement</strong> n'est sélectionné, les fichiers ne seront pas déployés sur le site de production, ce qui peut être utile pour le stockage et l'échange de code par exemple.<p class="widegraphic"><img src="76254.png" alt="Git_push_Deployment_mode" height="326" width="402" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet">Répertoire cible pour la publication des fichiers Git sur votre site Web. Par défaut, il s'agit du répertoire <code class="monospace">/httpdocs</code>. Vous pouvez le remplacer par un répertoire existant en cliquant sur son nom.<p class="widegraphic"><img src="76255.png" alt="Git_push_Deployment_path" height="344" width="400" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul><p class="bodytext">Cliquez sur <strong class="specialbold">OK</strong>. Plesk tente de se connecter au dépôt distant et de le cloner. </p>
+<p class="widegraphic"><img src="76455.png" alt="Progress1" height="178" width="604" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Après que la boîte de dialogue d'avancement a confirmé la réussite du clonage, le nouveau dépôt est visible sur la page <strong class="specialbold">Git </strong>.</p>
+<p class="widegraphic"> <img src="76456.png" alt="Progress3" height="203" width="603" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Il apparaît sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>. Le nom du dépôt distant est utilisé comme nom du dépôt Git. Vous pouvez renommer le dépôt ultérieurement (voyez la section <strong class="specialbold"><a id="h76324" class="jumptemplate" title="Renommer ou supprimer un dépôt" href="75848.htm#o76302" target="_self">Renommer ou supprimer un dépôt</a></strong><strong class="specialbold"> </strong>).</p>
+<p class="bodytext">Le dépôt créé est un clone du dépôt distant et sera utilisé pour récupérer les modifications et les déployer sur le dépôt cible.</p>
+<p class="widegraphic"><img src="76920.gif" alt="Git_remote_created" height="338" width="1212" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o77957"></a><h3 class="heading3">Utilisation de la connexion SSH</h3>
+<p class="bodytext">Vous pouvez utiliser SSH pour la connexion au dépôt Git distant. Dans ce cas, lors de l'ajout d'un nouveau dépôt, indiquez l'URL du dépôt distant au format SSH. Le champ <strong class="specialbold">Clé publique SSH </strong>présente la clé publique SSH générée automatiquement par Plesk. </p>
+<p class="widegraphic"><img src="77959.gif" alt="Git_pull_create_SSH" height="689" width="1145" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Avant de cliquer sur <strong class="buttons">OK </strong>sur cet écran, ajoutez la clé SSH aux paramètres du dépôt Git distant. Pour plus d'informations, consultez la documentation sur l'ajout d'une clé SSH pour<strong class="specialbold"> <a class="externalhyperlinktemplate" title="" href="https://help.github.com/enterprise/11.10.340/admin/articles/adding-an-ssh-key-for-shell-access/" target="_blank">GitHub</a></strong> et <strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="https://confluence.atlassian.com/bitbucket/add-an-ssh-key-to-an-account-302811853.html" target="_blank">BitBucket</a></strong>. </p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76295"></a><h3 class="heading3">Récupérer et déployer des fichiers</h3>
+<p class="bodytext">Après commit des fichiers de votre site Web et envoi vers le dépôt distant, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur le bouton <strong class="specialbold">Récupérer les derniers changements</strong> en regard du nom du dépôt. Les modifications du dépôt distant seront récupérées sur le dépôt Git cloné.</p>
+<p class="bodytext">Vous pouvez voir les dernières informations de commit sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>.</p>
+<p class="bodytext">Par défaut, Plesk utilise le mode <strong class="specialbold">Déploiement automatique</strong>. Cela signifie qu'après envoi d'un fichier au répertoire, il est immédiatement déployé sur le dépôt cible. Vous pouvez désactiver ce mode si nécessaire ; voyez la section <strong class="specialbold"><a id="h76303" class="jumptemplate" title="Sélectionner le mode de déploiement" href="75848.htm#o76298" target="_self">Sélection du mode de déploiement</a></strong>.</p>
+<p class="bodytext">Par exemple, si vous avez récupéré un fichier <code class="monospace">index.html</code> avec le texte &quot;Bonjour ! Bienvenue sur mon site.&quot;, vous pouvez cliquer immédiatement sur l'URL pour voir les modifications.</p>
+<p class="widegraphic"><img src="76922.gif" alt="Git_website" height="330" width="888" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76297"></a><h3 class="heading3">Modifier la branche ou le chemin d'accès</h3>
+<p class="bodytext"><strong class="specialbold">Déploiement à partir d'une nouvelle branche</strong></p>
+<p class="bodytext">Utiliser plusieurs branches dans un répertoire est une pratique courante. Une seule branche peut être active à la fois. Par défaut, la branche <strong class="specialbold">maître</strong> est utilisée pour le déploiement.</p>
+<p class="bodytext">Pour ajouter une branche, vous devez la créer dans le répertoire distant, puis récupérer les modifications. Ensuite, vous pouvez sélectionner l'une des deux branches actives (ou plus) dans Plesk. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur le lien <strong class="specialbold">Modifier la branche et le chemin d'accès</strong>, puis dans la fenêtre ouverte, sélectionnez le nom de la branche dans le menu <strong class="specialbold">Branche</strong>.</p>
+<p class="widegraphic"><img src="76275.png" alt="Git_remote_new_branch" height="421" width="601" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Après que vous avez sélectionné la nouvelle branche et cliqué sur <strong class="specialbold">OK</strong>, Plesk affiche la nouvelle branche active.</p>
+<p class="widegraphic"><img src="76923.gif" alt="Git_remote_branch" height="334" width="1215" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext"><strong class="specialbold">Modification du chemin de déploiement</strong></p>
+<p class="bodytext">Par défaut, le répertoire <code class="monospace">/httpdocs</code> est utilisé pour la publication des fichiers Git sur votre site Web. Pour modifier le chemin de déploiement, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur le lien <strong class="specialbold">Modifier la branche et le chemin d'accès</strong> et dans la fenêtre ouverte, sélectionnez le nouveau dépôt.</p>
+<p class="widegraphic"><img src="76278.png" alt="Git_remote_change_folder" height="423" width="601" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76298"></a><h3 class="heading3">Sélectionner le mode de déploiement</h3>
+<p class="bodytext">Vous pouvez sélectionner le mode de déploiement de votre répertoire. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong> et sélectionnez l'une des options sous <strong class="specialbold">Sélectionner le mode de déploiement</strong> :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Déploiement automatique</strong>. Sélectionnez cette option pour que Plesk déploie immédiatement toutes les modifications sur le site de production.</li><li class="listbullet"><strong class="specialbold">Déploiement manuel</strong>. Dans ce cas, vous devez déployer manuellement les fichiers en cliquant sur le bouton <strong class="specialbold">Déployer depuis le dépôt</strong> sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>. Vous pouvez aussi déployer manuellement les fichiers en cliquant sur le bouton <strong class="specialbold">Déployer</strong> en regard du nom du dépôt sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="listbullet"><strong class="specialbold">Aucun déploiement (hébergement de dépôt)</strong>. Dans ce cas, les fichiers ne sont pas déployés sur le site de production. Vous pouvez utiliser cette option par exemple si vous souhaitez n'utiliser le dépôt Git que pour stocker et échanger du code.<p class="widegraphic"><img src="76924.gif" alt="Git_remote_deploy_mode" height="720" width="1195" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76296"></a><h3 class="heading3">Utiliser des webhooks pour la récupération automatique</h3>
+<p class="bodytext">Vous pouvez utiliser des webhooks pour configurer votre dépôt distant afin de notifier Plesk quant à certains événements, par exemple, lorsque des fichiers sont poussés vers le répertoire ). Pour plus d'informations, consultez la documentation sur la gestion des webhooks dans <strong class="specialbold"><a class="" title="" href="https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html" target="_self">BitBucket</a></strong> ou <strong class="specialbold"><a class="" title="" href="https://developer.github.com/webhooks/" target="_self">GitHub</a></strong>.</p>
+<p class="bodytext">L'URL du webhook est générée automatiquement pour chaque dépôt. Pour voir l'URL du webhook, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong>. </p>
+<p class="widegraphic"><img src="76927.gif" alt="Git_remote_webhook" height="720" width="1195" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Copiez l'URL du webhook, ajoutez-la à votre répertoire distant et configurez-la pour être utilisée en cas de poussée de fichiers vers le répertoire. Ainsi, chaque fois qu'un fichier est poussé vers le dépôt distant, Plesk est notifié de cet événement et récupère automatiquement les fichiers sans que vous n'ayez à cliquer sur <strong class="specialbold">Récupérer les derniers changements</strong>. Si un déploiement automatique est configuré pour un répertoire, les fichiers récupérés sont immédiatement déployés sur le site Web.</p>
+<p class="note"><strong class="buttons">Remarque </strong>: si Plesk est protégé par un certificat auto-signé, le webhook risque de ne pas fonctionner s'il est appelé via le protocole HTTPS à cause de problèmes d'instabilité SSL/TLS. Si tel est le cas, indiquez plutôt le protocole HTTP dans l'URL du webhook.</p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76299"></a><h3 class="heading3">Autoriser d'autres actions de déploiement</h3>
+<p class="bodytext">Bien souvent, la publication de fichiers ne suffit pas pour finaliser le déploiement d'un site Web. Par exemple, si vous utilisez un framework comme Ruby on Rails, il peut vous être nécessaire de procéder à la tâche de migration des données après déploiement avec une commande du type :&nbsp;<code class="monospace">bin/rails db:migrate</code>. </p>
+<p class="bodytext">Plesk vous permet de définir plusieurs commandes supplémentaires qui seront exécutées à chaque déploiement de fichiers sur le site Web.</p>
+<p class="bodytext">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong>, sélectionnez <strong class="specialbold">Activer des actions de déploiement supplémentaires</strong> et indiquez les commandes de shell à exécuter à chaque déploiement du contenu de ce répertoire. Chaque commande doit être saisie sur une nouvelle ligne.</p>
+<p class="widegraphic"><img src="76929.gif" alt="Git_remote_actions" height="299" width="1163" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="note"><strong class="buttons">Remarque </strong>: sous Linux, si l'accès SSH est interdit pour les utilisateurs système du domaine, toutes les commandes indiquées sont exécutées dans un environnement chrooté. Le répertoire principal de l'utilisateur système d'un abonnement est traité comme la racine du système de fichiers de cet abonnement. Aucun fichier exécutable hors de la jail chroot ne peut être exécuté. Par exemple, si le chemin vers votre site est <code class="monospace">/var/www/vhosts/exemple.com/httpdocs</code>, alors, dans un environnement chrooté, le chemin est <code class="monospace">./httpdocs</code>, ainsi, vous ne pourrez pas exécuter les commandes au-delà de la limite d'un niveau au-dessus du répertoire <code class="monospace">/httpdocs</code>.</p>
+<p class="bodytext"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76300"></a><h3 class="heading3">Voir les logs de commit</h3>
+<p class="bodytext">Pour voir l'ensemble de l'historique de commit de la branche active, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong> et cliquez sur le lien <strong class="specialbold">Logs de commit</strong>. Les informations suivantes sont disponibles pour chaque commit : heure, identifiant unique, nom d'utilisateur et message de commit. Cliquez sur <strong class="specialbold">Actualiser</strong> pour mettre à jour le log du commit.</p>
+<p class="widegraphic"><img src="76930.gif" alt="Git_remote_commit_log" height="413" width="1227" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous pouvez filtrer les logs de commit selon tout paramètre. Par exemple, vous pouvez regrouper tous les commits effectués par un certain utilisateur à partir d'une certaine date. Cliquez sur l'icône <img src="76269.png" alt="Git_Commit_Logs_search_Buttom" height="29" width="30" vspace="0" hspace="0" align="bottom" border="0"> et entrez les paramètres de recherche, puis cliquez sur <strong class="specialbold">Rechercher</strong>.</p>
+<p class="widegraphic"><img src="76931.gif" alt="Git_remote_commit_log_filter" height="387" width="1228" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76302"></a><h3 class="heading3">Renommer ou supprimer un dépôt</h3>
+<p class="bodytext">Vous pouvez renommer votre dépôt à tout moment. Par exemple, une fois le développement fini, vous souhaiterez peut-être appeler le dépôt <strong class="specialbold">siteweb-dev</strong> <strong class="specialbold">siteweb</strong> pour éviter toute confusion. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong> et entrez le nouveau nom dans le champ <strong class="specialbold">Nom du dépôt</strong>.</p>
+<p class="bodytext">Pour supprimer le dépôt, cliquez sur le lien <strong class="specialbold">Supprimer le dépôt</strong> sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; Git. Dans ce cas, Plesk ne supprime que le dépôt. Le dépôt cible avec les données publiées reste intact. </p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '75848.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

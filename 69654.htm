@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Publication Web avec Web Deploy (Windows) </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65282.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="75824.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031194.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031194.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Publication Web avec Web Deploy (Windows)</h3>
+<p class="bodytext"><em class="emphasis">Web Deploy</em> (Outil de déploiement Web) est un outil Microsoft qui simplifie largement la migration, la gestion et le déploiement de vos sites Web et applications Web. Pour être plus précis, vous pouvez écrire un code dans votre environnement local, par exemple, dans <em class="emphasis">Visual Studio&reg;</em> (IDE) ou <em class="emphasis">WebMatrix&reg;</em> (outil de développement), puis publier régulièrement les mises à jour vers votre serveur de production à l'aide de Web Deploy. </p>
+<h5 class="heading5">Différences entre Visual Studio&reg; et WebMatrix&reg;</h5>
+<p class="bodytext">Si vous recherchez un environnement qui vous permet de publier sans problème les mises à jour de codes vers votre compte, vous aurez certainement le choix entre Visual Studio&reg; et WebMatrix&reg;. </p>
+<ul class="listbullet"><li class="listbullet">Visual Studio&reg; est un environnement de développement intégré (IDE) classique pour écrire des sites et applications .NET de toutes tailles. Il inclut toute une gamme de plug-ins qui étendent ses fonctions de base. Cependant, pour exécuter et déboguer vos applications dans Visual Studio&reg;, vous devez procéder à des configurations supplémentaires (comme préparer une base de données et ajuster les paramètres d'environnement). Ainsi, cet outil convient plus aux utilisateurs avancés.</li><li class="listbullet">Avec WebMatrix&reg;, vous avez un jeu intégré de templates d'applications et d'applications de productivité (WordPress, Joomla) prêtes à l'emploi. Si vous souhaitez ajouter instantanément une application dans votre compte client ou l'exécuter, vous devez tout simplement sélectionner l'application à partir de la liste et WebMatrix&reg; la configurera de manière transparente. De plus, vous pouvez rechercher et vous abonner directement à un pack d'hébergement pour votre projet sans avoir à quitter WebMatrix&reg;. Pour résumer, cet outil correspond même à des utilisateurs novices et favorise un développement rapide en fournissant des templates et applications dont vous pouvez vous servir directement. Pour en savoir plus sur l'installation et l'utilisation de WebMatrix&reg;, consultez la page <a class="externalhyperlinktemplate" title="" href="http://www.microsoft.com/web/webmatrix/" target="_blank">http://www.microsoft.com/web/webmatrix/</a> (en anglais).</li></ul><p class="bodytext">C'est à vous de décider ce qui convient le mieux à votre projet.</p>
+<h5 class="heading5">Configuration de la publication Web dans Visual Studio&reg; et WebMatrix&reg;</h5>
+<p class="bodytext">Pour configurer la publication Web dans votre environnement, vous devez ouvrir les paramètres de publication et indiquer l'adresse IP de votre compte client ainsi que le nom d'utilisateur et le mot de passe que vous utilisez pour vous connecter au Panneau Client.</p>
+<p class="bodytext">Dans WebMatrix&reg;, vous pouvez trouver les paramètres de publication dans <strong class="specialbold">Accueil</strong> &gt; <strong class="specialbold">Publier</strong>. Vous pouvez indiquer ces paramètres manuellement ou en tant que fichier XML généré automatiquement par Plesk. Pour télécharger le fichier pour un site Web spécifique, cliquez sur le lien <strong class="specialbold">Télécharger</strong> sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="placeholder">&lt;nom_domaine&gt;</strong> &gt; <strong class="specialbold">Paramètres de publication de Web Deploy</strong>. Les paramètres sont disponibles uniquement si Web Deploy est installé sur le serveur Plesk et s'il est en cours d'exécution. Si vous ne voyez pas ces paramètres, contactez votre hébergeur.</p>
+<p class="bodytext">Pour en savoir plus sur les paramètres de publication dans Visual Studio&reg;, consultez la page <a class="externalhyperlinktemplate" title="" href="http://msdn.microsoft.com/fr-fr/library/dd394698(v=vs.110).aspx" target="_blank">http://msdn.microsoft.com/fr-fr/library/dd394698110.aspx</a>.</p>
+<p class="note"><strong class="buttons">Remarque </strong>: vous pouvez décider librement si vous voulez transférer les mises à jour en toute sécurité vers votre compte client en cochant l'option correspondante dans les paramètres de publication. Si votre hébergeur n'a pas de certificat SSL/TLS valide, vous recevrez un message d'erreur lorsque vous essaierez de publier. Pour résoudre le problème, contactez votre hébergeur pour être aidé ou évitez d'utiliser la connexion sécurisée.</p>
+<h5 class="heading5">Protéger les paramètres de publication de WebMatrix&reg;</h5>
+<p class="bodytext">Un fichier XML contenant les paramètres de publication de WebMatrix&reg; peut inclure le mot de passe d'un compte client. Les administrateurs disposent d'une option de configuration de Plesk afin qu'il exclue ces mots de passe des fichiers XML. Si les administrateurs souhaitent renforcer la sécurité du système et empêcher les vols de mots de passe, ils peuvent exclure le mot de passe du fichier XML. Les clients devront alors entrer le mot de passe directement dans WebMatrix&reg;. Cette option est disponible sous l'onglet <strong class="specialbold">Outils &amp; Paramètres</strong> &gt; <strong class="specialbold">Paramètres du serveur</strong>.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '69654.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

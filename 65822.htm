@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Créer des boutons personnalisés </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69329.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="69349.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031127.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031127.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Créer des boutons personnalisés</h2>
+<p class="bodytext">Pour accéder aux ressources Internet depuis l'interface Plesk, vous pouvez créer des boutons personnalisés qui s'afficheront dans <strong class="specialbold">Sites Web &amp; Domaines</strong>. Vous pouvez utiliser cette fonction, par exemple, pour insérer un lien vers le site Web de votre entreprise, vers le HelpDesk ou vers une application Web personnalisée. Lorsque l'utilisateur clique sur le bouton personnalisé, il est redirigé vers l'adresse prédéfinie. Vous pouvez également transmettre d'autres informations comme le nom du contact client, l'ID de l'abonnement ou le nom d'utilisateur et le mot de passe FTP. Vous pouvez réserver les boutons personnalisés à votre usage privé ou les partager avec tous les utilisateurs de vos abonnements.</p>
+<p class="bodytext">Pour ajouter un bouton personnalisé, allez dans <strong class="specialbold">Compte</strong> &gt; <strong class="specialbold">Autres services</strong> et cliquez sur <strong class="specialbold">Ajouter un lien vers le service</strong>. </p>
+<p class="widegraphic"><img src="76833.gif" alt="Add_Link_to_service" height="376" width="1074" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Pour configurer votre bouton personnalisé, renseignez les paramètres suivants :</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Emplacement</strong>. Ce paramètre définit l'emplacement de votre bouton personnalisé. Vous avez quatre possibilités :<ul class="listbullet3"><li class="listbullet3"><strong class="specialbold">Accès commun</strong>. Le bouton personnalisé est affiché dans <strong class="specialbold">Sites Web &amp; Domaines</strong>, section <em class="emphasis">Autres services</em> du volet de navigation à droite :<p class="widegraphic"><img src="76837.gif" alt="Custom_button_additional_services" height="99" width="231" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="listcontinue3">Il est également visible dans la section contenant les liens vers d'autres fonctions de Plesk, comme la gestion des bases de données et sauvegardes :</p>
+<p class="widegraphic"><img src="76836.gif" alt="Custom_button_tools" height="243" width="230" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet3"><strong class="specialbold">Outils du site Web</strong>. Le bouton personnalisé est affiché dans <strong class="specialbold">Sites Web &amp; Domaines</strong> avec les autres paramètres de configuration des sites Web comme les paramètres PHP et DNS :<p class="widegraphic"><img src="76834.gif" alt="Custom_button_website_tools" height="234" width="566" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="listcontinue3">Il est disponible pour tous les domaines et sous-domaines de vos propres abonnements.</p>
+</li><li class="listbullet3"><strong class="specialbold">Page Sites Web &amp; Domaines de l'abonnement</strong>. Le bouton personnalisé est affiché uniquement dans <strong class="specialbold">Sites Web &amp; Domaines</strong>, dans la section du volet de navigation qui contient des liens vers d'autres fonctions de Plesk, comme les bases de données et les sauvegardes :<p class="widegraphic"><img src="76839.gif" alt="Custom_button_tools" height="243" width="230" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet3"><strong class="specialbold">Page d'accueil du client</strong>. Le bouton personnalisé est affiché dans <strong class="specialbold">Sites Web &amp; Domaines</strong>, dans la section <em class="emphasis">Autres services</em> du volet de navigation :<p class="widegraphic"><img src="76838.gif" alt="Custom_button_additional_services" height="99" width="231" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul></li><li class="listbullet2"><strong class="specialbold">Priorité</strong>. Cette valeur définit l'ordre d'affichage des boutons personnalisés. Plus le chiffre est faible, plus le bouton est en haut de la liste (les boutons s'affichent de gauche à droite dans la zone des outils du site Web et de haut en bas dans les autres cas). Le bouton avec la valeur la plus faible s'affiche en premier et celui avec la valeur la plus élevée en dernier. Si vous n'avez qu'un seul bouton personnalisé, ce paramètre n'a aucune incidence sur l'ordre d'affichage. Si les boutons ont des valeurs identiques, ils sont classés par ordre alphabétique.</li><li class="listbullet2"><strong class="specialbold">Image du fond d'écran</strong>. Les images carrées sont les plus adaptées. Pour les boutons placés dans le volet de navigation, nous vous recommandons d'utiliser une image GIF ou JPEG de 16 x 16 pixels. Pour les boutons placés dans la zone des outils du site Web, nous vous recommandons d'utiliser une image GIF ou JPEG de 32 x 32 pixels.</li><li class="listbullet2"><strong class="specialbold">URL</strong>. Saisissez l'URL cible en commençant par <code class="monospace">http://</code> ou <code class="monospace">https://</code>. Cochez les cases voulues ci-après pour inclure dans Plesk des informations sur l'utilisateur ou sur l'abonnement sélectionné actuellement dans l'URL.</li></ul><p class="bodytext"><strong class="specialbold">Ouvrir l'URL dans Plesk</strong>. Cochez cette case si vous voulez que l'URL cible s'ouvre dans la fenêtre active du navigateur. Ne cochez pas cette case si vous voulez que l'URL cible s'ouvre dans une nouvelle fenêtre du navigateur.</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Ne pas utiliser de cadre</strong>. Cochez cette case si vous voulez que l'URL cible s'ouvre et remplace l'interface de Plesk. Ne cochez pas cette case si vous voulez que l'URL cible s'ouvre dans l'interface Plesk.</li><li class="listbullet2"><strong class="specialbold">Visible uniquement pour moi</strong>. Cochez cette case si vous voulez être l'unique utilisateur à voir ce bouton. Ne cochez pas cette case si vous voulez que ce bouton soit visible de tous les utilisateurs de vos abonnements, vous inclus.</li></ul><p class="bodytext">Pour changer les propriétés d'un bouton personnalisé, allez dans <strong class="specialbold">Compte</strong>, puis cliquez sur l'onglet <strong class="specialbold">Autres services</strong>. Ensuite, cliquez sur le nom du bouton à modifier. Pour supprimer des boutons, cochez les cases correspondantes et cliquez sur <strong class="specialbold">Supprimer</strong>.</p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65822.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

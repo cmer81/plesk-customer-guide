@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Gérer des applications Ruby </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="76489.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="76555.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311129.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311129.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Gérer des applications Ruby</h2>
+<h5 class="heading5">Activation de Ruby pour votre site Web</h5>
+<p class="bodytext">Pour activer Ruby pour votre site Web, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Ruby </strong>et cliquez sur <strong class="specialbold">Activer Ruby</strong>.</p>
+<p class="widegraphic"><img src="76933.gif" alt="Ruby_enable" height="336" width="699" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">L'interpréteur Ruby de la version sélectionnée est activé pour votre site Web et le numéro de version s'affiche sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong> en regard de l'icône <strong class="specialbold">Ruby</strong>.</p>
+<p class="widegraphic"><img src="76934.gif" alt="Ruby_enabled" height="441" width="943" vspace="0" hspace="0" align="bottom" border="0"></p>
+<h5 class="heading5">Déploiement d'une application Ruby</h5>
+<p class="bodytext">Chargez les fichiers de votre application (par exemple à l'aide du <strong class="specialbold"><a id="h76508" class="jumptemplate" title="Envoyer du contenu avec le Gestionnaire de fichiers" href="74105.htm" target="_self">gestionnaire de fichiers</a></strong>) comme suit :</p>
+<ol class="listnumber"><li class="listnumber">Créez un sous-répertoire nommé&nbsp;<code class="monospace">/&lt;nom de l'application&gt;/public </code>dans le répertoire principal de votre site Web, où <code class="monospace">&lt;nom de l'application&gt;</code> est le nom de votre application Ruby.</li><li class="listnumber">Chargez les fichiers de l'application (y compris le fichier <code class="monospace">config.ru</code>) dans le répertoire <code class="monospace">/&lt;nom de l'application&gt;</code>.</li><li class="listnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>, cliquez sur <strong class="specialbold">Paramètres d'hébergement</strong> et définissez la valeur <strong class="specialbold">Racine du document</strong> sur <code class="monospace">/&lt;nom de l'application&gt;/public</code>.</li></ol><p class="bodytext">Ensuite, allez sous <strong class="specialbold">Sites Web &amp; Domaines </strong>&gt; <strong class="specialbold">Ruby</strong>. Si Ruby est activé, Plesk&nbsp;détecte votre application et la page <strong class="specialbold">Ruby </strong>affiche des informations à son sujet.</p>
+<p class="widegraphic"><img src="76935.gif" alt="Ruby_application" height="328" width="1145" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Les informations suivantes sont affichées :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Version de Ruby</strong>. Il s'agit de la version de Ruby activée pour votre domaine. Vous pouvez la modifier en cliquant sur le numéro de version et en sélectionnant celle voulue parmi les versions proposées de Ruby.</li><li class="listbullet"><strong class="specialbold">Mode d'application</strong>. Les applications Ruby peuvent s'exécuter en différents modes définis dans le code de l'application. Généralement, les modes suivants sont utilisés : &quot;développement&quot;, &quot;test&quot; et &quot;production&quot;. Chacun inclut des spécificités. Par exemple, le mode &quot;développement&quot; produit des informations de débogage dans les fichiers de log et le mode &quot;production&quot; peut activer la mise en cache. Cliquez sur la valeur active du <strong class="specialbold">Mode d'application</strong> pour sélectionner un autre mode ou définir un mode personnalisé.<p class="widegraphic"><img src="76498.png" alt="Application_mode" height="208" width="537" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet"><strong class="specialbold">URL de l'application</strong>. Il s'agit de l'URL du site Web où s'exécute l'application. Cliquez sur l'URL pour ouvrir le site Web.</li><li class="listbullet"><strong class="specialbold">Root d'application</strong>. Il s'agit du répertoire principal de l'application. Cliquez sur le lien pour voir le répertoire dans le gestionnaire de fichiers.</li><li class="listbullet"><strong class="specialbold">Variables d'environnement personnalisées</strong>. Ici vous pouvez définir la liste des variables d'environnement personnalisées pour votre application. Cela peut par exemple permettre d'activer le mode de débogage ou de stocker un mot dans une variable au lieu de le coder en dur Cliquez sur le lien <strong class="specialbold">[préciser]</strong> pour ajouter ou supprimer des variables.<p class="widegraphic"><img src="76500.png" alt="Custom_variables" height="216" width="1059" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet"><strong class="specialbold">Type d'app Ruby</strong>. Plesk détecte automatiquement si l'application a été développée avec le framework Ruby on Rails, auquel cas elle sera de type <strong class="specialbold">Ruby on Rails</strong>. Sinon, c'est le type d'<strong class="specialbold">application Rake </strong>qui est affiché.</li></ul><p class="bodytext">Une application peut inclure une liste <strong class="specialbold">Gemfile </strong>des Gems et de leurs versions requises par l'application. Auquel cas, pour le déploiement de l'application, vous devez installer ces Gems avec l'utilitaire Bundler. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>, cliquez sur&nbsp;<strong class="specialbold">Ruby</strong>&nbsp;et sur <strong class="specialbold">Installation groupée</strong>. </p>
+<p class="widegraphic"><img src="76501.png" alt="Bundle install-1" height="174" width="603" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Tous les Gems sont alors installés dans le répertoire <code class="monospace">vendor/bundle</code> dans la structure de l'application.</p>
+<p class="widegraphic"><img src="76502.png" alt="Bundle install-2" height="203" width="602" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Une fois que la boîte de dialogue d'avancement a confirmé la réussite de l'installation, l'application est déployée sur votre site Web, puis redémarrée.</p>
+<p class="bodytext">Si votre application requiert une base de données, ajoutez-la dans Plesk (voir<strong class="specialbold"> Bases de données de site Web</strong>).</p>
+<p class="note"><strong class="buttons">Remarque </strong>: si vous devez exécuter des tâches Rake avec votre application via l'interface de ligne de commande et si vous souhaitez utiliser la même version de Ruby et les mêmes Gems que pour votre application, utilisez la commande <code class="monospace">bundle</code>. Par exemple :<code class="monospace"> RAILS_ENV=production bundle exec rake db:migrate</code>.</p>
+<h5 class="heading5">Redémarrage de l'application</h5>
+<p class="bodytext">Parfois, il peut être nécessaire de redémarrer l'application, par exemple si elle s'exécute en mode Production et si une nouvelle version du code a été déployée. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>, cliquez sur&nbsp;<strong class="specialbold">Ruby</strong>, puis sur <strong class="specialbold">Redémarrer l'app</strong>. Autre solution, cliquez sur le bouton <strong class="specialbold">Redémarrer l'app</strong> en regard du nom de l'application sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong>. </p>
+<p class="widegraphic"><img src="76936.png" alt="Ruby_restart" height="206" width="637" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">L'application doit être redémarrées si vous en avez modifié les fichiers de configuration, le code, ou ajouté ou supprimé des variables d'environnement personnalisées.</p>
+<h5 class="heading5">Accès aux fichiers de configuration</h5>
+<p class="bodytext">Plesk vous propose des liens rapides vers les fichiers de configuration les plus utilisés de l'application. Vous pouvez modifier ces fichiers pour définir des paramètres personnalisés. Vous pouvez en particulier modifier le fichier Gemfile qui liste les Gems requis par l'application.</p>
+<p class="bodytext">Pour voir les fichiers de configuration de l'application détectés par Plesk, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur&nbsp;<strong class="specialbold">Ruby</strong>.</p>
+<p class="widegraphic"><img src="76937.gif" alt="Ruby_conf_files" height="314" width="1143" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Cliquez sur le nom d'un fichier pour en modifier le contenu, faites les modifications voulues et cliquez sur <strong class="specialbold">OK</strong>.</p>
+<p class="widegraphic"><img src="76938.gif" alt="Ruby_conf_file_edit" height="777" width="1133" vspace="0" hspace="0" align="bottom" border="0"></p>
+<h5 class="heading5">Désactivation de Ruby</h5>
+<p class="bodytext">Pour désactiver Ruby pour votre domaine, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>, cliquez sur&nbsp;<strong class="specialbold">Ruby</strong>, puis sur&nbsp;<strong class="specialbold">Désactiver Ruby</strong>.</p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '76554.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Configurer les pages d'erreur personnalisées sur les serveurs Windows </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65246.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65653.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031196.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031196.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Configurer les pages d'erreur personnalisées sur les serveurs Windows</h4>
+<p class="procedureheading">Pour configurer le serveur Web pour afficher les pages d'erreur personnalisées pour un site ou un répertoire dans un site : </p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Activez la prise en charge des documents d'erreur personnalisés. <ol class="procedurelistnumber2"><li class="procedurelistnumber2">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur le bouton <strong class="specialbold">Paramètres d'hébergement</strong> à côté du nom de domaine dont vous avez besoin. </li><li class="procedurelistnumber2">Cochez la case <strong class="specialbold">Documents d'erreur personnalisés</strong>.</li><li class="procedurelistnumber2">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol></li><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine dont vous avez besoin.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Répertoires virtuels</strong> pour voir la liste des documents d'erreur pour le répertoire Web root. Les documents d'erreur situés ici sont utilisés pour toutes les pages Web du site sélectionné. Si vous voulez personnaliser les pages d'erreur d'un répertoire virtuel spécifique donné, parcourez ce répertoire.</li><li class="procedurelistnumber">Cliquez sur l'onglet <strong class="specialbold">Documents d'erreur</strong>, puis cliquez dans la liste sur le document d'erreurs concerné.<ul class="listbullet2"><li class="listbullet2">Pour utiliser le document par défaut fourni par IIS pour cette page d'erreur, sélectionnez <strong class="specialbold">Par défaut</strong> dans le menu <strong class="specialbold">Type</strong>.</li><li class="listbullet2">Pour utiliser un document HTML personnalisé qui se trouve déjà dans le répertoire <code class="monospace">error_docs</code> dans le répertoire hôte virtuel du domaine, sélectionnez <strong class="specialbold">Fichier</strong> dans le menu <strong class="specialbold">Type</strong>, puis entrez le nom du fichier dans le champ <strong class="specialbold">Emplacement</strong>. </li><li class="listbullet2">Pour utiliser un document HTML personnalisé qui se trouve dans un autre répertoire que le répertoire <code class="monospace">error_docs</code> d'un domaine, sélectionnez l'<strong class="specialbold">URL</strong> dans le menu <strong class="specialbold">Type</strong>, puis saisissez le chemin d'accès à votre document dans le champ <strong class="specialbold">Emplacement</strong>. Le chemin d'accès doit être constitué de &quot;http://&lt;votre nom de domaine&gt;&quot; et du chemin d'accès vers le root de l'hôte virtuel (soit <code class="monospace">&lt;vhosts&gt;\&lt;domain&gt;\httpdocs</code>).<p class="listcontinue2">Exemple : votre nom de domaine est <em class="emphasis">exemple.com</em>. Vous avez créé un fichier appelé <code class="monospace">forbidden_403_1.html</code> et vous l'avez enregistré dans le répertoire <code class="monospace">httpdocs\my_errors</code>. Pour utiliser ce fichier en tant que document d'erreur, vous devez saisir l'URL dans le champ <strong class="specialbold">Emplacement</strong> : <code class="monospace">http://example.com/my_errors/forbidden_403_1.html</code>.</p>
+<p class="listnote"><strong class="buttons">Remarque :</strong> pour des raisons de sécurité, vous ne pouvez pas utiliser de connexion via FTP ou via Gestionnaire de fichiers dans Plesk pour envoyer votre document d'erreurs personnalisé sur le serveur. Utilisez une connexion RDP si ce droit vous a été accordé. Sinon, contactez votre hébergeur pour obtenir de l'aide.</p>
+</li></ul></li><li class="procedurelistnumber">Après s'être réinitialisé, le serveur Web utilisera désormais vos documents d'erreur personnalisés.</li></ol><p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65652.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

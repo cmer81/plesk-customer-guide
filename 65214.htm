@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Créer des répertoires virtuels </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65213.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65219.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311101.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311101.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Créer des répertoires virtuels</h4>
+<p class="procedureheading">Pour créer un répertoire virtuel dans un site Web :    </p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine de votre site.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Répertoires virtuels</strong>. Vous êtes maintenant à la racine de votre site Web.</li><li class="procedurelistnumber">Allez jusqu'au répertoire dans lequel vous voulez créer un répertoire virtuel.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Créer un répertoire virtuel</strong>.<p class="widegraphic"><img src="76899.gif" alt="Virtual_Directories" height="711" width="1206" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="listnote"><strong class="buttons">Remarque :</strong> pour créer un répertoire physique au lieu d'un répertoire virtuel, cliquez sur <strong class="specialbold">Créer un répertoire</strong>, entrez le nom du répertoire puis cliquez sur <strong class="specialbold">OK</strong>.</p>
+</li><li class="procedurelistnumber">Spécifiez les paramètres requis :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Nom</strong> : donne le nom du répertoire virtuel.</li><li class="listbullet2"><strong class="specialbold">Chemin</strong> : donne le chemin d'accès du répertoire virtuel.<ul class="listbullet3"><li class="listbullet3">Cochez la case <strong class="specialbold">Créer un répertoire physique du même nom que le répertoire virtuel</strong> si vous voulez que le système crée automatiquement un répertoire physique du même nom que le répertoire virtuel.</li><li class="listbullet3">Décochez la case <strong class="specialbold">Créer un répertoire physique du même nom que le répertoire virtuel</strong>. Dans le champ prévu à cet effet, donnez le chemin d'accès permettant de sélectionner un répertoire physique déjà existant.</li></ul></li><li class="listbullet2"><strong class="specialbold">Accès aux sources du script</strong> : cochez cette case pour autoriser les utilisateurs à accéder au code source si les droits de lecture ou d'écriture sont accordés. Le code source insère des scripts dans les applications ASP.</li><li class="listbullet2"><strong class="specialbold">Droit de lecture</strong> : cochez cette case pour donner aux utilisateurs le droit de lecture sur des fichiers ou des répertoires avec les propriétés associées.</li><li class="listbullet2"><strong class="specialbold">Droit d'écriture</strong> : cochez cette case pour donner aux utilisateurs le droit d'envoyer des fichiers avec les propriétés associées dans le répertoire virtuel ou de modifier le contenu d'un fichier sur lequel le droit d'écriture est activé. L'accès en écriture n'est autorisé que si le navigateur prend en charge la fonction PUT du protocole HTTP 1.1.</li><li class="listbullet2"><strong class="specialbold">Droits de navigation dans le répertoire</strong> : cochez cette case pour donner aux utilisateurs le droit de consulter la liste des liens hypertextes des fichiers et sous-répertoires existants dans le répertoire virtuel. </li><li class="listbullet2"><strong class="specialbold">Consigner les visites dans des logs</strong> : cochez cette case si vous voulez conserver les informations sur les visites dans le répertoire virtuel.</li><li class="listbullet2"><strong class="specialbold">Créer une application</strong> : cochez cette case pour transformer le répertoire Web en application IIS. Le répertoire devient alors logiquement indépendant du reste du site Web.</li><li class="listbullet2"><strong class="specialbold">Droits d'exécution</strong> : sélectionnez le niveau d'exécution du programme approprié pour le répertoire virtuel.<ul class="listbullet3"><li class="listbullet3"><strong class="specialbold">Aucun</strong> : permet d'accéder aux fichiers statiques uniquement, comme les fichiers HTML ou les fichiers images.</li><li class="listbullet3"><strong class="specialbold">Scripts uniquement</strong> : permet d'exécuter des scripts mais pas des exécutables.</li><li class="listbullet3"><strong class="specialbold">Scripts et exécutables</strong> : supprime toutes les restrictions pour que tous les types de fichiers puissent être exécutés.</li></ul></li><li class="listbullet2"><strong class="specialbold">Paramètres ASP</strong> : paramètres spécifiques définis pour les applications Web basées sur ASP.<ul class="listbullet3"><li class="listbullet3">Si vous utilisez des applications ASP qui ne peuvent pas fonctionner correctement avec les restrictions de transfert de données actuellement définies par IIS, décochez la case <strong class="specialbold">Défini par le répertoire parent </strong>correspondant au champ que vous voulez changer et entrez le nombre requis.</li><li class="listbullet3">Si vous voulez activer le débogage des applications ASP côté serveur, décochez la case <strong class="specialbold">Défini par le répertoire parent</strong> correspondante puis cochez la case <strong class="specialbold">Activer le débogage du script ASP côté serveur</strong>. </li><li class="listbullet3">Si vous voulez activer le débogage des applications ASP côté client, décochez la case <strong class="specialbold">Défini par le répertoire parent</strong> correspondante puis cochez la case <strong class="specialbold">Activer le débogage du script ASP côté client</strong>. </li></ul><p class="listcontinue2">Remarque : si vous essayez de changer les paramètres ASP du répertoire virtuel root, les noms des cases par défaut seront <strong class="specialbold">Défini par IIS</strong> au lieu de <strong class="specialbold">Défini par le répertoire parent</strong>.</p>
+</li></ul></li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="procedureheading">Pour supprimer un répertoire virtuel d'un site Web :    </p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine de votre site.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Répertoires virtuels</strong>.</li><li class="procedurelistnumber">Cochez la case correspondant au répertoire que vous voulez supprimer.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Supprimer</strong>.</li><li class="procedurelistnumber">Confirmez la suppression puis cliquez sur <strong class="specialbold">OK</strong>.</li></ol>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65214.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prise en charge Ruby </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="75848.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="76554.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h1 class="heading1">Prise en charge Ruby</h1>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/vQqbYI_NjHA?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Plesk pour Linux vous offre la possibilité de déployer des applications Web Ruby sur vos sites Web. Plesk prend en charge toutes les applications Web Ruby qui utilisent l'interface Rack (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="http://rack.github.io/" target="_blank">http://rack.github.io/</a></strong>), y compris les applications Web développées dans les frameworks Ruby les plus populaires, comme Ruby on Rails (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="http://rubyonrails.org/" target="_blank">http://rubyonrails.org/</a></strong>) ou Sinatra (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="http://www.sinatrarb.com/" target="_blank">http://www.sinatrarb.com/</a></strong>).</p>
+<p class="bodytext">Lorsque vous chargez une application Ruby dans le répertoire de votre domaine et activez la prise en charge Ruby sur le domaine, Plesk détecte et enregistre l'application. Vous pouvez alors installer tous les <em class="emphasis">Gems</em> (packs de code Ruby) nécessaires avec <em class="emphasis">Bundler </em>(utilitaire de suivi et d'installation des versions spécifiques des Gems requis par l'application ; plus d'infos sur <strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="http://bundler.io/" target="_blank">http://bundler.io/</a></strong>), ajouter des variables d'environnement, modifier les fichiers de configuration et redémarrer l'application. Pour plus d'informations, consultez la section <strong class="specialbold"><a id="h76556" class="jumptemplate" title="Gérer des applications Ruby" href="76554.htm" target="_self">Gérer des applications Ruby</a></strong>.</p>
+<p class="bodytext">En outre, vous pouvez <strong class="specialbold"> <a id="h76557" class="jumptemplate" title="Gérer les versions de Ruby via l'interface de ligne de commande" href="76555.htm" target="_self">gérer les versions de Ruby par l'interface de ligne de commande</a></strong> et <strong class="specialbold"><a id="h76558" class="jumptemplate" title="Exécuter des tâches Rake" href="76553.htm" target="_self">exécuter des tâches Rake</a></strong>.</p>
+<p class="bodytext">Pour bénéficier de cette fonctionnalité, assurez-vous que les conditions suivantes sont remplies :</p>
+<ol class="listnumber"><li class="listnumber">L&#8217;extension <strong class="specialbold">Ruby </strong>doit être installée dans Plesk. L&#8217;extension installe automatiquement deux composants : <strong class="specialbold">Prise en charge Ruby </strong>et <strong class="specialbold">Serveur Phusion Passenger</strong>. Phusion Passenger est un serveur d'applications qui vous permet de charger une application et de servir les requêtes aussi rapidement que possible. Il est installé en tant que module Apache ou du serveur Web Nginx. Vous trouverez plus d'informations sur (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="https://en.wikipedia.org/wiki/Phusion_Passenger" target="_blank">https://en.wikipedia.org/wiki/Phusion_Passenger</a></strong>).</li><li class="listnumber">L'icône&nbsp;applications Ruby complexes (par exemple, celles basées sur le framework Ruby on Rails) exigent souvent une procédure de compilation pendant l'installation de Gems. Pour installer simplement ce type de Gems, le composant <strong class="specialbold">Tools required for building Ruby gems (Outils requis pour la création de Gems Ruby)</strong> doit être installé (pour en savoir plus, consultez <strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="/current/redirect.html?book=administrator-guide&page=74719.htm" target="_blank">Ajouter et supprimer des composants Plesk</a></strong>). Ce composant fournit les bibliothèques de développement requises pour la compilation des Gems Ruby les plus populaires, permettant à Bundler de bien installer les Gems.</li><li class="listnumber">Un domaine doit disposer d'un abonnement incluant le droit de <strong class="specialbold">gestion de la prise en charge Ruby</strong>.<p class="widegraphic"></p>
+</li></ol><table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans ce chapitre :</p><p class="relateditem"><a href="76554.htm" target="_self">Gérer des applications Ruby</a></p><p class="relateditem"><a href="76555.htm" target="_self">Gérer les versions de Ruby via l'interface de ligne de commande</a></p><p class="relateditem"><a href="76553.htm" target="_self">Exécuter des tâches Rake</a></p></td>
+</tr>
+</table>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '76489.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

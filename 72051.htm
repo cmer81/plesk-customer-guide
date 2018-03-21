@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Types d'hébergements </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="72050.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="72339.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031153.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031153.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Types d'hébergements</h4>
+<p class="bodytext">Le type d'hébergement définit le &quot;comportement&quot; du site Web. Plesk prend en charge ces trois types d'hébergements : <strong class="specialbold">Hébergement du site Web</strong>, <strong class="specialbold">Redirection</strong> et <strong class="specialbold">Aucun hébergement Web</strong>.</p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="72051.htm#o72052" target="_self">Hébergement du site Web</a></p><p class="relateditem"><a href="72051.htm#o72053" target="_self">Redirection</a></p><p class="relateditem"><a href="72051.htm#o72054" target="_self">Domaines avec Aucun hébergement Web</a></p></td>
+</tr>
+</table>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o72052"></a><h5 class="heading5">Hébergement du site Web </h5>
+<p class="bodytext">L'hébergement du <strong class="specialbold">site Web</strong> signifie qu'un site Web est physiquement localisé sur le serveur.</p>
+<p class="bodytext">Vous pouvez définir les paramètres suivants pour ce type d'hébergement :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Racine du document ou Document root</strong>. L'emplacement du répertoire dans lequel tous les fichiers et sous-répertoires du site seront gardés. Vous pouvez utiliser le répertoire par défaut appelé <code class="monospace">httpdocs</code> ou en indiquer un autre. </li><li class="listbullet"><strong class="specialbold">Domaine préféré</strong>. Généralement, tous les sites Web sont accessibles depuis deux URL : avec le préfixe www. (comme <code class="monospace">www.exemple.com)</code> et sans ce préfixe (comme <code class="monospace">exemple.com</code>). Nous vous recommandons de toujours rediriger les visiteurs vers l'une de ces URL (en général, la version sans www.). Par exemple, lorsque vous avez défini le domaine sur la version sans www. (<code class="monospace">exemple.com</code>), les visiteurs sont redirigés vers cette URL même s'ils saisissent <code class="monospace">www.exemple.com</code> dans leur navigateur.<p class="listcontinue"><br>Plesk utilise la redirection permanente du moteur de recherche HTTP 301 pour ce type de redirection, ce qui signifie que le référencement du moteur de recherche est conservé (domaine préféré). Si vous choisissez <strong class="specialbold">Aucun</strong> pour désactiver la redirection, les moteurs de recherche traiteront les deux versions de l'URL (avec et sans www) en tant qu'URL pour ces différents sites. Par conséquent, le référencement sera partagé entre les deux URL. </p>
+</li></ul>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o72053"></a><h5 class="heading5">Redirection </h5>
+<p class="bodytext">Vous pouvez faire pointer un ou plusieurs noms de domaines vers le même site Web physique à l'aide de la redirection de noms de domaines. Cela permet de rediriger automatiquement les visiteurs depuis l'URL qu'ils saisissent dans leur navigateur vers un site avec une URL différente. Par exemple, les visiteurs du site <code class="monospace">www.exemple.com</code> peuvent être redirigés vers le site <code class="monospace">www.somedomain.tld</code>. Il existe deux types de redirections dans Plesk : la Redirection par cadre et la Redirection standard.</p>
+<h5 class="heading5">Redirection standard</h5>
+<p class="bodytext">Avec la <strong class="specialbold">Redirection standard</strong>, les utilisateurs qui ont été redirigés depuis une autre URL peuvent voir l'URL de destination dans la barre d'adresse du navigateur.</p>
+<p class="bodytext">Vous pouvez choisir le type de redirection en fonction de la durée pendant laquelle vous comptez l'utiliser : Déplacé de façon permanente (code 301) ou Déplacé de façon temporaire (code 302). Ces codes correspondent aux codes de réponses que Plesk envoie aux navigateurs pour effectuer la redirection. Du point de vue du visiteur, le code de réponse utilisé n'a pas d'importance : dans les deux cas, il sera redirigé vers une URL de destination. Au niveau des moteurs de recherche, ce code définit comment le site redirigé doit être traité. Par ailleurs, le code affecte le référencement du site par le moteur de recherche.</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Déplacé de façon permanente (code 301)</strong>.<p class="listcontinue">Utilisez ce type de redirection si vous déplacez de façon permanente votre site et voulez en préserver le référencement par le moteur de recherche.<br>Par exemple : si <code class="monospace">exemple1.com</code> a été déplacé de façon permanente vers le domaine <code class="monospace">exemple2.com</code>, le référencement n'est pas partagé entre <code class="monospace">exemple1.com</code> et <code class="monospace">exemple2.com</code> : il sera considéré comme un site Web unique par les robots d'indexation (dits crawlers).</p>
+</li><li class="listbullet"><strong class="specialbold">Déplacé de façon temporaire (code 302)</strong>.<p class="listcontinue">Si votre domaine de destination est utilisé de façon temporaire, appliquez ce type de redirection. De cette manière, vous pouvez tester une nouvelle version de votre site Web avec des visiteurs réels tout en conservant l'ancienne version. Si vous définissez la redirection pour un domaine de destination créé récemment, ce domaine ne sera pas indexé par les moteurs de recherche.</p>
+</li></ul><h5 class="heading5">Redirection par cadre </h5>
+<p class="bodytext">Avec la <strong class="specialbold">Redirection par cadre</strong>, lorsque les visiteurs sont redirigés vers un autre site, la barre d'adresse de leur navigateur continue d'afficher l'URL source. C'est pourquoi les visiteurs ne savent pas qu'ils sont redirigés. Ce type de redirection s'appelle &quot;Redirection par cadre&quot;, car la page d'index du site source contient un cadre avec le site de destination.</p>
+<p class="bodytext">&nbsp;</p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o72054"></a><h5 class="heading5">Domaines avec Aucun hébergement Web </h5>
+<p class="bodytext">Vous pouvez désactiver le service Web et utiliser uniquement les services de messagerie sous ce domaine (dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; nom de domaine &gt; <strong class="specialbold">Paramètres d'hébergement</strong> &gt; lien <strong class="specialbold">Modifier</strong> à côté de <strong class="specialbold">Type d'hébergement</strong> &gt; option <strong class="specialbold">Aucun Hébergement Web</strong>).</p>
+<p class="bodytext">&nbsp;</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '72051.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

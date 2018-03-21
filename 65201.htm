@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Envoyer, télécharger et supprimer des fichiers de sauvegarde </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65205.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65206.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311213.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311213.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Envoyer, télécharger et supprimer des fichiers de sauvegarde</h2>
+<p class="bodytext">Vous pouvez télécharger sur votre ordinateur les fichiers de sauvegarde que vous créez dans Plesk. La redondance qui en résulte peut vous donner une certaine tranquillité d&#8217;esprit, ou vous pouvez réduire le volume d&#8217;espace disque que vous utilisez en supprimant dans Plesk les sauvegardes que vous avez sauvegardées localement. Vous pouvez envoyer dans Plesk les fichiers de sauvegarde de votre ordinateur à n&#8217;importe quel moment.</p>
+<h5 class="heading5">Télécharger des fichiers de sauvegarde à partir de Plesk</h5>
+<p class="bodytext">Pour télécharger un fichier de sauvegarde de Plesk, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Gestionnaire de sauvegardes</strong>, cliquez sur la sauvegarde que vous souhaitez télécharger, puis cliquez sur <strong class="specialbold">Télécharger</strong>.</p>
+<p class="bodytext"><img src="78384.png" alt="" height="191" width="421" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Avant le téléchargement du fichier, Plesk vous invite à protéger la sauvegarde avec un mot de passe. Cela chiffre les mots de passe enregistrés dans la base de données Plesk. De cette façon, même si le fichier de sauvegarde tombe dans les mains d&#8217;un tiers, il sera impossible d&#8217;obtenir les mots de passe enregistrés à l&#8217;intérieur, car restaurer un fichier protégé par un mot de passe sans fournir le bon mot de passe a pour résultat que tous les mots de passe sont générés de façon aléatoire. Si vous ne souhaitez pas protéger votre sauvegarde par un mot de passe, décochez la case <strong class="specialbold">Utiliser la protection par mot de passe</strong>.</p>
+<p class="bodytext">Pour terminer l&#8217;opération, cliquez sur <strong class="specialbold">OK</strong>. Le fichier de sauvegarde sera téléchargé dans le répertoire &quot;Téléchargements&quot; spécifié dans vos paramètres de navigateur.</p>
+<h5 class="heading5">Charger les fichiers de sauvegarde dans Plesk</h5>
+<p class="bodytext">Pour envoyer un fichier de sauvegarde dans Plesk, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Gestionnaire de sauvegardes</strong> puis cliquez sur <strong class="specialbold">Envoyer</strong>. Cliquez sur <strong class="specialbold">Choisir le fichier</strong> et naviguez jusqu&#8217;à l&#8217;endroit où le fichier de sauvegarde que vous souhaitez envoyer est enregistré.</p>
+<p class="bodytext">Si la sauvegarde a été protégée par un mot de passe quand elle a été téléchargée, vous devez taper ce dernier dans le champ correspondant lorsque vous envoyez la sauvegarde. Si vous ne le faites pas, ou si le mot de passe que vous entrez est incorrect, la sauvegarde va certes êtes envoyée, mais toute tentative de la restaurer sans fournir le bon mot de passe réinitialisera tous les mots de passe contenus dans la sauvegarde, comme les mots de passe des boîtes mail, les mots de passe de l&#8217;utilisateur de la base de données, etc.</p>
+<p class="bodytext">Pour terminer l&#8217;opération, cliquez sur <strong class="specialbold">OK</strong>. Le fichier de sauvegarde sera envoyé dans le répertoire Plesk.</p>
+<h5 class="heading5">Supprimer les fichiers de sauvegarde </h5>
+<p class="bodytext">Pour supprimer un ou plusieurs fichiers de sauvegarde, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Gestionnaire de sauvegardes</strong>, cochez les cases correspondant aux fichiers de sauvegarde que vous souhaitez supprimer et cliquez sur <strong class="specialbold">Supprimer</strong>.</p>
+<p class="bodytext">La suppression de toute une sauvegarde supprime automatiquement toutes les sauvegardes incrémentables qui l&#8217;utilisent comme sauvegarde parent.</p>
+<p class="warning"><strong class="buttons">Attention :</strong> toutes les informations enregistrées dans les fichiers de sauvegarde supprimés sont perdues de façon permanente. Il n&#8217;y a pas de bouton &quot;Annuler&quot;. Assurez-vous de bien supprimer uniquement les sauvegardes dont vous n&#8217;avez plus besoin.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65201.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

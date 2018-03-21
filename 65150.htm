@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ajouter et supprimer des domaines </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69429.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65180.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Ajouter et supprimer des domaines</h3>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/txnGmdHuU1o?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Si votre pack d'hébergement inclut plusieurs noms de domaine (sites Web), vous pouvez facilement ajouter des domaines au serveur. Avant de tenter d'ajouter un nouveau domaine qui utilisera un nom de domaine de deuxième niveau, tel que <em class="emphasis">exemple.com</em>, assurez-vous d'enregistrer ce nom de domaine. Si votre hébergeur offre le service d'enregistrement des noms de domaine, vous pouvez le faire sur le Panneau Client comme décrit ci-dessous. Sinon, vous devez enregistrer votre nom de domaine auprès d'une autre autorité d'enregistrement de nom de domaine :</p>
+<p class="bodytext">Vous pouvez configurer les types suivants de configurations de sites via Plesk :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Site Web adressé par un nom de domaine de deuxième niveau.</strong> Les services suivants sont disponibles pour les sites Web :<ul class="listbullet2"><li class="listbullet2">Adresse Internet unique (nom de domaine), comme <em class="emphasis">exemple.com</em>.</li><li class="listbullet2">Autres noms de domaine (alias de domaine).</li><li class="listbullet2">Sous-domaines : divisions d'un site accessibles par des adresses faciles à retenir qui sont ajoutées au site principal, comme mail.exemple.com.</li><li class="listbullet2">Comptes FTP séparés pour la collaboration sur le contenu du site. Pour chaque compte FTP, vous pouvez indiquer les répertoires accessibles.</li><li class="listbullet2">Création du contenu à l'aide de Presence Builder.</li><li class="listbullet2">Déploiement simplifié des applications, de type systèmes de gestion de contenu, galeries photo, paniers, plates-formes de blogs, forums, etc. </li><li class="listbullet2">Échange de données sécurisé implémenté par le protocole SSL/TLS. Pour cela, le site doit être hébergé sur une adresse IP dédiée non partagée avec d'autres utilisateurs et sites.</li><li class="listbullet2">Boîtes mail et listes de diffusion.</li><li class="listbullet2">Affichage des statistiques de visites du site.</li></ul></li><li class="listbullet"><strong class="specialbold">Site Web ou partie de site Web, avec adressage par nom de domaine de troisième niveau (sous-domaine).</strong> Il s'agit généralement d'une division d'un site existant. Cela inclut une adresse Internet en trois parties séparées par des points. Les services suivants sont disponibles pour les sous-domaines :<ul class="listbullet2"><li class="listbullet2">Racine du document séparée du site principal. La racine du document est un répertoire sur le serveur dans lequel les pages Web d'un site sont stockées.</li><li class="listbullet2">Accès via FTP pour la gestion du contenu.</li><li class="listbullet2">Création du contenu à l'aide de Presence Builder.</li><li class="listbullet2">Déploiement simplifié des applications.</li><li class="listbullet2">Échange de données sécurisé implémenté par le protocole SSL/TLS. </li><li class="listbullet2">Affichage des statistiques de visites du site.</li></ul></li></ul><h5 class="heading5">Ajout de domaines</h5>
+<p class="procedureheading">Pour héberger un nouveau site Web avec un nom de domaine de deuxième niveau :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>. Cliquez sur <strong class="specialbold">Ajouter un domaine</strong> et suivez les instructions à l'écran.<p class="listnote"><strong class="buttons">Remarque </strong>: selon l'édition de Plesk, les informations que vous pouvez indiquer sur l'écran <strong class="specialbold">Ajouter un domaine</strong> peuvent varier.</p>
+<p class="widegraphic"><br><img src="76850.gif" alt="Add_domain" height="563" width="1074" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="listnote"><strong class="buttons">Remarque </strong>: si vous sélectionnez l'option recommandée, vous devez connecter les paramètres DNS associés et votre nom de domaine avec le nom de domaine niveau registrar. Pour cela, entrez l'adresse IP du serveur de noms Plesk dans l'enregistrement NS correspondant du registrar. Pour obtenir l'adresse IP : cliquez sur <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; nom du domaine &gt; <strong class="specialbold">Paramètres DNS</strong>. Cherchez l'enregistrement NS, puis l'enregistrement A correspondant à la valeur de l'enregistrement NS.<br>Par exemple, si votre enregistrement NS est<br><em class="emphasis">exemple.com.	NS	ns.exemple.com</em>,<br>cherchez l'enregistrement A avec <em class="emphasis">ns.exemple.com, par exemple, </em>ns.exemple.com.<em class="emphasis"> </em><br><em class="emphasis">ns.exemple.com.	A	192.0.2.12</em><br>La valeur obtenue, <em class="emphasis">192.0.2.12</em>, correspond à l'adresse IP du serveur de noms Plesk dont vous avez besoin.</p>
+</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.<p class="listcontinue">Le nouveau nom de domaine s'affiche maintenant dans la liste en bas de l'écran.</p>
+</li><li class="procedurelistnumber">S'il est possible de changer les paramètres d'hébergement de votre compte, vous pouvez alors cliquer sur le nom de domaine du nouveau site Web pour voir ou changer les paramètres d'hébergement, comme décrit dans la section <strong class="specialbold"><a id="h69599" class="jumptemplate" title="Paramètres d'hébergement" href="69455.htm" target="_self">Changer les paramètres d'hébergement</a></strong>.</li></ol><p class="bodytext">Vous pouvez maintenant créer votre site Web avec Presence Builder ou envoyer votre contenu Web dans l'abonnement du nouveau site Web, comme décrit dans la section <strong class="specialbold"><a id="h69627" class="jumptemplate" title="Contenu du site Web" href="69462.htm" target="_self">Contenu du site Web</a></strong>.</p>
+<h5 class="heading5">Enregistrer des domaines</h5>
+<p class="bodytext">Si votre fournisseur de services offre le service d'enregistrement des noms de domaine ainsi que l'hébergement Web, vous pouvez initier un enregistrement de domaine directement à partir de Plesk. Pour enregistrer un nom de domaine, ajoutez-le comme décrit ci-dessus, puis cliquez sur le lien <strong class="specialbold">Enregistrer les noms de domaine</strong> à côté du nouveau nom de domaine sur l'onglet <strong class="specialbold">Sites Web &amp; Domaines</strong>. Vous êtes alors redirigé vers la boutique en ligne du fournisseur où vous pouvez procéder à l'enregistrement.</p>
+<p class="bodytext">Après enregistrement, le nom de domaine apparaît dans la liste des <strong class="specialbold">Noms de domaine enregistrés</strong> sur l'onglet <strong class="specialbold">Sites Web &amp; Domaines</strong>. Pour en savoir plus sur l'enregistrement d'un nom de domaine, par exemple, le coût d'enregistrement et la prochaine date de renouvellement, cliquez sur le nom voulu dans cette liste.</p>
+<h5 class="heading5">Suppression de domaines</h5>
+<p class="bodytext">Si vous supprimez un domaine de Plesk, toutes les données associées au site correspondant sont supprimées du serveur. </p>
+<p class="note"><strong class="buttons">Remarque </strong>: le nom de domaine principal, c'est-à-dire, le premier nom de domaine (domaine par défaut) créé pour votre compte ne peut pas être supprimé, mais il peut être renommé.</p>
+<p class="procedureheading">Pour supprimer un domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine ou de sous-domaine à supprimer.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Supprimer le site Web</strong> ou sur <strong class="specialbold">Supprimer le sous-domaine</strong>.</li><li class="procedurelistnumber">Confirmez la suppression, puis cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="note"><strong class="buttons">Remarque : </strong>supprimer les noms de domaine du Panneau Client n'annule pas l'enregistrement de ces noms. Si vous avez enregistré ces noms de domaine, vous pourrez continuer à les utiliser pour vos sites Web.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65150.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

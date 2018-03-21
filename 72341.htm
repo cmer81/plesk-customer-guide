@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Installer des applications </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="68973.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74969.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031178.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031178.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Installer des applications</h3>
+<p class="bodytext">Vous pouvez choisir l'une des méthodes ci-dessous pour installer une application, selon vos besoins et votre niveau d'expertise :</p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Installation rapide</em>. Il s'agit de la méthode la plus rapide pour installer une application. Si vous choisissez cette méthode, Plesk installe la version la plus récente de l'application sélectionnée et utilise les valeurs par défaut comme paramètres de l'application. Par exemple, vos identifiants d'accès à Plesk seront utilisés comme identifiants de l'administrateur des applications. Pour certaines applications, vous serez invité à définir certains paramètres même si vous sélectionnez l'installation rapide.</li><li class="listbullet"><em class="emphasis">Installation personnalisée</em>. Cette méthode vous permet de personnaliser les paramètres d'installation de l'application. Par exemple, vous pouvez préciser les identifiants d'accès de l'administrateur, l'emplacement et le chemin d'accès de l'installation, etc. Nous vous recommandons d'utiliser l'installation personnalisée notamment si vous souhaitez désactiver les mises à niveau automatiques de l'application. <p class="listnote"><strong class="buttons">Remarque :</strong> de nombreuses applications ne fonctionnent pas si la directive PHP safe_mode est appliquée. Pour vérifier si safe_mode est activé pour votre compte, allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong>. Cliquez sur <strong class="specialbold">Paramètres PHP</strong> et cherchez safe_mode dans la section <strong class="specialbold">Paramètres communs</strong>. Désactivez la directive safe_mode si elle est activée. Si vous ne pouvez pas modifier vos paramètres PHP, contactez votre fournisseur.</p>
+</li></ul><p class="procedureheading">Pour installer une application :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Rendez-vous sur l'onglet <strong class="specialbold">Applications</strong> et recherchez l'application que vous souhaitez installer.</li><li class="procedurelistnumber">Si vous souhaitez procéder à une installation rapide, cliquez sur le bouton <strong class="specialbold">Installer</strong>. Si vous préférez une installation personnalisée, cliquez sur <strong class="specialbold">Installation (personnalisée)</strong>.</li><li class="procedurelistnumber"><em class="emphasis">(Facultatif)</em> Désactivez les mises à niveau automatiques de l'application.<p class="listcontinue">Si vous ne voulez pas que l'application soit mise à niveau automatiquement, ne cochez pas la case de l'option <strong class="specialbold">Mettre à jour automatiquement cette application lorsque de nouvelles mises à jour sont disponibles</strong> sur la page des paramètres d'installation.</p>
+</li><li class="procedurelistnumber"><em class="emphasis">(Facultatif)</em> Sélectionnez la version de l'application. <p class="listcontinue">Parfois, vous devez installer une version spécifique d'une application. Par exemple, si vous projetez d'utiliser des extensions d'une application qui ne sont pas compatibles avec la dernière version de l'application. Dans ce cas, cliquez sur le nom de l'application, puis sur <strong class="specialbold">Installer la version</strong> afin de choisir la version dont vous avez besoin. Ensuite, installez l'application.</p>
+<p class="widegraphic"><img src="76877.gif" alt="Applications_install" height="403" width="1170" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ol>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o68976"></a><h3 class="heading3">Gérer les applications</h3>
+<p class="bodytext">En général, toutes les applications permettent la configuration de leurs principaux paramètres, et ce directement dans le Panneau Client. Pour accéder aux paramètres d'une application, allez dans l'onglet <strong class="specialbold">Applications</strong> sous <strong class="specialbold">Gérer mes applications</strong> et sélectionnez votre application dans la liste. Ensuite, vous pouvez configurer les paramètres suivants :</p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Paramètres généraux</em>.<br>Il s'agit des paramètres de base des applications (comme le mot de passe administrateur) qui peuvent être changés via <strong class="specialbold">Changer les paramètres</strong>.</li><li class="listbullet"><em class="emphasis">Paramètres du service</em>.<br>Si une application fournit une partie de ses fonctions à Plesk à l'aide de services, vous avez la possibilité de les configurer. Par exemple, l'application SugarCRM permet de créer des comptes utilisateur et offre cette capacité en tant que service dans le Panneau Client. Une fois que vous avez sélectionné ce service dans <strong class="specialbold">Services fournis</strong>, vous pouvez voir tous les comptes utilisateur de l'application et en créer.<br>Pour certaines applis, vous pouvez associer les comptes de l'application à des comptes utilisateur auxiliaires. Pour en savoir plus sur l'association des comptes, consultez la section <strong class="specialbold"><a id="h68982" class="jumptemplate" title="Associer les applications et les comptes utilisateur supplémentaires" href="72341.htm#o68978" target="_self">Associer les applications et les comptes utilisateur supplémentaires</a></strong>.</li></ul><p class="note"><strong class="buttons">Remarque :</strong> si WordPress Toolkit est installé sur le serveur, il est conseillé aux utilisateurs de s'en servir pour centraliser la gestion des installations WordPress sur le serveur. Pour en savoir plus, consultez la section <strong class="specialbold"><a id="h73896" class="jumptemplate" title="WordPress Toolkit" href="73391.htm" target="_self">WordPress Toolkit</a></strong>.</p>
+<p class="widegraphic"><img src="76878.gif" alt="Applications_manage" height="380" width="1175" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o68977"></a><h3 class="heading3">Permettre à d'autres utilisateurs d'accéder aux applications</h3>
+<p class="bodytext">Lorsque vous installez une application, celle-ci est disponible par défaut uniquement pour les utilisateurs dotés du rôle <strong class="specialbold">Propriétaire</strong>. Pour permettre à d'autres utilisateurs de l'abonnement d'accéder à l'application :</p>
+<ul class="listbullet"><li class="listbullet">Accordez le droit d'accès à l'application à un certain groupe d'utilisateurs dans <strong class="specialbold">Utilisateurs</strong> &gt; <strong class="specialbold">Rôles d'utilisateur</strong>.</li><li class="listbullet">Ajoutez les utilisateurs de votre choix dans le groupe.<p class="widegraphic"><img src="76879.gif" alt="Application_user_role" height="639" width="1146" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul><p class="bodytext">Lorsque vous avez autorisé les utilisateurs à accéder à l'application, un lien s'affiche sur leur page <strong class="specialbold">Sites Web &amp; Domaines</strong>, juste sous le nom du site Web correspondant. Remarque : <em class="emphasis">vous pouvez contrôler l'accès des applications uniquement pour des groupes d'utilisateurs</em>. Vous devez ainsi modifier les droits d'un groupe existant ou en créer un et lui affecter des utilisateurs. </p>
+<p class="bodytext">Par défaut, l'administrateur des applications d'un abonnement est un utilisateur avec le rôle <strong class="specialbold">Propriétaire</strong>. Cet utilisateur peut non seulement accéder aux applications à partir de la page <strong class="specialbold">Sites Web &amp; Domaines</strong>, mais également installer et gérer les applications dans un abonnement. À cette fin, son interface inclut en plus la page <strong class="specialbold">Applications</strong>. Vous pouvez donner les mêmes privilèges administrateur aux autres utilisateurs de l'abonnement en accordant le droit <strong class="specialbold">Installer et gérer les applications</strong> à leur rôle dans <strong class="specialbold">Utilisateurs &gt; Rôles de l'utilisateur</strong>. Les utilisateurs ont alors un accès administrateur complet à <em class="emphasis">toutes</em> les applications d'un abonnement. Comme l'administrateur, les utilisateurs avec ce droit peuvent installer, configurer, mettre à jour et supprimer les applications via la section <strong class="specialbold">Applications</strong> dans leur Panneau Client.</p>
+<p class="bodytext"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o68978"></a><h3 class="heading3">Associer les applications et les comptes utilisateur supplémentaires</h3>
+<p class="bodytext">Certaines applications vous permettent de créer et de gérer les comptes utilisateur sans se connecter à l'application. Si une application offre un tel « <em class="emphasis">service de compte</em> », vous pouvez associer les utilisateurs d'un abonnement Plesk avec les comptes dans l'application. Pour exécuter une telle association :</p>
+<ol class="listnumber"><li class="listnumber">Organisez les utilisateurs en un certain groupe (<strong class="specialbold">Utilisateurs &gt; Rôles de l'utilisateur</strong>).</li><li class="listnumber">Accordez l'un de ces droits de groupe :<ul class="listbullet2"><li class="listbullet2"><em class="emphasis">Accès public</em>.<br>Si ce droit est accordé, tous les utilisateurs du groupe accéderont à l'application via le lien sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="listbullet2"><em class="emphasis">Accès privé</em>.<br>Si ce droit est accordé, <em class="emphasis">l'application créera automatiquement des comptes</em> pour tous les utilisateurs du groupe. Ensuite, la page <strong class="specialbold">Sites Web &amp; Domaines</strong> des utilisateurs inclura un lien supplémentaire qui permet de se connecter à un compte personnel dans l'application. Notez que si vous refusez le droit <strong class="specialbold">Accès privé</strong>, <em class="emphasis">l'application supprimera automatiquement tous les comptes</em> associés à ce groupe.</li></ul></li></ol><p class="bodytext"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o68979"></a><h3 class="heading3">Mettre à jour des applications</h3>
+<h5 class="heading5">Mises à jour automatiques</h5>
+<p class="bodytext">Par défaut, Plesk installe la dernière version disponible pour les applications. Lorsqu'une nouvelle version est publiée, Plesk procède immédiatement à la mise à jour. Toutefois, la mise à jour d'une application peut modifier significativement son fonctionnement : par exemple, les plug-ins ou les extensions développés pour une version spécifique de l'application peuvent ne pas être compatibles avec les nouvelles versions. C'est pourquoi vous pouvez être amené à désactiver la mise à jour automatique pour une application particulière. </p>
+<p class="procedureheading">Pour activer ou désactiver la mise à jour automatique :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Applications</strong> &gt; <strong class="specialbold">Gérer mes applications</strong> et cliquez sur le nom de l'application.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Changer les paramètres</strong>.</li><li class="procedurelistnumber">Cochez la case selon vos préférences pour activer ou désactiver l'option <strong class="specialbold">Mettre à jour automatiquement cette application lorsque de nouvelles mises à jour sont disponibles</strong>.</li></ol><h5 class="heading5">Mises à jour manuelles</h5>
+<p class="bodytext">Si vous désactivez les mises à jour automatiques pour une application, Plesk vous informe lorsqu'une nouvelle version est disponible. Le lien <strong class="specialbold">Mise à jour disponible</strong> s'affiche sous le nom de l'application dans <strong class="specialbold">Applications</strong> &gt; <strong class="specialbold">Gérer mes applications</strong>. Cliquez sur ce lien pour vérifier les modifications disponibles dans la nouvelle version. Vous pouvez alors décider de mettre à jour ou non l'application.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '72341.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Gérer les comptes utilisateur supplémentaires </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="74484.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65822.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031127.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031127.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Gérer les comptes utilisateur supplémentaires</h2>
+<p class="bodytext">Lors de la création d'un abonnement, un compte utilisateur pour le propriétaire de l'abonnement est créé simultanément. C'est le compte que vous utilisez pour vous connecter à Plesk. Depuis ce compte, vous pouvez exécuter toute opération pour laquelle l'hébergeur vous a accordé les droits. Imaginons le scénario suivant : vous voulez donner l'accès à Plesk à d'autres utilisateurs, comme un employé de votre entreprise ou un contractuel, afin qu'il puisse exécuter certaines opérations. Cependant, cet utilisateur ne doit pas avoir le contrôle complet de votre abonnement pendant qu'il est connecté.</p>
+<p class="bodytext">Dans ce cas, vous pouvez créer d'autres utilisateurs : vous leur accordez l'accès à Plesk et à un groupe de fonctions prédéfinies, comme la création de boîtes mail, la gestion de bases de données ou la création de sauvegardes. Les fonctions accessibles au nouvel utilisateur sont déterminées par le rôle utilisateur que vous créez, configurez et lui assignez.</p>
+<p class="bodytext">Pour créer un compte utilisateur, allez sous <strong class="specialbold">Utilisateurs</strong> &gt; <strong class="specialbold">Comptes utilisateur</strong> et cliquez sur <strong class="specialbold">Créer un compte utilisateur</strong>. </p>
+<p class="widegraphic"><img src="76831.gif" alt="Create_user_account" height="392" width="1075" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous devez entre autres indiquer le nom de contact de l'utilisateur, son adresse mail, son nom d'utilisateur et son mot de passe. Soyez particulièrement vigilant avec les paramètres suivants :</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Rôle utilisateur</strong>. Depuis le menu, vous devez sélectionner l'un des rôles utilisateur prédéfinis pour l'affecter à l'utilisateur. Les rôles utilisateur déterminent les fonctions de Plesk accessibles à l'utilisateur une fois qu'il est connecté. Ces rôles sont décrits ultérieurement dans cette section.</li><li class="listbullet2"><strong class="specialbold">Accès aux abonnements</strong>. Si votre compte client comporte plusieurs abonnements, vous pouvez autoriser l'utilisateur à voir et à gérer tous les abonnements ou uniquement l'abonnement de votre choix.</li><li class="listbullet2"><strong class="specialbold">Utilisateur actif</strong>. Si vous décochez cette case, l'utilisateur ne pourra plus se connecter à Plesk. Par défaut, cette case est cochée. Si vous voulez désactiver un autre compte utilisateur sans le supprimer, allez sous <strong class="specialbold">Utilisateurs</strong> &gt; <strong class="specialbold">Comptes utilisateurs</strong>. Cliquez sur le nom de l'utilisateur à désactiver, puis sur <strong class="specialbold">Changer les paramètres</strong> et décochez la case <strong class="specialbold">Utilisateur actif</strong>.</li></ul><p class="bodytext">Les rôles utilisateur servent à définir les fonctions de Plesk accordées aux autres utilisateurs. Chaque utilisateur supplémentaire doit avoir un rôle utilisateur. Chaque rôle inclut un jeu de droits, accordé aux utilisateurs avec ce rôle.</p>
+<p class="bodytext">Pour créer un rôle utilisateur, allez sous <strong class="specialbold">Utilisateurs</strong> &gt; <strong class="specialbold">Rôle de l'utilisateur</strong> et cliquez sur <strong class="specialbold">Créer un rôle d'utilisateur</strong>. </p>
+<p class="widegraphic"><img src="76832.gif" alt="Create_user_role" height="426" width="1076" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous verrez une liste de tous les droits. Pour chaque droit, sélectionnez soit Accordé soit Refusé. Quand vous sélectionnez Accordé, tout utilisateur avec ce rôle a le droit d'exécuter un certain nombre d'opérations spécifiques. Voici une liste complète de tous les droits ainsi que leur description :</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Gérer les utilisateurs et rôles</strong>. Ce droit permet de gérer des utilisateurs et des rôles utilisateur supplémentaires. Remarque : les utilisateurs supplémentaires qui ont ce droit pourront modifier leur propre compte utilisateur, y compris leur rôle utilisateur.</li><li class="listbullet2"><strong class="specialbold">Créer et gérer les sites</strong>. Ce droit permet de créer des domaines et des sous-domaines. Avec ce droit, l'utilisateur peut gérer un nombre limité de paramètres d'hébergement Web.</li><li class="listbullet2"><strong class="specialbold">Configurer la rotation des logs</strong>. Ce droit permet de configurer les paramètres de rotation des logs.</li><li class="listbullet2"><strong class="specialbold">Configurer le filtre anti-spam</strong>. Ce droit permet de gérer les paramètres de SpamAssassin pour toutes les boîtes mail. Remarque : le droit <strong class="specialbold">Créer et gérer les comptes mail</strong> doit également être inclus dans le rôle. Sinon, le droit Configurer le filtre anti-spam n'est pas actif.</li><li class="listbullet2"><strong class="specialbold">Configurer l'antivirus</strong>. Ce droit permet de gérer les paramètres de l'antivirus pour toutes les boîtes mail. Remarque : le droit <strong class="specialbold">Créer et gérer les comptes mail</strong> doit également être inclus dans le rôle. Sinon, le droit Configurer le filtre anti-spam n'est pas actif.</li><li class="listbullet2"><strong class="specialbold">Créer et gérer les bases de données</strong>. Ce droit permet de créer et gérer les utilisateurs de bases de données, ainsi que d'exporter et d'importer les dumps de bases de données.</li><li class="listbullet2"><strong class="specialbold">Configurer et exécuter les fonctions de sauvegarde et restauration des données</strong>. Ce droit permet de sauvegarder et de restaurer la configuration et le contenu des abonnements auxquels l'utilisateur a accès.</li><li class="listbullet2"><strong class="specialbold">Afficher les statistiques</strong>. Ce droit permet d'afficher les statistiques de Plesk et les statistiques Web.</li><li class="listbullet2"><strong class="specialbold">Installer et gérer les applications</strong>. Ce droit permet d'installer et de gérer les applications Web.</li><li class="listbullet2"><strong class="specialbold">Concevoir des sites dans Presence Builder</strong>. Ce droit permet de concevoir des sites à l'aide de l'éditeur Presence Builder.</li><li class="listbullet2"><strong class="specialbold">Envoyer et gérer les fichiers</strong>. Ce droit permet d'envoyer et de gérer des fichiers via le Gestionnaire de fichiers.</li><li class="listbullet2"><strong class="specialbold">Créer et gérer les comptes FTP supplémentaires</strong>. Ce droit permet de créer des utilisateurs FTP supplémentaires.</li><li class="listbullet2"><strong class="specialbold">Gérer les paramètres DNS</strong>. Ce droit permet de gérer les paramètres DNS.</li><li class="listbullet2"><strong class="specialbold">Créer et gérer les comptes mail</strong>. Ce droit permet de créer et de gérer des comptes mail.</li><li class="listbullet2"><strong class="specialbold">Créer et gérer les listes de diffusion</strong>. Ce droit permet de créer et de gérer des listes de diffusion. Remarque : le droit <strong class="specialbold">Créer et gérer les comptes mail</strong> doit également être inclus dans le rôle. Sinon, le droit Configurer le filtre anti-spam n'est pas actif.</li></ul><p class="bodytext">Remarque : les droits inclus dans les rôles utilisateur sont écrasés par les droits configurés au niveau de l'abonnement. Par exemple, si l'hébergeur désactive le droit <strong class="specialbold">Gestion du filtre anti-spam</strong> de l'abonnement, ni le propriétaire de l'abonnement ni les autres utilisateurs ne peuvent modifier les paramètres de SpamAssassin, même si le droit <strong class="specialbold">Configurer le filtre anti-spam</strong> est accordé dans leur rôle utilisateur.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '69329.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

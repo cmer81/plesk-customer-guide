@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prise en charge Git </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69654.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="75825.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h1 class="heading1">Prise en charge Git</h1>
+<h5 class="heading5">Vue d'ensemble</h5>
+<p class="bodytext">Plesk prend en charge l'intégration Git qui est le système de gestion de code source le plus populaire, utilisé par de nombreux développeurs Web. Vous pouvez gérer des dépôts Git et déployer automatiquement des sites Web à partir de ces dépôts vers un répertoire cible public. En d'autres termes, vous pouvez utiliser Git comme transport pour les mises à jour ultérieures&nbsp;.</p>
+<p class="note"><strong class="buttons">Remarque</strong> : cette fonctionnalité n'est pas prise en charge dans les installations Plesk sous Windows Server 2008.</p>
+<p class="bodytext">Les conditions suivantes doivent être réunies pour utiliser Git :</p>
+<ol class="listnumber"><li class="listnumber">L&#8217;extension <strong class="specialbold">Git </strong>installée dans Plesk. </li><li class="listnumber">Un domaine doit être créé dans Plesk avec un pack de services incluant le droit de <strong class="specialbold">gestion Git</strong>.</li></ol><p class="bodytext">Dans Plesk, vous pouvez ajouter des dépôts Git de deux types, selon votre cas de figure : </p>
+<ol class="listnumber"><li class="listnumber"><strong class="specialbold">Avec un répertoire local sur votre poste de travail</strong>. Dans ce cas, vous envoyez les modifications depuis votre répertoire local à Plesk qui les déploie sur votre site Web. Consultez <strong class="specialbold"><a id="h75870" class="jumptemplate" title="Utiliser un répertoire local" href="75825.htm" target="_self">Utiliser un répertoire local</a></strong>.</li><li class="listnumber"><strong class="specialbold">Avec l'hébergement Git distant</strong>. Cette solution peut s'avérer utile si vous utilisez déjà des dépôts distants dans GitHub (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="https://github.com/" target="_blank">github.com</a></strong>) ou BitBucket (<strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="https://bitbucket.org/" target="_blank">bitbucket.org</a></strong>). Vous envoyez les modifications à ce dépôt distant, puis Plesk les en extrait et les déploie sur votre site Web. Consultez <strong class="specialbold"><a id="h76042" class="jumptemplate" title="Utiliser l'hébergement Git distant" href="75848.htm" target="_self">Utiliser l'hébergement Git distant</a></strong>.</li></ol><p class="bodytext">Lorsque les dépôts Git sont activés pour votre domaine, la liste des dépôts créés est visible sur la page du domaine. Pour chaque dépôt, le nom, la branche active et le chemin de déploiement sont indiqués. Le bouton <strong class="specialbold">Déployer</strong> en regard du nom du répertoire vous permet de déployer les fichiers à partir d'un dépôt (si le déploiement manuel est configuré) et le bouton <strong class="specialbold">Récupérer les derniers changements</strong> vous permet de récupérer les modifications du dépôt distant.</p>
+<p class="note"><strong class="buttons">Remarque</strong> : actuellement, les dépôts Git hébergés par Plesk sont protégés par le mot de passe utilisateur FTP. L'accès anonyme ne peut pas être utilisé.</p>
+<p class="bodytext">Le lien <strong class="specialbold">Git</strong> vous permet de gérer les dépôts Git du domaine.</p>
+<p class="widegraphic"><img src="76967.gif" alt="Git_subscription" height="576" width="820" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext"></p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="75825.htm" target="_self">Utiliser un répertoire local</a></p><p class="relateditem"><a href="75848.htm" target="_self">Utiliser l'hébergement Git distant</a></p></td>
+</tr>
+</table>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '75824.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

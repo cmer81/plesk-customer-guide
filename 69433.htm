@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> (Avancé) Configurer le DNS pour un domaine </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="72057.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65185.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">(Avancé) Configurer le DNS pour un domaine</h3>
+<p class="bodytext">Le Domain Name System (DNS) est un service permettant de traduire un nom de domaine en informations de plusieurs types qui y sont associées, notamment en adresses IP de la machine portant ce nom. Une telle traduction est appelée <em class="emphasis">Résolution</em>. Quand vous ajoutez un nom de domaine (depuis <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Ajouter un domaine</strong>), vous devez choisir le rôle de Plesk pour la résolution de vos ressources : Plesk peut traiter directement les requêtes de traduction, agir comme serveur de sauvegarde ou transférer les requêtes de traduction à un serveur distant. Ce rôle peut être changé pour les noms de domaine existants (<strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; nom de domaine &gt; <strong class="specialbold">Paramètres DNS</strong>). Dans cette section, nous allons évoquer en détail chaque rôle et donner des instructions pour savoir comment les affecter.</p>
+<p class="note"><strong class="buttons">Remarque : </strong>si votre version de Plesk n'utilise pas son propre service DNS et n'autorise pas la configuration de paramètres DNS sur un serveur DNS distant, vous pouvez seulement afficher les informations sur votre nom de domaine enregistré. Le lien <strong class="specialbold">Paramètres DNS</strong> dans <strong class="specialbold">Sites Web &amp; Domaines</strong> sera remplacé par <strong class="specialbold">Informations WHOIS</strong>.</p>
+<h5 class="heading5">Résolution du nom DNS</h5>
+<p class="bodytext">Le DNS est basé sur une structure hiérarchique appelée espace de nom de domaine. Cet espace de nom global contient tous les noms de domaine et se divise en parties logiques : les zones de domaine (voir l'image ci-dessus). Une zone de domaine est une partie de l'espace de nom qui contient des adresses de domaines particuliers. Les adresses sont stockées dans un fichier sur un serveur de noms séparé qui fait autorité pour cette zone. Par exemple, lorsqu'un navigateur essaye d'accéder à <code class="monospace">www.exemple.com</code>, il obtient l'adresse IP du site à partir d'un serveur qui fait autorité pour la zone <code class="monospace">exemple.com</code>. Pour en savoir plus sur le fonctionnement du DNS, consultez la documentation respective. Vous pouvez la trouver dans de nombreuses sources sur Internet, par exemple, <a class="externalhyperlinktemplate" title="" href="http://technet.microsoft.com/en-us/library/cc958978.aspx" target="_blank">Microsoft TechNet</a>.</p>
+<p class="widegraphic"><img src="69678.gif" alt="Zones DNS" height="259" width="400" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Lorsque vous achetez un domaine, un registrar vous permet d'accéder aux paramètres de la zone DNS en charge de votre domaine et de ses sous-domaines. Vous pouvez soit autoriser le registrar à gérer la zone, soit déléguer la zone à Plesk. Cette dernière option vous permet de gérer une zone directement depuis votre compte client. Pour en savoir plus sur la procédure à suivre pour déléguer votre zone à Plesk, consultez la section <strong class="specialbold"><a id="h69595" class="jumptemplate" title="Plesk en tant que Serveur DNS maître" href="65185.htm" target="_self">Plesk en tant que Serveur DNS maître</a></strong>.</p>
+<p class="note"><strong class="buttons">Remarque :</strong> de nombreux registrars vous demandent de fournir l'adresse d'au moins deux serveurs de noms distincts lorsque vous achetez un nom de domaine. Par défaut, Plesk indique un seul serveur de nom. Si vous devez indiquer un deuxième serveur de nom, contactez votre fournisseur.</p>
+<p class="bodytext">Si vous êtes un utilisateur avancé et avez déjà un serveur DNS et si vous voulez que ce serveur fasse autorité sur votre zone, vous pouvez configurer Plesk pour qu'il soit un serveur DNS esclave (également appelé secondaire). Dans ce cas, Plesk stocke simplement une copie de votre zone et vous n'avez pas d'option pour la gérer à partir du Panneau Client. Le serveur DNS de Plesk sera utilisé uniquement si votre serveur de noms primaire devient inaccessible ou inopérable. Pour en savoir plus sur la procédure à suivre pour que Plesk agisse en tant que serveur DNS secondaire, consultez la section<strong class="specialbold"> <a id="h69596" class="jumptemplate" title="Plesk en tant que Serveur DNS esclave" href="65192.htm" target="_self">Plesk en tant que serveur DNS esclave</a></strong>.</p>
+<p class="bodytext">Si vous décidez de <em class="emphasis">ne pas</em> utiliser Plesk en tant que serveur DNS, toute la gestion de la zone doit être exécutée sur le site d'un registrar de domaine. Certains registrars offrent la prise en charge de la gestion de la zone DNS distante. Si votre hébergeur utilise cette fonction, vous pourrez toujours modifier la zone DNS à partir du Panneau Client peu importe où se trouve votre serveur de noms faisant autorité. Pour en savoir plus sur la procédure à suivre pour désactiver le serveur DNS de Plesk et gérer votre zone à distance, veuillez vous reporter à la section <strong class="specialbold"><a id="h69597" class="jumptemplate" title="Paramètres DNS du registrar dans Plesk" href="65628.htm" target="_self">Paramètres DNS du registrar dans Plesk</a></strong>.</p>
+<p class="bodytext"></p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="65185.htm" target="_self">Plesk en tant que Serveur DNS maître</a></p><p class="relateditem"><a href="65192.htm" target="_self">Plesk en tant que Serveur DNS esclave</a></p><p class="relateditem"><a href="74741.htm" target="_self">Désactiver le service DNS de Plesk</a></p><p class="relateditem"><a href="65628.htm" target="_self">Paramètres DNS du registrar dans Plesk</a></p></td>
+</tr>
+</table>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '69433.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

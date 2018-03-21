@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Utiliser un site provisoire </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69479.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65246.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031194.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031194.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Utiliser un site provisoire</h3>
+<p class="bodytext">Si vous avez un site Web de production et si vous planifiez des changements de sites majeurs, pensez à configurer un site provisoire : un emplacement séparé sur le serveur dans lequel vous pouvez mettre à jour et tester sans problème une copie du site avant de le placer en production.</p>
+<p class="bodytext">Nous vous conseillons d'utiliser un site provisoire de la manière suivante :</p>
+<ol class="listnumber"><li class="listnumber">Décidez où vous voulez héberger la copie de développement et préparer l'environnement de développement. Vous pouvez choisir de l'héberger dans le même abonnement, dans un abonnement distinct sur le même serveur ou l'envoyer sur un compte FTP ou un autre serveur.<p class="listcontinue">Si vous choisissez le même abonnement, vous devez tout d'abord configurer un nouveau site Web en ajoutant un domaine ou un sous-domaine.</p>
+</li><li class="listnumber">(Étape facultative.) Si vous configurez votre environnement de développement sous votre compte dans Plesk et si votre site de production comporte des applications APS installées via Plesk (sous l'onglet <strong class="specialbold">Applications</strong>), installez les applications pour site souhaitées dans votre environnement de développement dans le même sous-répertoire que sur votre site de production. Cette étape est facultative, mais elle vous évitera de changer manuellement les paramètres de connexion de la base de données dans les scripts d'applications. </li><li class="listnumber">Faites une copie du site Web et placez-la dans l'environnement provisoire.</li><li class="listnumber">Faites des copies des bases de données utilisées par le site et déployez-les dans l'environnement provisoire.</li><li class="listnumber">Changez les paramètres de connexion de la base de données dans les scripts pour pointer vers les bases de données dans l'environnement provisoire.</li><li class="listnumber">(Étape facultative.) Terminez la configuration des applications APS. Allez dans l'onglet <strong class="specialbold">Applications</strong> pour votre site de développement, localisez l'application dans la liste des applications installées, ouvrez son écran <strong class="specialbold">Paramètres</strong> et réenregistrez les paramètres. Avec cette opération, les scripts APS doivent arrêter de pointer vers la base de données de production et reconnecter l'application à la copie de la base de données. Cette étape est nécessaire s'il y a sur votre site de production des applications APS installées via Plesk et si vous avez exécuté l'étape 2 de la procédure en cours. </li><li class="listnumber">Appliquez les changements requis dans la copie du site dans l'environnement provisoire et testez-les pour vous assurer que tout fonctionne comme prévu.</li><li class="listnumber">Publiez le site mis à jour. Vous pouvez y parvenir en pointant la racine du document du site de production vers l'emplacement du site provisoire.</li></ol><p class="procedureheading">Pour configurer un site à des fins provisoires :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="procedurelistnumber">Cliquez soit sur <strong class="specialbold">Ajouter un domaine</strong>, soit sur <strong class="specialbold">Ajouter un sous-domaine</strong>.<p class="listcontinue">Nous vous conseillons d'utiliser un sous-domaine à des fins provisoires.</p>
+</li><li class="procedurelistnumber">Procédez comme décrit dans la section <strong class="specialbold"><a id="h66503" class="jumptemplate" title="Ajouter et supprimer des domaines" href="65150.htm" target="_self">Ajouter des domaines</a></strong> ou <strong class="specialbold"><a id="h66504" class="jumptemplate" title="Ajouter des sous-domaines" href="65180.htm" target="_self">Ajouter des sous-domaines</a></strong>.</li></ol><p class="bodytext">Si vous ne voulez pas que votre site provisoire soit accessible aux utilisateurs Internet, n'enregistrez pas le nom du sous-domaine ou du domaine récemment ajouté avec un registrar de nom de domaine ou utilisez un fichier <code class="monospace">.htaccess</code> (sur l'hébergement Linux) pour en limiter l'accès.</p>
+<p class="procedureheading">Pour copier les fichiers du site Web :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom du site Web que vous voulez copier.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Copie du site Web</strong>.</li><li class="procedurelistnumber">Pour copier les fichiers du site Web dans la racine du document d'un site existant :<ol class="procedurelistnumber2"><li class="procedurelistnumber2">Sélectionnez l'option <strong class="specialbold">Site Web dans Plesk</strong>.</li><li class="procedurelistnumber2">Sélectionnez le site de destination à partir du menu <strong class="specialbold">Nom du site</strong>.</li><li class="procedurelistnumber2">Indiquez la procédure à suivre avec les fichiers pouvant être déjà présents dans le répertoire de destination.</li></ol></li><li class="procedurelistnumber">Pour copier les fichiers du site Web sur un compte FTP sur ce serveur ou un autre :<ol class="procedurelistnumber2"><li class="procedurelistnumber2">Sélectionnez l'option <strong class="specialbold">Stockage FTP</strong>.</li><li class="procedurelistnumber2">Indiquez les données d'accès et le nom d'hôte du serveur pour se connecter au compte FTP.</li><li class="procedurelistnumber2">Dans le champ <strong class="specialbold">Mode de connexion FTP</strong>, ne décochez pas l'option <strong class="specialbold">Mode actif</strong>. Si Plesk n'arrive pas à se connecter à un compte FTP externe, cochez l'option <strong class="specialbold">Mode passif</strong>.</li></ol></li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="bodytext">Si le site utilise les scripts qui fonctionnent avec une base de données, copiez la base de données dans l'environnement provisoire.</p>
+<ul class="listbullet"><li class="listbullet">Si la base de données est hébergée sur le même serveur (géré par Plesk), utilisez la procédure ci-dessous pour la copier.</li><li class="listbullet">Si la base de données est hébergée sur un serveur (non géré par Plesk), exécutez l'utilitaire <code class="monospace">mysqldump</code> pour exporter la base de données, migrez le fichier dump de données résultant vers l'environnement provisoire et déployez-le dedans. Modifiez les scripts du site dans l'environnement provisoire afin qu'ils se connectent à la base de données copiée.</li></ul><p class="procedureheading">Pour copier une base de données depuis le serveur géré par Plesk :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong>.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Copier</strong> dans la liste des bases de données pour copier la base de données souhaitée.</li><li class="procedurelistnumber">Indiquez les éléments suivants :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Serveur de bases de données de destination</strong>. Vous pouvez sélectionner le même serveur de bases de données géré par Plesk ou un serveur de bases de données situé autre part. Pour un serveur de bases de données externes, indiquez le nom d'hôte ou l'adresse IP ainsi que les identifiants d'accès : le nom d'utilisateur et le mot de passe d'un utilisateur système chargé de la gestion de base de données autorisé à créer des bases de données et des tables de bases de données.</li><li class="listbullet2"><strong class="specialbold">Base de données de destination</strong>. Vous pouvez choisir de créer une base de données ou de copier les données dans une base de données existante.</li><li class="listbullet2"><strong class="specialbold">Créer une copie complète</strong>. Ne décochez pas cette option pour copier la structure de la base de données et toutes les données.</li></ul></li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.<p class="listcontinue">La copie de la base de données sera déployée sur le serveur de destination.</p>
+</li><li class="procedurelistnumber">Modifiez les scripts du site dans l'environnement provisoire afin qu'ils se connectent à la base de données copiée.</li></ol><p class="bodytext">Lorsque la copie du site dans l'environnement provisoire est mise à jour et prête à être en ligne, publiez-la comme décrit dans les étapes suivantes.</p>
+<p class="procedureheading">Pour publier le site mis à jour dans l'environnement de production :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="procedurelistnumber">Dans la liste des noms de domaines, localisez l'adresse de votre site de production et cliquez dessus.</li><li class="procedurelistnumber">Dans la case <strong class="specialbold">Racine ou root du document</strong>, indiquez le répertoire root du document du site provisoire.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="bodytext">La copie du site mis à jour à l'emplacement du site provisoire est alors accessible aux visiteurs de votre adresse du site de production.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '66505.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

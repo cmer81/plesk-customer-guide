@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Créer des bases de données </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69535.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74497.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Créer des bases de données</h2>
+<div align="right"><span class="specialbold" style="font-size: 20px">Voir le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/XzJEfh8I9ek?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Vous pouvez créer et supprimer des bases de données depuis <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Base de données</strong>.</p>
+<p class="bodytext">Vous pouvez créer une base de données en indiquant son nom. Si vous disposez des droits correspondants grâce à votre abonnement, vous pouvez choisir un type de base de données et un serveur de bases de données sur lequel la base de données doit être créée. </p>
+<p class="bodytext">Vous pouvez sélectionner un site Web sur lequel la base de données sera utilisée via le champ <strong class="specialbold">Site associé</strong>. Cette option est pratique si vous avez de nombreux sites et bases de données, car vous verrez quelle base de données est utilisée par quel site directement depuis la page <strong class="specialbold">Bases de données</strong>.</p>
+<h5 class="heading5">Utilisateurs de bases de données</h5>
+<p class="bodytext">Au moins un compte utilisateur doit être associé à la base de données. Sinon, il est impossible d'y accéder. Vous pouvez créer un utilisateur de base de données pendant la création de bases de données. Pour cela, cochez la case <strong class="specialbold">Créer un utilisateur de bases de données</strong>. Vous pouvez également sélectionner un utilisateur par la suite. Par exemple, si vous voulez utiliser l'un des comptes utilisateur existants. Pour en savoir plus, consultez la section <strong class="specialbold"><a id="h71574" class="jumptemplate" title="Gérer les comptes utilisateur de la base de données" href="69539.htm" target="_self">Gérer les comptes utilisateur de la base de données</a></strong>.</p>
+<p class="bodytext">Pour sélectionner l'utilisateur de la base de données pour accéder à l'une de vos bases de données, cochez la case <strong class="specialbold">L'utilisateur dispose d'un accès à toutes les bases de données au sein de l'abonnement sélectionné</strong>.</p>
+<p class="bodytext">Si vous avez les droits correspondants, vous pouvez définir les règles du contrôle d'accès pour un utilisateur de base de données. Pour en savoir plus, consultez la section <strong class="specialbold"><a id="h73510" class="jumptemplate" title="Configurer des règles d'accès personnalisées" href="73491.htm" target="_self">Configurer des règles d'accès personnalisées</a></strong>.</p>
+<h5 class="heading5">Suppression d'une base de données</h5>
+<p class="bodytext">Pour supprimer une base de données, cliquez sur le lien <strong class="specialbold">Supprimer la base de données</strong> affiché pour cette base de données sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong>. Remarque : vous pouvez supprimer uniquement les bases de données et les utilisateurs de bases de données qui ne sont pas utilisés par les applications APS installées. Si le lien n'est pas disponible, cela signifie que la base de données est utilisée par une application et que vous ne pouvez la supprimer qu'en supprimant l'application concernée.</p>
+<p class="bodytext"></p>
+<p class="bodytext"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o71841"></a><h2 class="heading2">Accéder aux bases de données</h2>
+<p class="bodytext">Lorsque vous avez créé une base de données et affecté un utilisateur à cette base de données, vous pouvez y accéder depuis Plesk à l'aide du lien correspondant dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong>. Les liens sont différents selon le type de base de données :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">phpMyAdmin</strong> pour les bases de données MySQL</li><li class="listbullet"><strong class="specialbold">pgMyAdmin</strong> pour les bases de données PostgreSQL</li><li class="listbullet"><strong class="specialbold">myLittleAdmin</strong> pour les bases de données SQL Server</li></ul><p class="note"><strong class="buttons">Remarque :</strong> s'il n'y a aucun lien, contactez votre hébergeur.</p>
+<p class="bodytext">Lorsque vous accédez à une base de données avec ces outils, Plesk utilise automatiquement les Identifiants d'accès de l'utilisateur de la base de données. </p>
+<p class="bodytext">Si vous voulez accéder à votre base de données à l'aide d'autres outils (comme SQL Server Management Studio) ou si vous voulez autoriser une autre application à y accéder, vous devrez spécifier les paramètres suivants à ces outils et applications :</p>
+<ul class="listbullet"><li class="listbullet">Pour vous connecter à <em class="emphasis">MySQL</em> et à <em class="emphasis">PostgreSQL</em>, vous devez indiquer le nom de l'hôte (ou l'adresse IP) ainsi que le nom d'utilisateur et le mot de passe de l'utilisateur de la base de données. Pour afficher cette information, cliquez sur le lien <strong class="specialbold">Infos de connexion</strong> sous le nom de la base de données.</li><li class="listbullet">Pour vous connecter à <em class="emphasis">Microsoft SQL Server</em>, vous devez également indiquer l'instance Microsoft SQL Server. Plesk utilise l'instance nommée <code class="monospace">MSSQLSERVER2008</code> pour <em class="emphasis">Microsoft SQL Server 2008</em>. C'est pourquoi vous pouvez indiquer l'hôte comme suit : <code class="monospace">mydomain.com\MSSQLSERVER2008</code> ou <code class="monospace">123.123.123.123\MSSQLSERVER2008</code>. Pour <em class="emphasis">Microsoft SQL Server 2005</em>, Plesk utilise l'instance par défaut (<code class="monospace">MSSQL 2005</code>). Vous n'avez donc pas besoin de préciser le nom de l'instance.</li></ul>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65157.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

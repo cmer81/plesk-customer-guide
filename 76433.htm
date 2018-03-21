@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Configurer DNSSEC pour un domaine </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65628.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="69455.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Configurer DNSSEC pour un domaine</h3>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/ceumecl94s4?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">DNSSEC est l'extension du protocole DNS qui permet de signer des données DNS pour protéger le processus de résolution des noms de domaine. Pour obtenir des informations générales sur DNSSEC et son utilisation, visitez le <a class="externalhyperlinktemplate" title="" href="https://www.icann.org/resources/pages/dnssec-2012-02-25-en" target="_blank">site Web ICANN</a> et la page <a class="externalhyperlinktemplate" title="" href="https://tools.ietf.org/html/rfc6781" target="_blank">https://tools.ietf.org/html/rfc6781</a>.</p>
+<p class="note"><strong class="buttons">Remarque </strong>: la prise en charge DNSSEC est disponible dans Plesk pour Linux. L'extension <strong class="specialbold">Plesk DNSSEC</strong> doit être installée dans Plesk par le fournisseur d'hébergement. </p>
+<p class="bodytext">Vous pouvez effectuer les opérations suivantes pour protéger les données DNS de vos domaines avec DNSSEC : </p>
+<ul class="listbullet"><li class="listbullet">Ajouter et supprimer la signature de zones de domaine selon les conditions DNSSEC.</li><li class="listbullet">(Facultatif) Définir des paramètres personnalisés pour la génération de clés.</li><li class="listbullet">Recevoir des notifications.</li><li class="listbullet">Voir et copier des enregistrements de ressources DS.</li><li class="listbullet">Voir et copier des jeux d'enregistrements de ressources DNSKEY.</li></ul><p class="bodytext"></p>
+<h5 class="heading5">Signature d'une zone de domaine</h5>
+<p class="bodytext">Pour commencer à utiliser la protection DNSSEC pour votre zone DNS, signez cette zone. Plesk signe la zone avec des signatures générées automatiquement à l'aide de deux paires de clés asymétriques : KSK (Key Signing Key, pour clé de signature de clé) et ZSK (Zone Signing Key, pour clé de signature de zone).</p>
+<p class="procedureheading">Pour signer une zone de domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Sélectionnez le domaine dans <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="procedurelistnumber">Allez dans <strong class="specialbold">DNSSEC </strong>et cliquez sur <strong class="specialbold">Signer la zone DNS.</strong></li><li class="procedurelistnumber">Si la zone n'a jamais été signée, Plesk vous invite à générer les clés qui seront utilisées pour créer une signature. <p class="listcontinue">Vous pouvez utiliser les valeurs par défaut ou indiquer des valeurs personnalisées. Vous pouvez consulter les <em class="emphasis">valeurs recommandées</em> ci-dessous.</p>
+<p class="widegraphic"><img src="77026.gif" alt="2016-09-09_181447" height="598" width="589" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="procedurelistnumber">Si vous avez déjà signé la zone DNS, vous pouvez choisir les clés déjà générées ou en générer de nouvelles. Si vous optez pour de nouvelles clés, vous pouvez utiliser les valeurs par défaut ou en définir de nouvelles. Vous pouvez consulter les <em class="emphasis">valeurs recommandées</em> ci-dessous.<p class="listcontinue"><strong class="buttons">Valeurs recommandées pour les paramètres de génération des clés KSK et ZSK :</strong></p>
+<ul class="listbullet2"><li class="listbullet2">Clé et période de substitution longues pour KSK.<p class="listcontinue2">À chaque mise à jour de la clé KSK, vous devez mettre à jour les enregistrements DS dans la zone parent. Les valeurs recommandées permettent de mettre à jour les enregistrements DS aussi peu souvent que possible sans mettre en péril la sécurité.</p>
+</li><li class="listbullet2">Clé et période de substitution plus courtes pour ZSK.<p class="listcontinue2">La clé ZSK est mise à jour automatiquement. Les valeurs recommandées permettent d'économiser les ressources système sans mettre en péril la sécurité.</p>
+<p class="widegraphic"><img src="77028.gif" alt="DNSSEC_ask" height="167" width="477" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul></li><li class="procedurelistnumber">À l'issue de la procédure de signature, Plesk affiche les enregistrements DS ; ils intègrent des portions des clés KSK utilisées pour la signature de la zone.<p class="listcontinue">Copiez les enregistrements des ressources DS dans le presse-papiers et ajoutez-les à la zone de domaine parent. Consultez la section <em class="emphasis">Mise à jour des enregistrements DS dans la zone parent</em> ci-dessous.</p>
+<p class="widegraphic"><img src="77027.gif" alt="DNSSEC_copy_records" height="572" width="774" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ol><p class="bodytext">&nbsp;&nbsp;</p>
+<h5 class="heading5">Mise à jour des enregistrements DS dans la zone parent</h5>
+<p class="bodytext">Si la zone parent contient des enregistrements DS obsolètes, le nom de domaine n'est plus résolu par le service DNS.</p>
+<p class="bodytext">Vous devez ajouter ou mettre à jour manuellement les enregistrements DS dans la zone de domaine parent dans tous les cas, lorsque les clés DNSSEC sont mises à jour, soit quand :</p>
+<ul class="listbullet"><li class="listbullet">Vous avez signé une zone de domaine avec des clés générées récemment.</li><li class="listbullet">Il y a eu substitution de clés KSK (Key Signing Key). </li></ul><p class="bodytext">Plesk vous notifie et vous laisse le temps de mettre à jour les enregistrements DS. Ce délai correspond à la période de substitution KSK. Sur cette période, les enregistrements DS précédents restent valides.</p>
+<p class="bodytext">Si vous avez supprimé la signature de la zone de domaine, vous devez supprimer manuellement les enregistrements DS dans la zone de domaine parent.</p>
+<p class="procedureheading">Pour mettre à jour les enregistrements DS dans la zone parent :</p>
+<p class="bodytext">Pour un domaine dans Plesk avec zone parent hors de Plesk, mettez à jour les enregistrements DS dans le registrar du domaine.</p>
+<p class="bodytext">Pour un sous-domaine de domaine hébergé dans Plesk, avec zone DNS dans Plesk :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans les paramètres DNS du domaine parent (<strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; domaine parent &gt; <strong class="specialbold">Paramètres DNS</strong>).</li><li class="procedurelistnumber">Ajoutez les nouveaux enregistrements de type <strong class="specialbold">DS</strong> (<strong class="specialbold">Ajouter un enregistrement</strong>) et collez les valeurs indiquées par Plesk dans la zone relative aux <strong class="specialbold">enregistrements de ressources DS</strong> des paramètres DNSSEC du sous-domaine.</li></ol><p class="bodytext"></p>
+<h5 class="heading5">Suppression de la signature d'une zone de domaine</h5>
+<p class="bodytext">La suppression de la signature d'une zone de domaine désactive la protection DNSSEC de cette zone. Vous pouvez devoir supprimer la signature d'une zone si les clés ont été compromises, puis signer à nouveau cette zone avec de nouvelles clés.</p>
+<p class="procedureheading">Pour supprimer la signature d'une zone de domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; sélectionnez un domaine &gt;<strong class="specialbold"> DNSSEC </strong>et cliquez sur <strong class="specialbold">Supprimer la signature</strong>.</li><li class="procedurelistnumber">Supprimez les enregistrements de ressources DS de la zone parent, sinon, il n'y aura pas de résolution.</li></ol><p class="note"><strong class="buttons">Remarque </strong>: lorsque vous supprimez la signature d'une zone, les clés ne sont pas supprimées de Plesk. Vous pouvez signer à nouveau la zone avec les mêmes clés.</p>
+<p class="bodytext"></p>
+<h5 class="heading5">Consultation des enregistrements de ressources DNSKEY</h5>
+<p class="bodytext">Il peut vous être nécessaire de récupérer les enregistrements de ressources DNSKEY, qui contiennent des portions publiques des clés KSK utilisées par un domaine.</p>
+<p class="procedureheading">Pour voir les enregistrements DNSKEY :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; sélectionnez un domaine &gt;<strong class="specialbold"> DNSSEC</strong>.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Afficher les enregistrements DNSKEY</strong>.</li></ol><p class="bodytext"></p>
+<p class="bodytext">&nbsp;&nbsp;</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '76433.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

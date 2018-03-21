@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ajouter un alias de domaine </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65180.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="70111.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031139.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Ajouter un alias de domaine</h3>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/9codn677bBA?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Un alias de domaine vous permet d'utiliser plusieurs noms de domaine et de les rediriger vers votre site Web. Cela peut être utile par exemple à des fins commerciales (diversification de la marque). </p>
+<p class="procedureheading">Pour configurer un alias de domaine dans Plesk :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Exécutez l'assistant <strong class="specialbold">Ajouter un alias de domaine</strong> dans <strong class="specialbold">Sites Web &amp; Domaines</strong>.<p class="widegraphic"><br><img src="76852.gif" alt="Add_domain_alias" height="522" width="1076" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="procedurelistnumber">Indiquez le domaine pour lequel vous voulez créer un alias (<em class="emphasis">domaine primaire</em>) et l'alias du nom de domaine, par exemple <code class="monospace">alias.tld</code> puis configurez les éléments suivants :</li></ol><ul class="listbullet"><li class="listbullet"><strong class="specialbold">Synchronisation de la zone DNS avec le domaine primaire</strong><p class="listcontinue">Si cette option est activée, la zone DNS de l'alias de domaine sera synchronisée avec la zone du domaine primaire. Toute modification apportée à cette zone DNS du domaine primaire sera automatiquement appliquée à la zone DNS de l'alias.  Par exemple, si vous créez un enregistrement CNAME de type <code class="monospace">blog.primary_domain.tld</code>, l'enregistrement <code class="monospace">blog.alias.tld</code> correspondant sera ajouté à la zone de l'alias.</p>
+<p class="listnote"><strong class="buttons">Remarque : </strong>si la zone DNS d'un alias de domaine est synchronisée avec le domaine primaire, vous ne pouvez pas modifier les enregistrements de la ressource dans la zone DNS de l'alias.</p>
+</li><li class="listbullet"><strong class="specialbold">Service de messagerie</strong><p class="listcontinue">Plesk n'autorise pas la création de boîtes mail sous un alias de domaine. À la place, les boîtes mail du domaine primaire sont utilisées. Si vous sélectionnez l'option <strong class="specialbold">Service de messagerie</strong>, les boîtes mail créées sous le domaine primaire seront également disponibles sous l'alias. Pour autoriser les utilisateurs à lire les mails envoyés aux boîtes mail sous l'alias, Plesk les redirige vers les boîtes mail correspondantes sous le domaine primaire.</p>
+<p class="listcontinue">Par exemple : </p>
+<p class="listcontinue">Vous avez l'adresse e-mail <code class="monospace">mail@domaine.tld</code>. Puis, vous définissez un alias pour <code class="monospace">domaine.tld</code>, par exemple, <code class="monospace">alias.tld</code>. Si vous sélectionnez l'option <strong class="specialbold">Service de messagerie</strong>, tous les mails envoyés à l'alias <code class="monospace">mail@alias.tld</code> sont disponibles sous <code class="monospace">mail@domaine.tld</code>. Si vous ne sélectionnez pas l'option, <code class="monospace">mail@domaine.tld</code> ne reçoit pas les mails envoyés à l'alias <code class="monospace">mail@alias.tld</code>.</p>
+</li><li class="listbullet"><strong class="specialbold">Service Web</strong><p class="listcontinue">Si cette option est activée, le site Web s'ouvre dans le navigateur avec l'URL de l'alias. Si vous décochez la case <strong class="specialbold">Service Web</strong>, l'alias est utilisé pour la messagerie uniquement si l'option <strong class="specialbold">Service de messagerie</strong> est sélectionnée.</p>
+</li><li class="listbullet"><strong class="specialbold">Utilisation de la redirection permanente avec le code HTTP 301</strong><p class="listcontinue">Par défaut, Plesk utilise la redirection interne du serveur Web pour les alias. Dans ce cas, l'alias apparaît comme un site Web distinct pour les visiteurs et les moteurs de recherche Web. Cela pose le problème suivant : les moteurs de recherche indexent le contenu de l'alias séparément. Par conséquent, le référencement de votre domaine primaire dans les moteurs de recherche n'est pas préservé.</p>
+<p class="listcontinue">Pour éviter ce cas de figure, vous pouvez utiliser la redirection avec le code HTTP 301 (Déplacé de façon permanente) en sélectionnant <strong class="specialbold">Utiliser la redirection permanente avec le code HTTP 301</strong>. Dans ce cas, seul le domaine primaire est référencé dans les moteurs de recherche. Pour en savoir plus, consultez la page <a class="externalhyperlinktemplate" title="" href="http://support.google.com/webmasters/bin/answer.py?hl=en&answer=93633" target="_blank">https://support.google.com/webmasters/answer/93633?hl=fr</a>.</p>
+</li><li class="listbullet"><strong class="specialbold">Applications Web Java</strong><p class="listcontinue">Si vous utilisez des services d'hébergement basés sur une plate-forme Linux et si votre site inclut des applications Java que vous souhaitez rendre accessibles avec l'alias de domaine, sélectionnez l'option <strong class="specialbold">Applications Web Java</strong>.</p>
+</li></ul><p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65286.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

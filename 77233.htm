@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Obtenir un certificat SSL/TLS gratuit de Let's Encrypt </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="74681.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74686.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031186.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031186.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Obtenir un certificat SSL/TLS gratuit de Let's Encrypt</h3>
+<p class="bodytext">Si l&#8217;extension <strong class="specialbold">Let's Encrypt</strong> est installée dans Plesk, vous pouvez obtenir de l&#8217;autorité de certification <strong class="specialbold"><a class="externalhyperlinktemplate" title="" href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a></strong> un certificat gratuit pour votre domaine. </p>
+<p class="procedureheading">Pour obtenir un certificat SSL/TLS gratuit de Let's Encrypt :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Let's Encrypt</strong>.</li><li class="procedurelistnumber">Précisez l'adresse mail qui doit être utilisée pour les notifications urgentes et la récupération d&#8217;une clé perdue. Par défaut, c'est l'adresse mail du propriétaire de l&#8217;abonnement qui est utilisée.</li><li class="procedurelistnumber">Précisez si vous souhaitez inclure un nom de domaine alternatif pour le domaine et chaque alias sélectionné. Par exemple :<code class="monospace"> www.domain.tld</code> pour <code class="monospace">domain.tld</code>. Nous vous recommandons d'activer cette option.</li><li class="procedurelistnumber">S'il existe des alias de domaine, sélectionnez ceux que vous souhaitez ajouter au certificat.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Installer</strong> pour obtenir et installer le certificat Let's Encrypt de l'abonnement.<p class="widegraphic"><img src="78360.png" alt="lets-encrypt-customer" height="805" width="1590,4" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ol><p class="procedureheading">Une fois le certificat installé, vous pouvez l'utiliser pour protéger votre site :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur <strong class="specialbold">Paramètres d'hébergement</strong>.</li><li class="procedurelistnumber">Cochez la case <strong class="specialbold">Prise en charge SSL/TLS</strong>&nbsp;.</li><li class="procedurelistnumber">Sélectionnez le certificat Let's Encrypt que vous venez de recevoir dans le menu <strong class="specialbold">Certificat</strong> et cliquez sur <strong class="specialbold">OK</strong>.</li></ol>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '77233.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

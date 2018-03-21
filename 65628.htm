@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Paramètres DNS du registrar dans Plesk </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="74741.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="76433.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031145.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Paramètres DNS du registrar dans Plesk</h4>
+<p class="bodytext">Si ce sont des serveurs de noms primaire et secondaire externes qui font office de serveurs d'autorité pour certains de vos sites Web, désactivez le service DNS de Plesk de chacun de ces sites.</p>
+<p class="procedureheading">Pour désactiver le service DNS de Plesk pour un site servi par des serveurs de noms externes :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur le nom de domaine pour lequel vous voulez gérer les paramètres DNS.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Paramètres DNS</strong>.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Désactiver</strong>.<p class="listcontinue">Si vous désactivez le service DNS de la zone, l'écran sera actualisé, de telle sorte qu'il ne restera qu'une liste des serveurs de noms. Remarque : les enregistrements de serveurs de noms figurant dans la liste n'ont aucun effet sur le système. Ils sont présentés comme liens cliquables à l'écran uniquement pour vous permettre de valider la configuration de la zone gérée sur des serveurs de noms externes faisant office de serveurs d'autorité.</p>
+</li><li class="procedurelistnumber">Si vous voulez valider la configuration d'une zone gérée par des serveurs de noms d'autorité, procédez comme suit :<ol class="procedurelistnumber2"><li class="procedurelistnumber2">Ajoutez à la liste les entrées qui dirigent vers les serveurs de noms appropriés faisant autorité pour la zone : cliquez sur <strong class="specialbold">Ajouter l'enregistrement</strong>, indiquez un serveur de noms, puis cliquez sur <strong class="specialbold">OK</strong> et sur <strong class="specialbold">Mettre à jour</strong>.</li><li class="procedurelistnumber2">Répétez l'étape a. pour chaque serveur de noms que vous voulez tester. Les enregistrements apparaîtront au fur et à mesure dans la liste.</li><li class="procedurelistnumber2">Cliquez sur les enregistrements que vous venez de créer.</li></ol></li></ol><p class="bodytext">Plesk récupérera le fichier de zone depuis les serveurs de noms distants et contrôlera les enregistrements de ressources pour vérifier que la résolution des ressources du domaine est correcte. Les résultats seront interprétés et affichés à l'écran.</p>
+<h5 class="heading5">Autres opérations sur les domaines</h5>
+<p class="bodytext">Si votre Panneau Client est intégré à un système de facturation, les opérations suivantes sur les domaines peuvent être disponibles depuis Plesk :</p>
+<ul class="listbullet"><li class="listbullet">Configurer un mot de passe pour accéder au panneau de gestion du domaine dans un site de registrar.</li><li class="listbullet">Verrouiller et déverrouiller le nom de domaine à transférer vers un autre fournisseur.</li><li class="listbullet">Changer le registrant du domaine et autres informations de contact.</li><li class="listbullet">Changer les paramètres DNS pour les zones de domaine par un registrar de domaine.</li><li class="listbullet">Configurer un renouvellement automatique du compte de domaine dans la société d'enregistrement de nom de domaine.</li></ul><p class="procedureheading">Pour configurer un nouveau mot de passe pour accéder au Panneau Client de votre domaine dans un site de registrar :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Compte</strong>.</li><li class="procedurelistnumber">Localisez le nom de domaine pour lequel vous voulez changer des paramètres et cliquez sur le lien <strong class="specialbold">Informations du domaine</strong> situé à côté.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Modifier le mot de passe du domaine</strong>.</li><li class="procedurelistnumber">Saisissez un nouveau mot de passe, puis cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="procedureheading">Pour verrouiller ou déverrouiller le nom de domaine à transférer vers un autre fournisseur :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Compte</strong>.</li><li class="procedurelistnumber">Localisez le nom de domaine pour lequel vous voulez changer des paramètres et cliquez sur le lien <strong class="specialbold">Informations du domaine</strong> situé à côté.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Changer la config. du verrouillage du registrar</strong>.</li><li class="procedurelistnumber">Pour autoriser le transfert du nom de domaine, décochez la case <strong class="specialbold">Verrouiller</strong> et cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="procedureheading">Pour changer les informations de facturation, administratives, techniques ou informations de contact du propriétaire de domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Compte</strong>.</li><li class="procedurelistnumber">Localisez le nom de domaine pour lequel vous voulez changer des paramètres et cliquez sur le lien <strong class="specialbold">Informations du domaine</strong> situé à côté.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Modifier les infos sur le contact</strong>.</li><li class="procedurelistnumber">Appliquez les changements nécessaires, puis cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="procedureheading">Pour changer les paramètres DNS pour un domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Compte</strong>.</li><li class="procedurelistnumber">Localisez le nom de domaine pour lequel vous voulez changer des paramètres et cliquez sur le lien <strong class="specialbold">Informations du domaine</strong> situé à côté.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Éditer</strong> <strong class="specialbold">Paramètres DNS</strong>.</li><li class="procedurelistnumber">Indiquez les serveurs de nom de domaine qui servent la zone DNS pour votre site Web et l'adresse IP du serveur dans lequel le site Web est hébergé.</li><li class="procedurelistnumber">Si la zone DNS de votre site Web est servie par le registrar de votre nom de domaine, vous pouvez également indiquer d'autres enregistrements de ressources qui affectent l'accessibilité des services de votre site Web via Internet.</li><li class="procedurelistnumber">Pour enregistrer vos changements, cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="procedureheading">Pour configurer le renouvellement automatique du nom de domaine :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Compte</strong>.</li><li class="procedurelistnumber">Localisez le nom de domaine pour lequel vous voulez changer des paramètres et cliquez sur le lien <strong class="specialbold">Informations du domaine</strong> situé à côté.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Renouvellement de domaine automatique</strong>.</li><li class="procedurelistnumber">Pour autoriser le renouvellement automatique de l'enregistrement de domaine, cochez la case <strong class="specialbold">Activer le renouvellement automatique</strong> et cliquez sur <strong class="specialbold">OK</strong>. </li></ol>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65628.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

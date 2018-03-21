@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Types de gestionnaires PHP </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="70742.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65283.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Types de gestionnaires PHP</h4>
+<p class="bodytext">Plesk assure d'origine la prise en charge intégrale du langage de script PHP, ainsi que les versions PHP multiples et les types de gestionnaires. Cette section répertorie les types de gestionnaires PHP qui sont utilisés dans Plesk.</p>
+<table class="tableintopic" width="642" cellpadding="2" cellspacing="0" border="1" style="border-collapse:collapse; border:1px solid #010101">
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tableheading">Type de gestionnaire</p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tableheading">Performances</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tableheading">Utilisation mémoire</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="tableheading">Détails sur le gestionnaire</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tablebodytext"><strong class="specialbold">Module Apache</strong></p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tablebodytext">Haut</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">Bas</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="bodytext">Ce gestionnaire est disponible uniquement dans Plesk pour Linux. Il s'agit de l'option de sécurité la moins performante, car les scripts PHP sont exécutés au nom de l'utilisateur Apache. Autrement dit, tous les fichiers créés par les scripts PHP de tout abonné d'un pack ont le même propriétaire (Apache) et le même jeu de droits. C'est pourquoi, il est possible qu'un utilisateur affecte les fichiers d'un autre utilisateur ou des fichiers système importants. Vous pouvez éviter certains problèmes de sécurité en activant l'option safe_mode PHP. Cela désactive un certains nombre de fonctions PHP représentant de potentiels risques de sécurité. Cela peut entraîner le dysfonctionnement de certaines applications Web. L'option safe_mode est considérée comme obsolète ; elle est supprimée de PHP 5.4.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tablebodytext"><strong class="specialbold">Extension ISAPI</strong></p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tablebodytext">Haut</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">Bas</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="tablebodytext">Ce gestionnaire est disponible uniquement dans Plesk pour Windows. L'extension ISAPI peut permettre d'isoler le site si un pool d'applications IIS dédié est activé pour les abonnements. L'isolation du site signifie que les sites des différents clients exécutent leurs scripts de manière indépendante. Par conséquent, une erreur dans un script n'affecte pas le fonctionnement des autres scripts. En outre, les scripts PHP s'exécutent au nom d'un utilisateur système associé à un compte d'hébergement. Le gestionnaire de l'extension ISAPI n'est plus pris en charge depuis PHP 5.3.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tablebodytext"><strong class="specialbold">Application CGI</strong></p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tablebodytext">Bas</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">Bas</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="tablebodytext">Le gestionnaire CGI permet d'exécuter les scripts PHP au nom d'un utilisateur système associé à compte d'hébergement. Sur Linux, ce comportement est possible uniquement si le module du EXEC du serveur Web Apache est activé (option par défaut). Dans les autres cas, tous les scripts PHP sont exécutés au nom de l'utilisateur apache. Par défaut, le gestionnaire CGI n'est pas disponible pour les clients Plesk.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tablebodytext"><strong class="specialbold">Application FastCGI</strong></p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tablebodytext">Haut</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">Haut</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="tablebodytext">Le gestionnaire FastCGI exécute les scripts PHP au nom d'un utilisateur système associé à compte d'hébergement.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="138"><p class="tablebodytext"><strong class="specialbold">Application PHP-FPM</strong></p>
+</td>
+<td style="border:1px solid #010101;" width="114"><p class="tablebodytext">Haut</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">Bas</p>
+</td>
+<td style="border:1px solid #010101;" width="258"><p class="tablebodytext">Ce gestionnaire est disponible uniquement dans Plesk pour Linux. PHP-FPM est une version avancée de FastCGI, qui présente de nombreux avantages pour les applications Web à fort trafic.</p>
+</td>
+</tr>
+
+</table>
+<p class="bodytext"></p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '75145.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

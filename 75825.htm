@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Utiliser un répertoire local </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="75824.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="75848.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311111.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311111.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Utiliser un répertoire local</h2>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/601vhQPvLQI?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Dans ce cas de figure, vous envoyez les modifications depuis votre répertoire local à Plesk qui les déploie sur votre site Web.</p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans ce chapitre :</p><p class="relateditem"><a href="75825.htm#o76285" target="_self">Créer un dépôt Git</a></p><p class="relateditem"><a href="75825.htm#o76286" target="_self">Pousser et déployer des fichiers</a></p><p class="relateditem"><a href="75825.htm#o76287" target="_self">Modifier la branche ou le chemin d'accès</a></p><p class="relateditem"><a href="75825.htm#o76288" target="_self">Sélectionner le mode de déploiement</a></p><p class="relateditem"><a href="75825.htm#o76289" target="_self">Autoriser d'autres actions de déploiement</a></p><p class="relateditem"><a href="75825.htm#o76290" target="_self">Voir les logs de commit</a></p><p class="relateditem"><a href="75825.htm#o76291" target="_self">Renommer ou supprimer un dépôt</a></p></td>
+</tr>
+</table>
+
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76285"></a><h3 class="heading3">Créer un dépôt Git</h3>
+<p class="bodytext">Pour créer un dépôt Git pour votre domaine, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>. Si des dépôts Git ont déjà été créés via Plesk pour votre domaine, cliquez sur le bouton <strong class="specialbold">Ajouter un dépôt</strong>. L'écran de création de dépôt apparaît.</p>
+<p class="widegraphic"><img src="76903.gif" alt="Git_local_create" height="491" width="1154" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous devez d'abord sélectionner l'emplacement de stockage du code. Dans ce cas, sélectionnez <strong class="specialbold">Répertoire local sur votre poste de travail</strong>.</p>
+<p class="bodytext"><strong class="specialbold">Dépôt Git dans Plesk</strong>. Indiquez le nom du dépôt. Par défaut, c'est le nom du domaine qui est utilisé avec le suffixe <strong class="specialbold">.git</strong>.</p>
+<p class="bodytext">Dans la section <strong class="specialbold">Votre site Web</strong>, renseignez les informations suivantes :</p>
+<ul class="listbullet"><li class="listbullet">Mode de déploiement. Par défaut, il s'agit du <strong class="specialbold">Déploiement automatique</strong>. Cela signifie que toutes les modifications poussées vers le dépôt Git sont déployées automatiquement sur le site de production. Pour modifier le mode de déploiement, cliquez sur le lien <strong class="specialbold">déployé automatiquement</strong> et sélectionnez une autre option dans la fenêtre <strong class="specialbold">Mode de déploiement</strong>. Si <strong class="specialbold">Déploiement manuel</strong> est sélectionné, vous devez déployer manuellement les fichiers à partir du dépôt Git de votre hébergement. Si <strong class="specialbold">Aucun déploiement</strong> n'est sélectionné, les fichiers ne seront pas déployés sur le site de production, ce qui peut être utile pour le stockage et l'échange de code.<p class="widegraphic"><img src="76254.png" alt="Git_push_Deployment_mode" height="326" width="402" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet">Répertoire cible pour la publication des fichiers Git sur votre site Web. Par défaut, il s'agit du répertoire <code class="monospace">/httpdocs</code>. Vous pouvez le remplacer par un dépôt existant en cliquant sur son nom.<p class="widegraphic"><img src="76255.png" alt="Git_push_Deployment_path" height="344" width="400" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul><p class="bodytext">Cliquez sur <strong class="specialbold">OK</strong>. Le nouveau dépôt est créé et apparaît sur la page <strong class="specialbold">Git</strong>.</p>
+<p class="widegraphic"><img src="76904.gif" alt="Git_local_created" height="408" width="1153" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">L'URL visible du dépôt dépend de votre protocole de transfert de données. Vous pouvez choisir l'un des protocoles suivants :</p>
+<ol class="listnumber"><li class="listnumber">SSH (Linux uniquement). Ce protocole est utilisé par défaut si l'accès à l'hébergement Web SSH est activé pour ce domaine. Pour définir l'accès SSH du domaine, cliquez sur <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Accès à l'hébergement Web</strong> dans le menu <strong class="specialbold">Accès au serveur via SSH</strong>, sélectionnez <strong class="specialbold">/bin/bash </strong>ou <strong class="specialbold">/bin/sh</strong>. Dans ce cas, l'URL du dépôt est de type <em class="emphasis">utilisateur1@exemple.net:~/rep/exemple.git</em>. </li><li class="listnumber">HTTPS. Ce protocole est utilisé par défaut si l'accès Web SSH est interdit et si SSL/TLS est configuré pour un domaine (<strong class="specialbold">Paramètres d'hébergement &gt; Prise en charge SSL/TLS</strong>). Dans ce cas, l'URL est de type <em class="emphasis">https://utilisateur1@exemple.net/plesk-git/exemple.git</em>. </li><li class="listnumber">HTTP. Ce protocole est utilisé par défaut si l'accès Web SSH est interdit et si SSL/TLS n'est pas configuré pour un domaine. Dans ce cas, l'URL du répertoire est de type <em class="emphasis">http://utilisateur1@exemple.com/plesk-git/exemple.git</em>.</li></ol><p class="bodytext">Procédez comme indiqué par le lien <strong class="specialbold">Aide</strong> pour initialiser le répertoire local.</p>
+<p class="widegraphic"><img src="76905.gif" alt="Git_How_To" height="425" width="1152" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Lorsque le dépôt est initialisé, vous pouvez voir les informations de commit et le nom de la branche active sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>. Par défaut, la branche <strong class="specialbold">maître</strong> est utilisée dans Plesk. Vous pouvez par la suite ajouter des branches (voyez la section <strong class="specialbold"><a id="h76292" class="jumptemplate" title="Modifier la branche ou le chemin d'accès" href="75825.htm#o76287" target="_self">Changement de branche ou de chemin</a></strong>).</p>
+<p class="widegraphic"><img src="76911.gif" alt="Git _init_commit" height="459" width="1150" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Maintenant, vous pouvez engager vos fichiers de site Web depuis votre répertoire local et les envoyer/pousser vers le dépôt sur serveur. </p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76286"></a><h3 class="heading3">Pousser et déployer des fichiers</h3>
+<p class="bodytext">Lorsque vous effectuez un commit avec vos fichiers de site Web à partir de votre répertoire local et les envoyez sur le répertoire serveur, vous pouvez voir les informations de commit sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>.</p>
+<p class="widegraphic"><img src="76912.gif" alt="Git_local_commit" height="433" width="1151" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Par défaut, Plesk utilise le mode <strong class="specialbold">Déploiement automatique</strong>. Cela signifie qu'après envoi d'un fichier au répertoire, il est immédiatement déployé sur le dépôt cible. Vous pouvez désactiver ce mode si nécessaire ; voyez la section <strong class="specialbold"><a id="h76293" class="jumptemplate" title="Sélectionner le mode de déploiement" href="75825.htm#o76288" target="_self">Sélection du mode de déploiement</a></strong>.</p>
+<p class="bodytext">Par exemple, si vous engagez et poussez un fichier <code class="monospace">index.html</code> avec le texte &quot;Bonjour ! Bienvenue sur mon site.&quot; sur le dépôt Git, vous pouvez cliquer immédiatement sur l'URL pour voir les modifications.</p>
+<p class="widegraphic"><img src="76913.gif" alt="Git_website" height="330" width="888" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76287"></a><h3 class="heading3">Modifier la branche ou le chemin d'accès</h3>
+<p class="bodytext"><strong class="specialbold">Déploiement à partir d'une nouvelle branche</strong></p>
+<p class="bodytext">Utiliser plusieurs branches dans un répertoire est une pratique courante. Une seule branche peut être active à la fois. Par défaut, la branche <code class="monospace">maître</code> est utilisée pour le déploiement.</p>
+<p class="bodytext">Pour ajouter une branche, vous devez la créer dans le répertoire local. Par exemple, vous pouvez ajouter la branche <strong class="specialbold">dev</strong> avec les commandes :</p>
+<p class="bodytext"><code class="monospace">git branch dev</code></p>
+<p class="bodytext"><code class="monospace">git checkout dev</code></p>
+<p class="bodytext">Ensuite, engagez les fichiers avec cette branche et poussez vers le répertoire du serveur avec ces commandes : </p>
+<p class="bodytext"><code class="monospace">git commit &#8211;m &quot;changes to branch&quot;</code></p>
+<p class="bodytext"><code class="monospace">git push &#8211;u origin dev</code></p>
+<p class="bodytext">Vous pouvez alors sélectionner l'une des deux branches actives. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur le lien <strong class="specialbold">Modifier la branche et le chemin d'accès</strong>, puis dans la fenêtre ouverte, sélectionnez le nom de la branche dans le menu <strong class="specialbold">Branche</strong>.</p>
+<p class="widegraphic"><img src="76260.png" alt="Git_push_change_branche" height="423" width="602" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Si vous sélectionnez une nouvelle branche et cliquez sur <strong class="specialbold">OK</strong>, Plesk affiche la nouvelle branche active.</p>
+<p class="widegraphic"><img src="76914.gif" alt="Git_local_branch" height="485" width="1045" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext"><strong class="specialbold">Modification du chemin de déploiement</strong></p>
+<p class="bodytext">Par défaut, le répertoire <code class="monospace">/httpdocs</code> est utilisé pour la publication des fichiers Git sur votre site Web. Pour modifier le chemin de déploiement, cliquez sur le lien <strong class="specialbold">Modifier la branche et le chemin d'accès</strong> et dans la fenêtre ouverte, sélectionnez le répertoire. Vous pouvez aussi créer un répertoire en cliquant sur le bouton <strong class="specialbold">Créer un nouveau dossier</strong>.</p>
+<p class="widegraphic"><img src="76263.png" alt="Git_push_change_folder" height="420" width="601" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76288"></a><h3 class="heading3">Sélectionner le mode de déploiement</h3>
+<p class="bodytext">Pour sélectionner le mode de déploiement de votre répertoire, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong> et sélectionnez l'une des options sous <strong class="specialbold">Sélectionner le mode de déploiement</strong> :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Déploiement automatique</strong>. Plesk déploie immédiatement toutes les modifications sur le site de production dès qu'elles sont envoyées dans le répertoire Plesk.</li><li class="listbullet"><strong class="specialbold">Déploiement manuel</strong>. Vous devrez déployer manuellement les fichiers en cliquant sur le bouton <strong class="specialbold">Déployer depuis le dépôt</strong> sur la page <strong class="specialbold">Sites Web &amp; Domaines &gt; Git.</strong>. Vous pouvez aussi déployer manuellement les fichiers en cliquant sur le bouton <strong class="specialbold">Déployer</strong> en regard du nom du dépôt sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong>.</li><li class="listbullet"><strong class="specialbold">Aucun déploiement (hébergement de dépôt)</strong>. Les fichiers ne sont pas déployés sur le site de production. Vous pouvez utiliser cette option par exemple si vous souhaitez n'utiliser le dépôt Git que pour stocker du code.<p class="widegraphic"><img src="76915.gif" alt="Git_local_select_deploy_mode" height="468" width="1046" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76289"></a><h3 class="heading3">Autoriser d'autres actions de déploiement</h3>
+<p class="bodytext">Dans la plupart des cas, la publication de fichiers ne suffit pas pour finaliser le déploiement d'un site Web. Par exemple, si vous utilisez des frameworks comme Ruby on Rails, il peut vous être nécessaire de procéder à la tâche de migration des données après déploiement avec une commande du type :&nbsp;<code class="monospace">bin/rails db:migrate</code>. </p>
+<p class="bodytext">Plesk vous permet de définir plusieurs actions supplémentaires qui seront exécutées à chaque déploiement des fichiers sur le site Web.</p>
+<p class="bodytext">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong>, sélectionnez <strong class="specialbold">Activer des actions de déploiement supplémentaires</strong> et indiquez les commandes de shell à exécuter à chaque déploiement de ce dépôt. Chaque commande doit commencer sur une nouvelle ligne.</p>
+<p class="widegraphic"><img src="76916.gif" alt="Git_local_actions" height="538" width="1043" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="note"><strong class="buttons">Remarque </strong>: si SSH est interdit pour les utilisateurs sous Linux, toutes les commandes indiquées sont exécutées dans un environnement chrooté. Le répertoire principal de l'utilisateur système d'un abonnement est traité comme racine du système de fichiers pour cet abonnement. Aucun fichier exécutable hors de la jail chroot ne peut être exécuté. Par exemple, si le chemin vers votre site est <code class="monospace">/var/www/vhosts/exemple.com/httpdocs</code>, alors, dans un environnement chrooté, le chemin est <code class="monospace">./httpdocs</code>, ainsi, vous ne pourrez pas exécuter les commandes au-delà de la limite d'un niveau au-dessus du répertoire <code class="monospace">/httpdocs</code>.</p>
+<p class="bodytext"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76290"></a><h3 class="heading3">Voir les logs de commit</h3>
+<p class="bodytext">Pour voir l'ensemble de l'historique de commit de la branche active, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong> et cliquez sur le lien <strong class="specialbold">Logs de commit</strong>. Les informations suivantes sont disponibles pour chaque commit : heure, identifiant unique, nom d'utilisateur et message de commit. Cliquez sur <strong class="specialbold">Actualiser</strong> pour mettre à jour le log du commit.</p>
+<p class="widegraphic"><img src="76917.gif" alt="Got_Commit Logs" height="393" width="1045" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Vous pouvez filtrer les logs de commit selon tout paramètre. Par exemple, vous pouvez voir tous les commits d'un certain utilisateur à partir d'une certaine date. Cliquez sur l'icône <img src="76269.png" alt="Git_Commit_Logs_search_Buttom" height="29" width="30" vspace="0" hspace="0" align="bottom" border="0"> et entrez les paramètres de recherche, puis cliquez sur <strong class="specialbold">Rechercher</strong>.</p>
+<p class="widegraphic"><img src="76918.gif" alt="Git_Commit Logs_filter" height="417" width="1042" vspace="0" hspace="0" align="bottom" border="0"></p>
+&nbsp;
+<hr class="linesolid"/>
+<a name="o76291"></a><h3 class="heading3">Renommer ou supprimer un dépôt</h3>
+<p class="bodytext">Vous pouvez renommer votre dépôt à tout moment. Par exemple, une fois le développement fini, vous souhaiterez peut-être appeler le dépôt <strong class="specialbold">siteweb-dev</strong> <strong class="specialbold">siteweb</strong> pour éviter toute confusion. Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>, cliquez sur <strong class="specialbold">Paramètres du dépôt</strong> et entrez le nouveau nom dans le champ <strong class="specialbold">Nom du dépôt</strong>.</p>
+<p class="bodytext">Notez qu'après changement du nom du dépôt, vous devrez configurer votre référentiel local selon l'URL du nouveau dépôt avec la commande :</p>
+<p class="bodytext"><code class="monospace">git remote set-url origin [nouvelle URL]</code></p>
+<p class="bodytext">Par exemple, si le dépôt <strong class="specialbold">exemple </strong>devient <strong class="specialbold">exemple1</strong>, exécutez la commande :</p>
+<p class="bodytext"><code class="monospace">git remote set-url origin utilisateur1@exemple.com:~/repos/exemple1.git</code></p>
+<p class="bodytext">Pour supprimer le dépôt, cliquez sur le lien <strong class="specialbold">Supprimer le dépôt</strong> sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Git</strong>. Dans ce cas, Plesk ne supprime que le dépôt. Le dépôt cible avec les données publiées reste intact.</p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '75825.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

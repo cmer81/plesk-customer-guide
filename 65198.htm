@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Sauvegarder les données </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69566.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65199.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311214.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311214.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Sauvegarder les données</h2>
+<p class="bodytext">Plesk peut sauvegarder les données suivantes :</p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Configuration du compte</em>. Ce type de sauvegarde est de petite taille et s'avère pratique pour restaurer les paramètres du compte en cas de problèmes de configuration.</li><li class="listbullet"><em class="emphasis">Configuration du compte et contenu du site Web</em>. Ce type de sauvegarde requiert plus d'espace disque et de ressources système, car Plesk sauvegarde également le contenu de tous les sites Web y compris les bases de données. De telles sauvegardes sont idéales pour empêcher la perte de données.</li></ul><p class="bodytext">Vous pouvez exécuter manuellement des sauvegardes à tout moment ou les planifier à une date/heure précise. Par exemple, vous pouvez procéder à une sauvegarde complète une fois par jour pendant la nuit lorsque le nombre de visites de votre site est minime. Pour en savoir plus sur les détails de la planification des sauvegardes, reportez-vous à la section <strong class="specialbold"><a id="h69631" class="jumptemplate" title="Planifier des sauvegardes" href="65202.htm" target="_self">Planifier les sauvegardes</a></strong>.</p>
+<h5 class="heading5">Sauvegardes complètes et incrémentales</h5>
+<p class="bodytext">Plesk prend en charge deux types de sauvegardes :</p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Sauvegarde complète</em>. Une sauvegarde complète inclut toutes les données, à chaque sauvegarde, quelle que soit la date de la dernière mise à jour des données.</li><li class="listbullet"><em class="emphasis">Sauvegarde incrémentale</em>. Une sauvegarde incrémentale contient uniquement les données modifiées depuis la date de création de la dernière sauvegarde. <p class="listcontinue">Ce type de sauvegarde permet de réduire à la fois la durée de la sauvegarde et l'espace disque occupé par les fichiers de sauvegarde.</p>
+</li></ul><p class="bodytext">Plesk inclut les données suivantes dans les sauvegardes incrémentales :</p>
+<ul class="listbullet"><li class="listbullet">Les données d'hébergement Web modifiées depuis la dernière sauvegarde (complète et incrémentale).</li><li class="listbullet">Les données de messagerie Web modifiées depuis la dernière sauvegarde (complète et incrémentale).</li><li class="listbullet">Sauvegarde complète des données de base de données</li></ul><h5 class="heading5">Stockage des sauvegardes</h5>
+<p class="bodytext">Il y a deux méthodes pour stocker les sauvegardes dans Plesk :</p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Sur le serveur d'hébergement géré par Plesk</em>. Tous les fichiers de sauvegarde sont stockés sur votre serveur Plesk avec du contenu de compte. Notez que, dans ce cas, les fichiers de sauvegarde occupent l'espace disque fourni par votre abonnement.</li><li class="listbullet"><em class="emphasis">Sur un serveur FTP à distance</em>. Tous les fichiers de sauvegarde sont stockés sur un stockage FTP à distance. Dans ce cas, les fichiers de sauvegarde n'occupent pas l'espace disque fourni par votre abonnement. Les instructions de configuration de Plesk pour sauvegarder les sauvegardes vers un compte FTP sont disponibles dans la section ci-dessous.</li></ul><h5 class="heading5">Création de sauvegardes protégées par un mot de passe</h5>
+<p class="bodytext">Vous pouvez sécuriser les données confidentielles de vos sauvegardes en les protégeant par un mot de passe. Avec cette protection, aucun attaquant ne pourra voir les données de la sauvegarde si la sécurité de votre stockage de sauvegarde venait à être compromise.</p>
+<p class="bodytext">Vous pouvez définir un mot de passe pour la sauvegarde dans les cas suivants :</p>
+<ul class="listbullet"><li class="listbullet">Dans vos paramètres de stockage FTP (<strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Gestionnaire de sauvegardes</strong> &gt; <strong class="specialbold">Paramètres du stockage FTP</strong>). </li><li class="listbullet">Lors du téléchargement d'un fichier de sauvegarde à partir du répertoire interne de Plesk vers un emplacement externe.</li></ul><p class="bodytext">Lorsque vous réessaierez d'envoyer ces sauvegardes à Plesk et de les restaurer, vous serez invité à indiquer le mot de passe utilisé pour la protection.</p>
+<p class="warning"><strong class="buttons">Important : </strong>si vous oubliez le mot de passe que vous avez utilisé pour protéger la sauvegarde, il ne pourra pas être restauré ; par conséquent, nous vous conseillons vivement de garder une liste de vos mots de passe et noms de fichiers de sauvegarde correspondants dans un endroit sûr.</p>
+<h5 class="heading5">Configurer Plesk pour qu'il utilise le stockage FTP</h5>
+<p class="bodytext">Si vous comptez utiliser un serveur FTP pour stocker les fichiers de sauvegarde, vous devez indiquer ses paramètres dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Gestionnaire de sauvegardes</strong> &gt; Paramètres du stockage FTP.<strong class="specialbold"> </strong>Cliquez sur <strong class="specialbold">Utiliser le stockage FTP</strong> et renseignez ces informations :</p>
+<ul class="listbullet"><li class="listbullet">Adresse IP du serveur FTP ou nom d'hôte.</li><li class="listbullet">Répertoire sur le serveur où vous voulez stocker les fichiers de sauvegarde.</li><li class="listbullet">Nom d'utilisateur et mot de passe à saisir pour accéder au compte FTP.</li><li class="listbullet">Utilisation du FTP en mode passif. Si la connexion au serveur FTP indiqué échoue, sélectionnez cette option et réessayez. Plesk teste la connexion lorsque vous cliquez sur <strong class="specialbold">OK</strong> sur l'écran des Paramètres du stockage FTP.</li><li class="listbullet">Utilisation du FTPS. Si le serveur FTP prend en charge ce protocole, vous pouvez l'utiliser pour améliorer la sécurité.</li><li class="listbullet">Mot de passe utilisé par Plesk pour protéger les fichiers de sauvegarde.<p class="widegraphic"><img src="76960.gif" alt="FTP_storage_settings" height="606" width="1094" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li></ul><p class="bodytext">&nbsp;&nbsp;&nbsp;</p>
+<table class="relatedtopics belowtopictext" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="relatedheading">Dans cette section :</p><p class="relateditem"><a href="65199.htm" target="_self">Sauvegarder le compte et les sites Web</a></p><p class="relateditem"><a href="65203.htm" target="_self">Utiliser un stockage de sauvegarde de bases de données (Windows)</a></p><p class="relateditem"><a href="65202.htm" target="_self">Planifier des sauvegardes</a></p></td>
+</tr>
+</table>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65198.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

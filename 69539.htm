@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Gérer les comptes utilisateur de la base de données </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69538.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="73491.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311201.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Gérer les comptes utilisateur de la base de données</h2>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/XzJEfh8I9ek?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Lorsque vous utilisez une base de données dans Plesk, ce dernier accède à la base de données au nom d'un compte utilisateur associé à la base de données. C'est pourquoi au moins un compte utilisateur doit être associé à chaque base de données, sans quoi vous ne pourrez pas accéder à la base de données.</p>
+<p class="bodytext">Tout utilisateur de base de données peut être défini par <em class="emphasis">défaut</em> pour une base de données spécifique. Plesk accède toujours à la base de données avec les identifiants de cet utilisateur par défaut, même lorsque d'autres utilisateurs y sont associés. Si une base de données est associée à plusieurs comptes utilisateur et aucun n'est l'utilisateur par défaut, le premier compte de la liste sera utilisé.</p>
+<h5 class="heading5">Types d'utilisateurs de base de données</h5>
+<p class="bodytext">Il existe deux types de comptes utilisateur de base de données dans Plesk : </p>
+<ul class="listbullet"><li class="listbullet"><em class="emphasis">Comptes utilisateur ayant accès uniquement à une base de données spécifique</em>. <br>Si vous travaillez avec d'autres personnes pour gérer un site Web et souhaitez leur permettre d'accéder à la base de données, vous devez créer pour chacun un compte utilisateur. Chacun de ces comptes est utilisé pour accéder uniquement à une base de données. Dans ce cas, vous devez d'abord créer une base de données, puis les comptes utilisateur.</li><li class="listbullet"><em class="emphasis">Comptes utilisateurs universels ayant accès à toutes les bases de données</em>. <br>Les utilisateurs universels accèdent non seulement à <em class="emphasis">toutes</em> les bases de données existantes, mais aussi à toutes les nouvelles bases de données. <p class="listcontinue">Si vous projetez d'installer plusieurs applications Web sur votre site, il peut être pratique de créer un seul compte utilisateur universel afin que toutes les applications puissent accéder à leurs bases de données à l'aide de ce compte. Dans ce cas, vous pouvez créer un compte utilisateur universel et l'utiliser lorsque vous installez les applications.</p>
+<p class="listnote"><strong class="buttons">Remarque : </strong>un utilisateur universel agit uniquement sur un seul serveur de bases de données. Si vous utilisez plusieurs serveurs de bases de données, créez un compte utilisateur universel pour chaque serveur.</p>
+</li></ul><h5 class="heading5">Opérations avec les utilisateurs de bases de données</h5>
+<p class="bodytext">Vous pouvez créer, mettre à jour ou supprimer un utilisateur de base de données depuis <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Gestion des utilisateurs</strong>.</p>
+<p class="bodytext">Lorsque vous créez un utilisateur de base de données, vous devrez fournir les identifiants pour accéder à la base de données ainsi que le nom de la base de données à laquelle cet utilisateur aura accès. Pour créer un utilisateur <em class="emphasis">universel</em> de bases de données, sélectionnez <strong class="specialbold">Aucun</strong> dans le menu déroulant <strong class="specialbold">Base de données</strong>. </p>
+<p class="note"><strong class="buttons">Remarques : </strong><br>1. Vous pouvez supprimer un utilisateur de base de données par défaut uniquement en supprimant la base de données associée à cet utilisateur. Autre solution : vous pouvez modifier l'utilisateur et décocher l'option <strong class="specialbold">Définir cet utilisateur par défaut pour cette base de données</strong>,&nbsp;puis supprimer l'utilisateur.<br>2. Si un utilisateur de base de données a été créé par une app APS, vous ne pouvez le supprimer qu'en supprimant l'app correspondante.<br>3. Le mot de passe de l'utilisateur doit comporter au moins 5 caractères. Il ne doit pas contenir le nom d'utilisateur ni des caractères ASCII étendus.</p>
+<h5 class="heading5">Contrôle de l'accès</h5>
+<p class="bodytext">À compter de Plesk 12.0, vous pouvez autoriser ou interdire l'accès à distance à une base de données ou autoriser l'accès uniquement pour des hôtes spécifiques. Les paramètres d'accès s'appliquent à des comptes utilisateur individuels de bases de données. Pour en savoir plus, consultez la section <strong class="specialbold"><a id="h73510" class="jumptemplate" title="Configurer des règles d'accès personnalisées" href="73491.htm" target="_self">Configurer des règles d'accès personnalisées</a></strong>.</p>
+<h5 class="heading5">Droits de l'utilisateur de base de données</h5>
+<p class="bodytext">Si vous utilisez MySQL ou Microsoft SQL Server, vous pouvez gérer les droits des utilisateurs de bases de données via l'interface de Plesk. Par exemple, vous pouvez gérer le droit d'exécution des opérations sur la structure et les données de la table. Pour MySQL, ces droits sont <code class="monospace">Sélectionner</code>, <code class="monospace">Insérer</code>, <code class="monospace">Créer</code>, <code class="monospace">Supprimer</code>, etc. Pour Microsoft SQL Server, ces droits sont des rôles de niveau de base de données comme <code class="monospace">db_ddladmin</code>, <code class="monospace">db_datawriter</code>, etc. </p>
+<p class="bodytext">Pour vous aider à attribuer les droits, Plesk utilise des templates de jeux de droits appelés &quot;rôles&quot;. Au moment de la création, chaque compte utilisateur de base de données reçoit le jeu de droits par défaut. Ce jeu de droits correspond au rôle <strong class="specialbold">Lecture et Écriture</strong>. Autres rôles pris en charge : <strong class="specialbold">En lecture seule</strong> et <strong class="specialbold">Écriture uniquement</strong>. Par ailleurs, MySQL dispose d'un rôle <strong class="specialbold">Personnalisé</strong> avec un jeu de privilèges défini pour l'utilisateur.</p>
+<p class="procedureheading">Pour modifier les droits d'un utilisateur de base de données MySQL : </p>
+<ol class="listnumber"><li class="listnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Gestion des utilisateurs</strong> et cliquez sur le nom de l'utilisateur de la base de données.<p class="listcontinue">Par défaut les utilisateurs de bases de données venant d'être créés ont le rôle <strong class="specialbold">Lecture et Écriture</strong>. Vous pouvez voir et modifier les privilèges inclus dans ce rôle.</p>
+</li><li class="listnumber">Pour autoriser l'accès à un mode lecture ou écriture uniquement, sélectionnez le rôle correspondant (<strong class="specialbold">En lecture seule</strong> ou <strong class="specialbold">Écriture uniquement</strong>).</li><li class="listnumber">Pour ajouter ou supprimer des privilèges d'un rôle déjà sélectionné pour l'utilisateur, cochez ou décochez les cases correspondantes (<strong class="specialbold">Sélectionner</strong>, <strong class="specialbold">Insérer</strong>, <strong class="specialbold">Mettre à jour</strong>, etc).<p class="listcontinue">Remarque : si vous modifiez un jeu de privilèges, le rôle devient <strong class="specialbold">Personnalisé</strong>.</p>
+</li></ol><p class="procedureheading">Pour modifier les droits d'un utilisateur de base de données SQL Server :</p>
+<ol class="listnumber"><li class="listnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Bases de données</strong> &gt; <strong class="specialbold">Gestion des utilisateurs</strong> et cliquez sur le nom de l'utilisateur de la base de données.<p class="listcontinue">Par défaut les utilisateurs de bases de données venant d'être créés ont le rôle <strong class="specialbold">Lecture et Écriture</strong>.</p>
+</li><li class="listnumber">Pour autoriser l'accès à un mode lecture ou écriture uniquement, sélectionnez le rôle correspondant (<strong class="specialbold">En lecture seule</strong> ou <strong class="specialbold">Écriture uniquement</strong>).<p class="listcontinue">Par défaut, les jeux de droits sur Microsoft SQL Server sont les suivants :</p>
+</li></ol><table class="tableintopic" width="480" cellpadding="2" cellspacing="0" border="1" style="border-collapse:collapse; border:1px solid #010101">
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="144"><p class="tableheading">Droit</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tableheading">Lecture et Écriture</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tableheading">Lecture seule</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tableheading">Écriture uniquement</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="144"><p class="tablebodytext">db_backupoperator</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="144"><p class="tablebodytext">db_datareader</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">-</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="144"><p class="tablebodytext">db_datawriter</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">-</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border:1px solid #010101;" width="144"><p class="tablebodytext">db_ddladmin</p>
+</td>
+<td style="border:1px solid #010101;" width="132"><p class="tablebodytext">+</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">-</p>
+</td>
+<td style="border:1px solid #010101;" width="102"><p class="tablebodytext">+</p>
+</td>
+</tr>
+
+</table>
+<p class="listcontinue">Remarque : l'hébergeur peut modifier ces jeux de droits.</p>
+<p class="bodytext"><strong class="buttons">Modifications automatiques des rôles utilisateur</strong></p>
+<p class="bodytext">L'hébergeur peut ajouter ou supprimer des droits accordés avec des rôles différents.</p>
+<p class="bodytext">Sur MySQL, ces modifications n'affectent pas les droits des utilisateurs de bases de données existants. Ce qui change, c'est leur rôle dans Plesk : il deviendra <strong class="specialbold">Personnalisé</strong>, car leurs droits ne correspondront plus à leur rôle précédent (<strong class="specialbold">Lecture et Écriture</strong>, <strong class="specialbold">Lecture seule</strong> ou <strong class="specialbold">Écriture uniquement</strong>). Sur Microsoft SQL Server, les droits (rôles de niveau base de données) d'utilisateurs existants sont modifiés conformément aux modifications de l'hébergeur.</p>
+<p class="bodytext">L'hébergeur peut refuser définitivement certains droits pour tous les utilisateurs de bases de données. Par exemple, il peut refuser le droit de supprimer certains objets. Dans ce cas, le droit ne s'affiche pas dans Plesk. Dans Microsoft SQL Server, si un droit est exclu pour tous les rôles de Plesk, alors il est refusé à tous les utilisateurs.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '69539.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

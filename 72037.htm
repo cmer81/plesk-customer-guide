@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Ajuster les paramètres d'Apache et Nginx </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="72320.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="78407.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031163.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031163.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h5 class="heading5">Ajuster les paramètres d'Apache et Nginx</h5>
+<p class="bodytext">Tous les paramètres de serveur Web personnalisables sont disponibles sur la page <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; nom de domaine &gt; <strong class="specialbold">Réglages d'Apache et Nginx</strong>. Les paramètres personnalisés ne fonctionnent que pour le site Web sélectionné.</p>
+<p class="bodytext"></p>
+<p class="bodytext">Ces paramètres sont séparés en deux groupes :</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Paramètres communs Apache</strong> <p class="listcontinue">Ces paramètres sont généralement modifiés par les propriétaires de sites souhaitant ajouter un type de fichiers MIME pour les fichiers avec une extension spécifique (<strong class="specialbold">types MIME</strong>), pour indiquer les gestionnaires Apache d'un certain type de fichier (<strong class="specialbold">Gestionnaires</strong>), pour restreindre l'accès au site (<strong class="specialbold">Refuser l'accès au site</strong>) ou pour ajouter des fichiers index (<strong class="specialbold">Fichiers index</strong>).</p>
+<p class="widegraphic"><img src="76869.gif" alt="Common_Apache_settings" height="493" width="1189" vspace="0" hspace="0" align="bottom" border="0"></p>
+</li><li class="listbullet"><strong class="specialbold">Paramètres Nginx</strong><p class="listcontinue">Ces paramètres définissent la répartition du traitement des demandes Web entre les serveurs Web Apache et Nginx afin d'assurer des performances optimales pour un site spécifique.</p>
+<p class="widegraphic"><img src="76431.gif" alt="nginx_settings" height="410" width="601" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="listcontinue">Utilisez les options suivantes pour définir la façon dont Apache et Nginx doivent traiter les requêtes :</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Mode proxy</strong>.<p class="listcontinue2">Cette option est activée par défaut, ce qui signifie que Nginx joue le rôle de serveur proxy pour Apache. Les options ci-dessous sont actives uniquement si le <strong class="specialbold">mode proxy</strong> est activé. Elles vous permettent d'indiquer la façon dont le traitement des requêtes est partagé entre Nginx et Apache.</p>
+<p class="listcontinue2">Pour utiliser Nginx sans Apache pour traiter les requêtes de tout contenu Web, désactivez le <strong class="specialbold">mode proxy</strong>. Ainsi, Nginx gère toutes les requêtes. Pour en savoir plus sur l'hébergement Nginx uniquement, cliquez <a id="h78408" class="jumptemplate" title="Hébergement Nginx uniquement" href="78407.htm" target="_self">ici</a>.</p>
+</li><li class="listbullet2"><strong class="specialbold">Traiter intuitivement les fichiers statiques</strong>.<p class="listcontinue2">Si cette option est désactivée, le rôle de Nginx est limité. Nginx transfère uniquement les requêtes et les réponses sans les modifier. Nous vous recommandons de désactiver cette option uniquement pour résoudre les problèmes liés à Nginx.</p>
+</li><li class="listbullet2"><strong class="specialbold">Traiter les fichiers statiques directement avec Nginx</strong>.<p class="listcontinue2">Vous pouvez obtenir de meilleures performances pour les sites à fort trafic et avec beaucoup de contenu statique (type images et vidéos) en déléguant le traitement des fichiers statiques à Nginx. Les demandes pour le traitement des fichiers avec les extensions indiquées ne passeront jamais par Apache.</p>
+<p class="listcontinue2">Exemple : si vous voulez exclure d'Apache le traitement des fichiers .jpg et .gif, activez l'option <strong class="specialbold">Traiter les fichiers statiques directement avec Nginx</strong> et indiquez les extensions de fichiers comme suit : </p>
+<p class="preformattedseclevel">gif jpg</p>
+<p class="listcontinue2">ou</p>
+<p class="preformattedseclevel">gif|jpg</p>
+<p class="listnote2"><strong class="buttons">Remarque :</strong> si vous activez cette option, les requêtes de traitement des fichiers statiques ne sont jamais envoyées à Apache ou ne déclenchent pas les gestionnaires Apache. Cela signifie par exemple que les règles de réécriture ou les directives .htaccess ne sont pas appliquées.</p>
+</li><li class="listbullet2"><strong class="specialbold">Gérer PHP avec Nginx</strong>.<p class="listcontinue2">Lorsque l'option <strong class="specialbold">Gérer PHP avec Nginx</strong> est activée, Apache ne participe pas au traitement des requêtes des fichiers PHP. Toutes les requêtes de fichiers PHP sont traitées par Nginx à l'aide du gestionnaire PHP-FPM. Les gestionnaires utilisés par Apache ne sont pas disponibles sur Nginx. PHP-FPM est une version avancée de FastCGI, qui présente de nombreux avantages pour les applications Web à fort trafic. Pour en savoir plus sur PHP-FPM, consultez la page <a class="externalhyperlinktemplate" title="" href="http://php-fpm.org/about/" target="_blank">http://php-fpm.org/about/</a> (en anglais).</p>
+<p class="listcontinue2"> </p>
+<p class="listnote2"><strong class="buttons">Remarque :</strong> si vous activez cette option, les requêtes de traitement des fichiers statiques ne sont jamais envoyées à Apache ou ne passent pas par les gestionnaires Apache. Cela signifie que certaines applications Web peuvent ne pas fonctionner comme prévu.</p>
+</li></ul></li></ul><p class="bodytext">&nbsp;</p>
+<p class="bodytext">Remarque : les sous-domaines ont leurs propres paramètres de serveur Web. Par conséquent, lorsque vous changez les paramètres de serveur Web d'un site avec des sous-domaines, ces sous-domaines ne reçoivent pas ces modifications.</p>
+<p class="bodytext">Si vous ne trouvez pas le paramètre voulu, contactez l'administrateur de votre serveur (hébergeur), car il peut définir davantage de paramètres personnalisés pour les sites Web.</p>
+<h5 class="heading5">Valeur par défaut des paramètres du serveur </h5>
+<p class="bodytext">Vous pouvez définir la valeur de chaque paramètre soit en saisissant une valeur personnalisée, soit en laissant la valeur <strong class="specialbold">Par défaut</strong>. Dans ce cas, Plesk utilise les valeurs de la configuration du serveur Web par défaut définie par l'administrateur du serveur (hébergeur).</p>
+<p class="bodytext">Lorsque vous définissez vos valeurs, celles-ci écrasent les valeurs par défaut, sauf pour le paramètre <strong class="specialbold">Refuser l'accès au site</strong> : les adresses IP de la configuration par défaut ainsi que les adresses IP que vous indiquez seront toutes appliquées à votre site Web. En cas de conflit (par exemple, si vous autorisez une adresse IP refusée par la configuration par défaut), Apache utilise vos paramètres.</p>
+<p class="bodytext">&nbsp;</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '72037.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

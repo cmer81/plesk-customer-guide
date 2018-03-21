@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Limiter les mails sortants </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="72412.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="74086.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311184.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311184.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Limiter les mails sortants</h2>
+<p class="bodytext">Votre hébergeur peut limiter le nombre de mails sortants par heure. En général, les limites visent à réduire la diffusion de spam possible. Un abonnement, un domaine et une boîte mail ont leurs propres limites. Par défaut, les valeurs des limites sont définies par l'hébergeur.</p>
+<p class="bodytext">Vous pouvez augmenter la limite pour envoyer plus de mails ou diminuer la limite pour éviter l'excès de mails sortants.</p>
+<p class="bodytext">Le nombre de mails sortants envoyés par un objet parent (comme un abonnement) correspond à la somme des mails envoyés par ses objets enfants (comme les domaines). Les limites fonctionnent conformément à ces règles :</p>
+<ul class="listbullet"><li class="listbullet">Le nombre total de mails de tous les domaines d'un abonnement ne peut pas être supérieur à la limite de l'abonnement.</li><li class="listbullet">Le nombre total de mails de toutes les boîtes mail d'un domaine ne peut pas être supérieur à la limite du domaine.</li></ul><p class="note"><strong class="buttons">Remarque :</strong> la limite d'un objet parent est plus importante que les limites individuelles de ses objets enfants. Par exemple : si la limite d'un abonnement est atteinte, aucun domaine de cet abonnement ne peut envoyer de mails. Et ce, même si certains domaines n'ont pas atteint leur limite individuelle. De même, si un domaine atteint sa limite, aucune de ses boîtes mail ne peut envoyer de mails. Et ce, même si certaines des boîtes mail n'ont pas atteint leur limite individuelle.</p>
+<p class="note"><strong class="buttons">Remarque :</strong> les options ci-dessous sont affichées uniquement si les limites des mails sortants sont activées par votre hébergeur. Par ailleurs, certaines limites (par exemple, le nombre de mails sortants envoyés depuis une boîte mail) peuvent devenir indisponibles. Cela dépend du serveur de messagerie utilisé dans Plesk.</p>
+<p class="procedureheading">Pour définir les limites du nombre de mails sortants d'un domaine :</p>
+<ol class="listnumber"><li class="listnumber">Allez dans <strong class="specialbold">Mail </strong>&gt; onglet <strong class="specialbold">Paramètres de la messagerie</strong>. Sélectionnez un ou plusieurs domaines pour lesquels vous voulez modifier la limite. Pour cela, cochez les cases correspondantes.</li><li class="listnumber">Cliquez sur <strong class="specialbold">Limiter les messages sortants</strong> sur la barre d'outils.</li><li class="listnumber">Modifiez le champ <strong class="specialbold">Limites des messages sortants</strong>.</li></ol><p class="procedureheading">Pour définir les limites du nombre de mails sortants d'une boîte mail :</p>
+<ol class="listnumber"><li class="listnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres de la messagerie</strong> du domaine auquel la boîte mail appartient &gt; <strong class="specialbold">Adresse mail</strong>. Sélectionnez une ou plusieurs adresses mail pour lesquelles vous voulez modifier la limite. Pour cela, cochez les cases correspondantes.</li><li class="listnumber">Cliquez sur <strong class="specialbold">Limiter les messages sortants</strong> sur la barre d'outils.</li><li class="listnumber">Modifiez le champ <strong class="specialbold">Limites des messages sortants</strong>.<p class="listcontinue">Vous pouvez également cliquez sur l'adresse mail et modifier <strong class="specialbold">Limites des messages sortants</strong>.</p>
+</li></ol><p class="procedureheading">Pour afficher les statistiques détaillées et limiter le nombre de mails sortants (pour un abonnement) :</p>
+<ol class="listnumber"><li class="listnumber">Allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Limiter les mails sortants</strong>.<p class="listcontinue">Vous pouvez également aller dans <strong class="specialbold">Sites Web &amp; Domaines Paramètres de la messagerie</strong> du domaine principal &gt; <strong class="specialbold">Contrôle des mails sortants</strong> et cliquer sur le lien <strong class="specialbold">Contrôle des mails sortants</strong>.</p>
+</li><li class="listnumber">Dans l'onglet <strong class="specialbold">Général</strong>, vous pouvez voir le nombre d'objets Plesk qui ont dépassé les limites et la liste de ces objets.</li><li class="listnumber">Si vous avez besoin de plus d'informations au sujet d'un objet Plesk particulier, allez dans l'onglet correspondant (<strong class="specialbold">Adresses mail</strong>, <strong class="specialbold">Domaines</strong> ou <strong class="specialbold">Abonnements</strong>). Cliquez sur l'objet concerné et consultez le rapport <strong class="specialbold">Tentative d'envoi de mail une fois la limite atteinte</strong>.<p class="listcontinue">De plus, dans la section <strong class="specialbold">Mails envoyés</strong>, les statistiques quotidiennes par heure sont indiquées pour un objet Plesk : vous pouvez voir le nombre de tentatives de dépassement par heure pour un jour spécifique.</p>
+</li></ol><p class="note"><strong class="buttons">Remarque :</strong> les messages envoyés aux abonnés d'une liste de diffusion ne sont pas comptés lors du contrôle des mails sortants.</p>
+<p class="listcontinue">&nbsp;&nbsp;</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '73362.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

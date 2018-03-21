@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Protéger les boîtes mail contre les spams </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65703.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65689.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311184.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311184.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Protéger les boîtes mail contre les spams</h2>
+<div align="right"><span class="specialbold" style="font-size: 20px">Voir le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/gPPgtOQAk2k?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="procedureheading">Pour activer le filtre anti-spam pour une boîte mail :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Mail</strong> &gt; <strong class="placeholder">adresse mail</strong> &gt; onglet <strong class="specialbold">Antispam</strong>.</li><li class="procedurelistnumber">Cochez <strong class="specialbold">Activer le filtre anti-spam pour cette adresse mail</strong>.</li><li class="procedurelistnumber">Indiquez la procédure à suivre pour les messages classés en tant que spam.<ul class="listbullet2"><li class="listbullet2">Si vous voulez filtrer les mails avec le logiciel installé sur votre ordinateur local, activez l'option <strong class="specialbold">Marquer comme spam en ajoutant le texte suivant dans l'objet du message </strong>puis précisez comment le filtre anti-spam doit marquer les mails reconnus comme étant des spams. &quot;X-Spam-Flag: YES&quot; et &quot;X-Spam-Status: Yes&quot; sont ajoutés par défaut à la source du message, et si vous le souhaitez, le filtre anti-spam ajoutera également un texte spécifique au début de la ligne Objet et dans le corps du message.</li><li class="listbullet2">Si vous êtes sûr que votre filtre anti-spam est précis, vous pouvez le configurer pour qu'il supprime automatiquement tous les messages entrants reconnus comme spams. Pour ce faire, sélectionnez l'option <strong class="specialbold">Supprimer tous les spams</strong>.</li><li class="listbullet2">(Linux uniquement) Si vous accédez à votre boîte mail via le protocole IMAP et si vous voulez que le filtre anti-spam déplace tous les messages considérés comme du spam dans le dossier IMAP appelé Spam, sélectionnez l'option <strong class="specialbold">Déplacer le spam vers le dossier Spam</strong>.<p class="listcontinue2">Comme tous les messages sont automatiquement supprimés du dossier Spam après 30 jours, vous devrez régulièrement vérifier le contenu du dossier Spam pour vous assurer que vous n'avez pas manqué de messages importants et pour replacer tous les messages non spam dans le dossier Boîte de réception.</p>
+<p class="listcontinue2">Lorsque l'option <strong class="specialbold">Déplacer le spam dans le dossier Spam</strong> est cochée, vous pouvez former le filtre anti-spam et améliorer sa précision en déplaçant les spams de la Boîte de réception vers le dossier Spam et les messages non-spams du dossier Spam vers la Boîte de réception.</p>
+</li></ul></li><li class="procedurelistnumber">Si le filtre anti-spam manque certains spams ou renvoie de nombreux faux positifs, vous devez ajuster la sensibilité du filtre. Pour cela, cliquez sur <strong class="specialbold">Afficher les paramètres avancés</strong> et saisissez la valeur souhaitée dans le champ <strong class="specialbold">Intensité du filtre anti-spam</strong>.<p class="listcontinue">Par défaut, la valeur 7 convient à la plupart des situations. Cependant, si trop de spam n'est pas filtré, diminuez cette valeur d'un et vérifiez si le volume de spam non filtré diminue. Si non, diminuez encore la valeur d'un. Dans le cas contraire, si des mails non spams sont classés comme tel, vous devez augmenter la valeur de la sensibilité. Dans tous les cas, il convient d'augmenter ou de diminuer la valeur d'un cran à la fois. En effet, de trop grands écarts risquent d'entraîner des modifications radicales dans le comportement du filtre anti-spam.</p>
+<p class="listnote"><strong class="buttons">Remarque :</strong> pour continuer à améliorer la précision du filtre anti-spam, vous pouvez vouloir former votre filtre anti-spam avec les mails que vous recevez, comme décrit plus loin dans cette section.</p>
+</li><li class="procedurelistnumber">Si vous voulez être sûr que vous ne raterez pas de mails d'expéditeurs spécifiques, saisissez les adresses mail ou les noms de domaine dans le champ <strong class="specialbold">Liste blanche</strong>.<p class="listcontinue">Mettez une adresse par ligne ou séparez les adresses par une virgule, un point-virgule ou un espace. Vous pouvez utiliser un astérisque (*) pour remplacer un certain nombre de lettres et un point d'interrogation (?) pour remplacer une seule lettre. Par exemple : address@mycompany.com, user?@mycompany.com, *@mycompany.com. Si vous définissez *@mycompany.com, toutes les adresses mail du domaine de messagerie mycompany.com seront ajoutées à la liste blanche.</p>
+</li><li class="procedurelistnumber">Si vous ne voulez pas recevoir de mails d'expéditeurs ou de domaines spécifiques, saisissez les adresses mail ou les noms de domaine dans le champ <strong class="specialbold">Liste noire</strong>.<p class="listcontinue">Mettez une adresse par ligne ou séparez les adresses par une virgule, un point-virgule ou un espace. Vous pouvez utiliser un astérisque (*) pour remplacer un certain nombre de lettres et un point d'interrogation (?) pour remplacer une seule lettre. Par exemple : address@spammers.net, user?@spammers.net, *@spammers.net. Si vous indiquez *@spammers.net, tout le domaine de messagerie spammers.net sera bloqué.</p>
+</li><li class="procedurelistnumber">Si vous utilisez un compte client basé sur Windows, vous pouvez également indiquer des langues et des jeux de caractères de confiance. Les mails écrits dans les langues indiquées et avec les jeux de caractères définis passeront le filtre anti-spam et ne seront pas marqués en tant que spam.</li><li class="procedurelistnumber">Sur les comptes client basés sur Windows, vous pouvez indiquer les adresses IP des ordinateurs ou réseaux à partir desquels le mail doit toujours être accepté. En indiquant des adresses réseau, saisissez une adresse et ajoutez un masque de réseau après un slash. Par exemple, 192.168.10.10/24.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong>.</li></ol><p class="bodytext">Vous pouvez améliorer la précision de la détection des spams si le filtre anti-spam SpamAssassin est activé sur le serveur pour votre compte et si vous accédez à votre boîte mail via le protocole IMAP.</p>
+<p class="procedureheading">Pour augmenter la précision de détection des spams :</p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Accédez à votre boîte mail avec la messagerie Web ou un programme client de messagerie sur votre ordinateur.</li><li class="procedurelistnumber">Passez en revue les messages dans votre dossier <strong class="specialbold">Boîte de réception</strong>. Déplacez tous les spams dans le dossier <strong class="specialbold">Spam</strong>. Le filtre anti-spam SpamAssassin reconnaîtra alors les spams plus efficacement.</li></ol>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65690.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

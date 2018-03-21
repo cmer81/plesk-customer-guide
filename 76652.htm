@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Prise en charge Node.js </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="73391.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="70317.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h1 class="heading1">Prise en charge Node.js</h1>
+<div align="right"><span class="specialbold" style="font-size: 20px">Regardez le tutoriel vidéo</span><br/><iframe width="373" height="210" align="top" src="https://www.youtube.com/embed/4K-WJ2c54Ag?list=PL3vEEE_dvoG9f38D4uM3mRdHCQOf9mdCK" frameborder="0" allowfullscreen></iframe></div><p class="bodytext">Pour installer une application Node.js sur votre site Web, vous devez d'abord charger les fichiers de l'application sur le serveur. Vous pouvez les charger via <a id="h74106" class="jumptemplate" title="Envoyer du contenu via FTP" href="74104.htm" target="_self">FTP</a> ou à l'aide du <a id="h74107" class="jumptemplate" title="Envoyer du contenu avec le Gestionnaire de fichiers" href="74105.htm" target="_self">gestionnaire de fichiers</a>.</p>
+<p class="widegraphic"><img src="76653.png" alt="" height="164" width="461" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Pour configurer votre application, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> et cliquez sur <strong class="specialbold">Node.js</strong>. Cet écran présente plusieurs options vous permettant de gérer votre application Node.js :</p>
+<p class="widegraphic"><img src="77508.png" alt="" height="353" width="491" vspace="0" hspace="0" align="bottom" border="0"></p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Version de Node.js.</strong> Cette option correspond à la version actuellement sélectionnée de l'environnement d'exécution qui sera utilisé pour exécuter votre application. Cliquez sur le numéro de version pour sélectionner une autre version de Node.js.</li><li class="listbullet2"><strong class="specialbold">Racine du document.</strong> Ici vous pouvez définir le répertoire racine des documents du domaine. Il peut s'agir d'un sous-répertoire du répertoire d'application principal, indiqué plus bas.</li><li class="listbullet2"><strong class="specialbold">Mode d'application.</strong> Vous pouvez choisir &quot;Développement&quot; ou &quot;Production&quot; ou indiquer un nom de mode personnalisé. La variable d'environnement <code class="monospace">NODE_ENV</code> reflétera votre choix.</li><li class="listbullet2"><strong class="specialbold">URL de l'application.</strong> Cliquez sur cette URL générée automatiquement pour ouvrir l'application dans votre navigateur.</li><li class="listbullet2"><strong class="specialbold">Root d'application.</strong> Par défaut, le chemin du root d'application est le même que celui du répertoire racine du domaine. Cliquez sur &quot;[ouvert]&quot; pour accéder au contenu du répertoire root d'application à l'aide du gestionnaire de fichiers. En outre, dans Plesk pour Linux, vous pouvez cliquer sur le chemin du root d'application actuel pour en définir un personnalisé.</li><li class="listbullet2"><strong class="specialbold">Fichier de démarrage d'application.</strong> Par défaut, le nom du fichier de démarrage est <em class="emphasis">app.js</em>. Cliquez dessus pour indiquer un nom personnalisé.</li><li class="listbullet2">(Plesk pour Linux uniquement) <strong class="specialbold">Variables d'environnement personnalisées.</strong> Ici, vous pouvez voir la liste des variables d'environnement personnalisées que vous avez définies pour votre application (le cas échéant). Cliquez sur &quot;[préciser]&quot; pour ajouter ou supprimer des variables d'environnement pour votre application.<ul class="listbullet3"><li class="listbullet3">Cliquez sur <strong class="specialbold">Ajouter une variable</strong> pour ajouter une variable d'environnement à la liste. Tapez le nom de la variable dans le champ gauche et la valeur voulue à droite.</li><li class="listbullet3">Modifiez les variables existantes en cliquant sur le champ correspondant et en tapant le nouveau nom ou la nouvelle valeur.</li><li class="listbullet3">Cliquez sur <strong class="specialbold">Supprimer</strong> en regard de la variable voulue dans la liste.</li></ul></li></ul><p class="bodytext">Cliquez sur <strong class="specialbold">OK</strong> lorsque vous avez fini.</p>
+<p class="bodytext">Si le répertoire d'application principal contient le fichier de configuration <code class="monospace">package.json</code>, deux autres options sont disponibles :</p>
+<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Installer NPM.</strong> Installe les packs décrits dans le fichier <code class="monospace">package.json</code>.</li><li class="listbullet2"><strong class="specialbold">Démarrer le script.</strong> Exécute une commande indiquée dans la section &quot;Scripts&quot; du fichier <code class="monospace">package.json</code>. Indiquez le nom du script à exécuter ainsi que tout paramètre requis et cliquez sur <strong class="specialbold">OK</strong>.</li></ul><p class="bodytext">Si votre application inclut les fichiers de configuration <code class="monospace">package.json</code>, <code class="monospace">Gruntfile.js</code>, <code class="monospace">gulpfile.js</code> ou <code class="monospace">webpack.config.js</code>, ils sont visibles dans la section &quot;Accès aux fichiers de configuration&quot; sur la droite. Cliquez sur le nom d'un fichier de configuration pour l'ouvrir et le modifier.</p>
+<p class="widegraphic"><img src="76654.png" alt="" height="221" width="269" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Lorsque vous avez terminé de configurer votre application, cliquez sur <strong class="specialbold">Activer Node.js</strong> pour le démarrer. Les informations sur votre application, y compris la version de Node.js et le mode d'application, apparaissent sous le nom de domaine avec le bouton <strong class="specialbold">Redémarrer l'app</strong>.</p>
+<p class="widegraphic"><img src="76655.png" alt="" height="52" width="406" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Si, par la suite, vous devez désactiver Node.js, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong>, cliquez sur <strong class="specialbold">Node.js</strong> et sur <strong class="specialbold">Désactiver Node.js</strong>. La désactivation de Node.js n'affecte pas vos paramètres et vous pouvez réactiver votre application à tout moment.</p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '76652.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

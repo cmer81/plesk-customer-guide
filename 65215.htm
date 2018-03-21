@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Modifier les paramètres du répertoire virtuel </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="65221.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="65216.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311101.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc70311101.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Modifier les paramètres du répertoire virtuel</h4>
+<p class="procedureheading">Pour changer les paramètres d'un répertoire virtuel dans un site Web :   </p>
+<ol class="procedurelistnumber"><li class="procedurelistnumber">Allez dans <strong class="specialbold">Sites Web &amp; Domaines</strong> et repérez le nom de domaine de votre site.</li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">Répertoires virtuels</strong>.</li><li class="procedurelistnumber">Naviguez jusqu'au répertoire dont vous souhaitez modifier les préférences et cliquez sur l'icône correspondante <img src="75086.png" alt="Icon_settings" height="25" width="22" vspace="0" hspace="0" align="bottom" border="0">ou cliquez sur <strong class="specialbold">Propriétés du répertoire</strong> une fois dans le répertoire voulu.</li><li class="procedurelistnumber">Changez les réglages comme il convient :<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Nom</strong> : donnez le nom du répertoire virtuel.</li><li class="listbullet2"><strong class="specialbold">Chemin</strong> : donnez le chemin d'accès au répertoire physique auquel le répertoire virtuel est associé.</li><li class="listbullet2"><strong class="specialbold">Accès aux sources du script</strong> : cochez cette case pour autoriser les utilisateurs à accéder au code source si les droits de lecture ou d'écriture sont accordés. Le code source insère des scripts dans les applications ASP.</li><li class="listbullet2"><strong class="specialbold">Droit de lecture</strong> : cochez cette case pour donner aux utilisateurs le droit de lecture sur des fichiers ou des répertoires avec les propriétés associées.</li><li class="listbullet2"><strong class="specialbold">Droit d'écriture</strong> : cochez cette case pour donner aux utilisateurs le droit d'envoyer des fichiers avec les propriétés associées dans le répertoire virtuel ou de modifier le contenu d'un fichier sur lequel le droit d'écriture est activé. L'accès en écriture n'est autorisé que si le navigateur prend en charge la fonction PUT du protocole HTTP 1.1.</li><li class="listbullet2"><strong class="specialbold">Parcourir le répertoire</strong> : cochez cette case pour donner aux utilisateurs le droit de consulter le listing des liens hypertextes des fichiers et sous-répertoires existants dans le répertoire virtuel. </li><li class="listbullet2"><strong class="specialbold">Consigner les visites dans des logs</strong> : cochez cette case si vous voulez conserver les informations sur les visites dans le répertoire virtuel.</li><li class="listbullet2"><strong class="specialbold">Créer une application</strong> : cochez cette case pour transformer le répertoire Web en application IIS. Le répertoire devient alors logiquement indépendant du reste du site Web.</li><li class="listbullet2"><strong class="specialbold">Droits d'exécution</strong> : sélectionnez le niveau d'exécution du programme approprié pour le répertoire virtuel.<ul class="listbullet3"><li class="listbullet3"><strong class="specialbold">Aucun</strong> : permet d'accéder uniquement aux fichiers statiques comme les fichiers HTML ou les fichiers images.</li><li class="listbullet3"><strong class="specialbold">Scripts uniquement</strong> : permet d'exécuter des scripts mais pas des exécutables.</li><li class="listbullet3"><strong class="specialbold">Scripts et exécutables</strong> : supprime toutes les restrictions pour que tous les types de fichiers puissent être exécutés.</li></ul></li><li class="listbullet2"><strong class="specialbold">Autoriser l'utilisation des chemins parents</strong> : cochez cette case pour autoriser l'utilisation de deux points dans le nom du chemin d'accès pour donner la référence d'un dossier se trouvant un niveau au-dessus du répertoire Web actif. Ceci permet aux utilisateurs de remonter l'arborescence de répertoires sans savoir le nom du répertoire ni l'emplacement dans la hiérarchie. Si l'option est activée, la case <strong class="specialbold">Droit d'exécution</strong> en regard du chemin des répertoires parents ne doit pas être cochée au niveau des propriétés de ces derniers pour éviter que des applications ne puissent exécuter des programmes dans les chemins parents sans autorisation.</li><li class="listbullet2"><strong class="specialbold">Autoriser l'exécution de l'application en mode MTA (multi-threaded apartment)</strong> : cochez cette case pour autoriser l'exécution de l'application en mode MTA (multi-threaded apartment). Autrement, l'application s'exécutera en mode STA (single-threaded apartment). Avec STA, chaque pool d'applications est exécuté dans le cadre d'un processus dédié. En mode MTA, plusieurs pools d'applications concurrents sont exécutés en un seul fil, ce qui peut faire augmenter les performances dans certains cas.</li><li class="listbullet2"><strong class="specialbold">Utiliser les documents par défaut</strong> : cochez cette case pour permettre l'utilisation des documents par défaut pour le répertoire Web courant. Le document par défaut est envoyé lorsque des utilisateurs accèdent au répertoire sur le Web sans indiquer le nom du fichier spécifique (par exemple, en tapant &quot;http://www.exemple.com&quot; au lieu de &quot;http://www.exemple.com/index.html&quot;). Si cette case n'est pas cochée et si la case <strong class="specialbold">Parcourir le répertoire</strong> est cochée, le serveur Web renvoie une liste de dossiers. Si cette case n'est pas cochée et si la case <strong class="specialbold">Parcourir le répertoire</strong> est également décochée, le serveur Web renvoie un message d'erreur &quot;Accès interdit&quot;.</li><li class="listbullet2"><strong class="specialbold">Ordre de recherche des documents par défaut</strong> : indique dans quel ordre IIS recherche le document par défaut, suite à quoi il envoie le premier fichier disponible qu'il trouve à l'utilisateur. Si aucune occurrence correspondante n'est trouvée, IIS se comporte comme quand la page de contenu par défaut est désactivée.</li><li class="listbullet2"><strong class="specialbold">Autoriser l'accès anonyme</strong> : cochez cette case si vous voulez que le répertoire soit public pour que les utilisateurs Internet puissent y accéder sans devoir s'identifier.</li><li class="listbullet2"><strong class="specialbold">SSL/TLS requis</strong> : cochez cette case pour autoriser l'accès à ce répertoire uniquement via des connexions chiffrées SSL/TLS.</li><li class="listbullet2"><strong class="specialbold">Paramètres ASP</strong> : paramètres spécifiques définis pour les applications Web basées sur ASP.<ul class="listbullet3"><li class="listbullet3">Si vous utilisez des applications basées sur ASP ne pouvant fonctionner correctement avec les restrictions de transferts de données définies par IIS, décochez la case <strong class="specialbold">Définis par le répertoire parent</strong> correspondant au champ à modifier et entrez le nombre requis.</li><li class="listbullet3">Si vous voulez activer le débogage des applications ASP côté serveur, décochez la case <strong class="specialbold">Définis par le répertoire parent</strong> correspondante puis cochez la case <strong class="specialbold">Activer le débogage du script ASP côté serveur</strong>. </li><li class="listbullet3">Si vous voulez activer le débogage des applications ASP côté client, décochez la case <strong class="specialbold">Définis par le répertoire parent</strong> correspondante puis cochez la case <strong class="specialbold">Activer le débogage du script ASP côté client</strong>. <p class="listcontinue3">Notez que si vous essayez de changer les paramètres ASP pour le répertoire virtuel root, les noms des cases par défaut seront <strong class="specialbold">Définis par IIS</strong> au lieu de <strong class="specialbold">Définis par le répertoire parent</strong>.</p>
+</li></ul></li></ul></li><li class="procedurelistnumber">Cliquez sur <strong class="specialbold">OK</strong> pour enregistrer les modifications.</li></ol><p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '65215.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>

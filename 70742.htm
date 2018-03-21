@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Paramètres PHP </title>
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="stylesheet.css"/>
+<script src="locate.js"></script>
+<link href="prettify.css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+
+</head>
+<script src="highlight.js"></script>
+<body class="sid-main" onload="FindCorrectTOCPage(); prettyPrint()">
+<table class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td>
+<p class="pagenavigation"><a href="69457.htm" target="_self"><img src="38976.gif" alt="Page précédente" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page précédente</a></p></td>
+<td>
+<p class="pagenavigation"><a href="75145.htm" target="_self"><img src="38977.gif" alt="Page suivante" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Page suivante</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><img src="38970.gif" alt="Localiser la page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"> Localiser la page</a></p></td>
+<td>
+<p class="pagenavigation"><a href="toc7031158.htm" target="TOC"><a class="" title="" href="javascript:print();" target="_self"><img src="39072.gif" alt="Imprimer cette page" height="16" width="16" vspace="0" hspace="1" align="top" border="0"></a></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Paramètres PHP</h4>
+<p class="bodytext">Plesk assure la prise en charge intégrale du langage de script PHP, ainsi que plusieurs versions de PHP et types de gestionnaires, le tout, prêt à l'emploi. Cette section explique comment les clients Plesk peuvent gérer les paramètres PHP de leurs domaines et sous-domaines depuis le Panneau Client.</p>
+<p class="bodytext">La gestion PHP au niveau du domaine se déroule en trois phases :</p>
+<ul class="listbullet2"><li class="listbullet2">Choix de la version PHP.</li><li class="listbullet2">Choix du type de gestionnaire PHP.</li><li class="listbullet2">Configuration de paramètres PHP supplémentaires. </li></ul><p class="note"><strong class="buttons">Remarque :</strong> selon les paramètres de votre abonnement, vous ne pourrez gérer que certains, voire aucun des paramètres décrits ci-dessous. Si vous devez gérer des paramètres PHP non accessibles, contactez votre hébergeur.</p>
+<h5 class="heading5">Choix de la version PHP</h5>
+<p class="bodytext">Plesk prend en charge plusieurs versions PHP prêtes à l'emploi. Pour choisir la version PHP d'un domaine ou sous-domaine, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres PHP</strong> et sélectionnez la version souhaitée de PHP depuis le menu.</p>
+<p class="widegraphic"><img src="75142.png" alt="" height="30" width="344" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Si la version voulue n'est pas dans le menu, contactez votre hébergeur.</p>
+<p class="bodytext">Remarque : les différentes versions de PHP ne sont pas compatibles à 100 %. Un site Web avec PHP 5.3 risque de mal fonctionner si vous configurez PHP 5.4 pour le domaine. Si vous n'êtes pas sûr de la version de PHP à choisir, utilisez le paramètre par défaut ou la dernière version disponible. Si votre site Web ne s'affiche pas correctement, passez à une autre version de PHP.</p>
+<h5 class="heading5">Choix du type de gestionnaire</h5>
+<p class="bodytext">Plesk prend en charge différents gestionnaires PHP prêts à l'emploi. Pour choisir le type de gestionnaire PHP d'un domaine ou sous-domaine, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres PHP</strong> et sélectionnez le type de gestionnaire PHP souhaité depuis le menu.</p>
+<p class="widegraphic"><img src="75143.png" alt="" height="42" width="309" vspace="0" hspace="0" align="bottom" border="0"></p>
+<p class="bodytext">Si vous n'êtes pas sûr du type de gestionnaire PHP à choisir, vous pouvez consultez <a id="h75146" class="jumptemplate" title="Types de gestionnaires PHP" href="75145.htm" target="_self">cette documentation</a>.</p>
+<h5 class="heading5">Configuration de paramètres PHP supplémentaires</h5>
+<p class="bodytext">Outre la version et le type de gestionnaire PHP, vous pouvez configurer de nombreux autres paramètres PHP dans <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres PHP</strong>. La plupart de ces paramètres sont liés à la sécurité et aux performances, mais certains jouent sur les opérations des sites Web. Cliquez sur l'icône <img src="75144.png" alt="" height="18" width="18" vspace="0" hspace="0" align="bottom" border="0"> en regard d'une option pour en savoir plus à son sujet. </p>
+<p class="bodytext">Si vous modifiez ces paramètres, cela risque d'affecter les performances de votre site Web ou de l'empêcher de s'afficher correctement. Nous vous recommandons de conserver les valeurs par défaut pour tous les autres paramètres, sauf si vous êtes certain des modifications. Si votre site Web devient lent ou arrête de charger après modification des paramètres PHP, réinitialisez les paramètres PHP vers leur valeur par défaut.</p>
+<h5 class="heading5">Activation de l'accélération PHP</h5>
+<p class="bodytext">Si votre hébergeur vous y autorise, vous pouvez activer l'accélération PHP, également appelée &quot;opcode cache module&quot;, pour votre site Web. Si votre site Web est écrit en PHP, vous pouvez doubler sa vitesse ou plus en activant le &quot;opcode cache module&quot;. Pour activer l'accélération PHP, allez sous <strong class="specialbold">Sites Web &amp; Domaines</strong> &gt; <strong class="specialbold">Paramètres PHP</strong> et définissez la valeur de <code class="monospace">opcache.enable</code> sur &quot;<code class="monospace">on</code>&quot;.</p>
+<h5 class="heading5">Affichage des paramètres PHP</h5>
+<p class="bodytext">Pour voir les paramètres PHP actuels du domaine, y compris ceux niveau serveur, cliquez sur <strong class="specialbold">Voir la page phpinfo()</strong>.</p>
+<h5 class="heading5">Héritage de paramètres PHP</h5>
+<p class="bodytext">Les domaines appartenant à un abonnement héritent des paramètres PHP définis au niveau de l'abonnement. Les sous-domaines héritent des paramètres PHP définis au niveau de leur domaine parent. Si votre abonnement inclut les droits correspondants, vous pouvez modifier les paramètres PHP de chaque domaine et sous-domaine indépendamment.</p>
+<p class="bodytext"></p>
+
+
+
+
+<!--
+<p class="bodytext">
+<a target="_blank" title="Send feedback through a web form" href="http://www.parallels.com/en/support/usersdoc/?problemSubject=Feedback+on+Help+Page+" onclick="var u = parent.BODY.location.href;
+u = u.replace(/.+\/([^/]+).htm$/,'$1');
+u+= '+of+the+'+parent.document.title.replace(/ /g,'+');
+
+this.href+=u;
+
+window.location.reload(false);">Please send us your feedback on this help page.</a></p>
+-->
+
+
+
+&nbsp;
+<hr style="border: none; background-color: grey; color: grey; height: 2px" />
+<h3 class="heading3">Leave your feedback on this topic here</h3>
+<p class="note">If you have questions or need support, please visit the <a target="_blank" href="http://talk.plesk.com/">Plesk forum</a> or contact your hosting provider.<br>The comments below are for feedback on the documentation only. No timely answers or help will be provided.</p>
+
+    
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'pleskdocs'; // required: replace example with your forum shortname
+		var disqus_developer = 0; 
+		var disqus_identifier = '70742.htm';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments.</noscript>
+</body>
+<script>highlightTOC()</script>
+</html>
